@@ -8,3 +8,7 @@ Today I created the GitHub repository structure and organized the initial projec
 
 Used Commands Sudo systemctl status wazuh-manager, dashboard and indexer to ensure that wazuh is up and running on computer
 
+Found out I must upgrade my Wazuh from 4.7.5 to latest supported version (4.14+).
+
+
+
