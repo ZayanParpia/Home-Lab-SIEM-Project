@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \# Home SIEM Lab
 
 
@@ -32,3 +33,7 @@ The lab will include:
 
 \- Atomic Red Team simulations
 
+=======
+# Home-Lab-SIEM-Project
+Home-Lab-SIEM-Project
+>>>>>>> 4fa32e6514b099d610e6150e0592d86a8337891d
