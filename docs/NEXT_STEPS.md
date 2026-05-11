@@ -36,7 +36,17 @@
 
 
 
-* Upgrade WAZUH version to meet min requirements 
+* Upgrade WAZUH version to meet min requirements ✅
+
+
+
+\### 2026-05-12
+
+
+
+\### Planned Tasks
+
+* Reconfigure Wazuh Manager
 * Confirm my ubuntu laptop agent shows as “Active”
 * Install Sysmon on both Windows systems
 * Install the SwiftOnSecurity Sysmon config
@@ -44,6 +54,7 @@
 * Run safe test commands like whoami and ipconfig
 * Search for those logs in Wazuh
 * Take screenshots of:
+* Make Diagram
 * Active agents
 * Sysmon events
 * PowerShell logs
