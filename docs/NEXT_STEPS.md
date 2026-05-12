@@ -46,7 +46,7 @@
 
 \### Planned Tasks
 
-* Reconfigure Wazuh Manager
+* Reconfigure Wazuh Manager and make sure it's running as intended. ✅
 * Confirm my ubuntu laptop agent shows as “Active”
 * Install Sysmon on both Windows systems
 * Install the SwiftOnSecurity Sysmon config

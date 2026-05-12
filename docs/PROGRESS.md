@@ -32,3 +32,10 @@
 
 \- Continued debugging the upgrade process to ensure compatibility with the latest supported Wazuh release (V4.14.5.)
 
+
+\## 2026-05-12
+\- Used sudo systemctl status wazuh-manager
+\- wazuh-manager was dead so I ran command sudo systemctl start wazuh-manager and it was running.
+\- Used curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh and then bash wazuh-install.sh --all-in-one
+\- After Installing the wazuh package I started all the packages.
+\- Configuring Ubuntu Laptop Endpoint to be connected to the SIEM
