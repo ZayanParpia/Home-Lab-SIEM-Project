@@ -34,8 +34,10 @@
 
 
 \## 2026-05-12
-\- Used sudo systemctl status wazuh-manager
-\- wazuh-manager was dead so I ran command sudo systemctl start wazuh-manager and it was running.
-\- Used curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh and then bash wazuh-install.sh --all-in-one
-\- After Installing the wazuh package I started all the packages.
-\- Configuring Ubuntu Laptop Endpoint to be connected to the SIEM
+\- Used sudo systemctl status wazuh-manager to check the SIEM manager service status and confirmed it was not running
+\- Started the Wazuh manager using sudo systemctl start wazuh-manager and verified it was active
+\- Downloaded and installed the Wazuh all-in-one SIEM stack using curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh followed by bash wazuh-install.sh --all-in-one
+\- Restarted all Wazuh services using sudo systemctl restart wazuh-manager, sudo systemctl restart wazuh-indexer, and sudo systemctl restart wazuh-dashboard to ensure full SIEM functionality
+\- Configured Ubuntu laptop endpoint and registered it to the SIEM using agent-auth -m <SIEM_IP>
+\- Successfully connected the Ubuntu laptop endpoint to the Wazuh SIEM server and verified active log forwarding and monitoring
+

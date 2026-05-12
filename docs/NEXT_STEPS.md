@@ -47,20 +47,22 @@
 \### Planned Tasks
 
 * Reconfigure Wazuh Manager and make sure it's running as intended. ✅
-* Confirm my ubuntu laptop agent shows as “Active”
-* Install Sysmon on both Windows systems
+* Confirm my ubuntu laptop agent shows as “Active” ✅
+* Install Sysmon on Ubuntu Laptop
 * Install the SwiftOnSecurity Sysmon config
 * Enable PowerShell logging using gpedit.msc
 * Run safe test commands like whoami and ipconfig
 * Search for those logs in Wazuh
-* Take screenshots of:
 * Make Diagram
+* Refine Outline
 * Active agents
+* Install Agent on Tablets and VM
 * Sysmon events
 * PowerShell logs
 * Wazuh dashboard
 * Start documenting:
 * What you installed
 * Why it matters
+* Create Explain Doc for Screenshots
 * What logs you successfully collected
 
