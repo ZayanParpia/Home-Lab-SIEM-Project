@@ -41,3 +41,23 @@
 \- Configured Ubuntu laptop endpoint and registered it to the SIEM using agent-auth -m <SIEM_IP>
 \- Successfully connected the Ubuntu laptop endpoint to the Wazuh SIEM server and verified active log forwarding and monitoring
 
+## 2026-05-14 - Sysmon Installation & Endpoint Telemetry Setup
+
+### Actions
+- Learned to format GitHub project logs more effectively for SOC lab documentation and reproducibility
+- Updated and upgraded Ubuntu system packages to ensure stability and compatibility
+  sudo apt update && sudo apt upgrade -y
+- Installed prerequisite packages required for secure repository management and software installation
+  sudo apt install wget curl gnupg apt-transport-https -y
+- Added official Microsoft package repository to enable installation of Sysmon for Linux
+  wget -q https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
+  sudo dpkg -i packages-microsoft-prod.deb
+  sudo apt update
+- Installed Sysmon for Linux for enhanced endpoint telemetry collection
+  sudo apt install sysmonforlinux -y
+- Created a custom Sysmon configuration file to enable core telemetry visibility (process creation, network connections, file creation)
+
+### Outcome
+- Endpoint telemetry collection successfully enabled on Ubuntu system using Sysmon for Linux
+- System is now capable of generating enhanced security logs suitable for SIEM ingestion
+- Environment is prepared for next phase: integration with Wazuh agent and centralized log analysis
