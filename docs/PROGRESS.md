@@ -61,3 +61,8 @@
 - Endpoint telemetry collection successfully enabled on Ubuntu system using Sysmon for Linux
 - System is now capable of generating enhanced security logs suitable for SIEM ingestion
 - Environment is prepared for next phase: integration with Wazuh agent and centralized log analysis
+
+## 2026-05-15 
+### Actions
+- Downloaded Linux Audit Logging by using sudo apt install auditd audispd-plugins -y
+- Edited Diagram
