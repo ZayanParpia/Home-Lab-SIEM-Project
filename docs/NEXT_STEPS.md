@@ -52,7 +52,7 @@
 
 
 
-\### 2026-05-12
+\### 2026-05-15
 
 
 
@@ -62,20 +62,23 @@
 
 * Install Sysmon on Ubuntu Laptop ✅
 * Install the SwiftOnSecurity Sysmon config ✅
-* Enable Linux audit logging (auditd)
-* Run safe test commands like whoami and ipconfig
-* Search for those logs in Wazuh
-* Make Diagram
-* Collect Screenshots
+* Enable Linux audit logging (auditd) ✅
+* Run safe test commands like whoami and ipconfig ✅
+* Search for those logs in Wazuh ✅
+* Make Diagram ✅
+* 
+
+
+
+\### 2026-05-16
+
 * Refine Outline
-* Active agents
-* Install Agent on Tablets and VM
-* Sysmon events
-* PowerShell logs
-* Wazuh dashboard
-* Start documenting:
+* Refine Diagram
 * What you installed
 * Why it matters
+* Create Outline to capture what screenshots
 * Create Explain Doc for Screenshots
 * What logs I successfully collected
+* Test Monitoring
+* Create DEMO
 
