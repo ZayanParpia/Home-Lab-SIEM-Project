@@ -70,15 +70,21 @@
 
 
 
-\### 2026-05-16
+\### 2026-05-17
 
-* Refine Outline
-* Refine Diagram
-* What you installed
-* Why it matters
+\### Planned Tasks
+
+
+
+* Refine Outline ✅
+* Refine Diagram ✅
 * Create Outline to capture what screenshots
 * Create Explain Doc for Screenshots
+* Refine README.md
 * What logs I successfully collected
+* Capture Screenshots based on screenshots\_capture.md
 * Test Monitoring
 * Create DEMO
+* Create License 
+* Create list of simulations/projects with SIEM	
 
