@@ -78,13 +78,29 @@
 
 * Refine Outline ✅
 * Refine Diagram ✅
-* Create Outline to capture what screenshots
-* Create Explain Doc for Screenshots
-* Refine README.md
-* What logs I successfully collected
+* Refine README.md ✅
+
+
+
+\### 2026-05-18
+
+\### Planned Tasks
+
+
+
+* Create Outline to capture what screenshots ✅
+* Refine Diagram
+
+
+
+\### 2026-05-19
+
+\### Planned Tasks
+
 * Capture Screenshots based on screenshots\_capture.md
+* Create Explain Doc for Screenshots
 * Test Monitoring
 * Create DEMO
-* Create License 
-* Create list of simulations/projects with SIEM	
+* Create License
+* Create list of simulations/projects with SIEM
 
