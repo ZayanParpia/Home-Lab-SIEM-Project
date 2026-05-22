@@ -66,3 +66,13 @@
 ### Actions
 - Downloaded Linux Audit Logging by using sudo apt install auditd audispd-plugins -y
 - Edited Diagram
+
+## 2026-05-17
+### Actions
+- Refined README.md to include polished documentation of project 
+- Refined OUTLINE.md
+
+### 2026-05-22
+## Actions
+- Toady I collected the screenshots for the project
+-Create .gitignore file to ignore screenshots for now

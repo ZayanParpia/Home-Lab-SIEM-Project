@@ -89,18 +89,29 @@
 
 
 * Create Outline to capture what screenshots ✅
-* Refine Diagram
+* Refine Diagram ✅
 
 
 
-\### 2026-05-19
+\### 2026-05-22
 
 \### Planned Tasks
 
-* Capture Screenshots based on screenshots\_capture.md
+* Capture Screenshots based on screenshots\_capture.md ✅
+
+
+
+\### 2026-05-23
+
+\### Planned Tasks
+
+* Edit Screenshot names
+* blur PII \& other security vulnerabilities 
 * Create Explain Doc for Screenshots
 * Test Monitoring
 * Create DEMO
 * Create License
 * Create list of simulations/projects with SIEM
+* Make GitHub repo public
+* Upload to Linkedn and Portfolio Website
 

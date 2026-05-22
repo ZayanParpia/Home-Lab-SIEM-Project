@@ -71,7 +71,7 @@ Scripts used throughout the project for:
 Infrastructure documentation and architecture files.
 
 Includes:
-- Network diagrams
+- diagrams
 - VM layouts
 - System architecture
 - Data flow visualization

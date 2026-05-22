@@ -16,9 +16,9 @@
 
 \- Ubuntu Desktop installer
 
-\- Static IP configuration
+\- Static IP configuration ✅
 
-\- Successful ping test
+\- Successful ping test ✅
 
 
 
@@ -32,13 +32,14 @@
 
 \- Successful Ubuntu Server login
 
-\- `hostnamectl`
+\- `hostnamectl`✅
+ 
+\- `ip a` ✅
+ 
+\- `df -h`  ✅
 
-\- `ip a`
+\- `free -h` ✅
 
-\- `df -h`
-
-\- `free -h`
 
 
 
@@ -50,17 +51,17 @@
 
 
 
-\- Wazuh installation command
+\- Wazuh installation command ✅
 
-\- Wazuh installer running
+\- Wazuh installer running ✅
+ 
+\- Successful Wazuh installation message ✅
 
-\- Successful Wazuh installation message
+\- `systemctl status wazuh-manager` ✅
 
-\- `systemctl status wazuh-manager`
+\- `systemctl status wazuh-indexer` ✅
 
-\- `systemctl status wazuh-indexer`
-
-\- `systemctl status wazuh-dashboard`
+\- `systemctl status wazuh-dashboard` ✅
 
 
 
@@ -72,13 +73,14 @@
 
 
 
-\- Dashboard login page
+\- Dashboard login page ✅
 
-\- Dashboard homepage
+\- Dashboard homepage ✅
 
-\- Dashboard overview
 
-\- Agents page
+\- Dashboard overview ✅
+
+\- Agents page ✅
 
 
 
@@ -92,9 +94,9 @@
 
 \- Ubuntu Desktop system information
 
-\- `hostnamectl`
+\- `hostnamectl` ✅
 
-\- `sudo apt update \&\& sudo apt upgrade`
+\- `sudo apt update \&\& sudo apt upgrade` ✅
 
 
 
@@ -106,13 +108,13 @@
 
 
 
-\- Wazuh agent installation command
+\- Wazuh agent installation command ✅
 
-\- Agent configuration
+\- Agent configuration ✅
 
-\- `systemctl status wazuh-agent`
+\- `systemctl status wazuh-agent` ✅
 
-\- Successful agent startup
+\- Successful agent startup ✅
 
 
 
@@ -124,13 +126,14 @@
 
 
 
-\- Endpoint showing as active in Wazuh
+\- Endpoint showing as active in Wazuh ✅
 
-\- Incoming logs/events
+\- Incoming logs/events ✅
+
 
 \- Security events page
 
-\- Log activity timeline
+\- Log activity timeline ✅
 
 
 
@@ -160,13 +163,7 @@
 
 
 
-\- `/var/ossec/etc/ossec.conf`
-
-\- Any modified configuration files
-
-\- Service restart commands
+\- `/var/ossec/etc/ossec.conf` ✅
 
 
-
-\---
 
