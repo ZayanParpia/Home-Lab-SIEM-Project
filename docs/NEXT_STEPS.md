@@ -105,11 +105,12 @@
 
 \### Planned Tasks
 
-* Edit Screenshot names
-* blur PII \& other security vulnerabilities 
+* Edit Screenshot names ✅
+* blur PII \& other security vulnerabilities
 * Create Explain Doc for Screenshots
 * Test Monitoring
 * Create DEMO
+* Add What I learned Doc
 * Create License
 * Create list of simulations/projects with SIEM
 * Make GitHub repo public
