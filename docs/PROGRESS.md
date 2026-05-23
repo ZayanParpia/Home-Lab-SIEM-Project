@@ -75,4 +75,9 @@
 ### 2026-05-22
 ## Actions
 - Toady I collected the screenshots for the project
--Create .gitignore file to ignore screenshots for now
+- Created .gitignore file to ignore screenshots for now
+
+# 2026-05-23
+## Actions 
+- Today I finished renaming the screenshots
+- Edited Screenshots to remove PII
