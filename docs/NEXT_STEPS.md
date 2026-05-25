@@ -117,9 +117,9 @@
 \### Planned Tasks
 
 * Test Monitoring \& Create Video DEMO ✅
-* Create License
-* Make GitHub repo public
-* Upload to LinkedIn 
+* Create License ✅
+* Make GitHub repo public ✅
+* Upload to LinkedIn  ✅
 
 
 
