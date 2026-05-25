@@ -150,3 +150,8 @@ Technologies to be added for project expansion:
 - MITRE ATT&CK Frameworks 
 - Kali Linux
 - Many More TBD
+
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
