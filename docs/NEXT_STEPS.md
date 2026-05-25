@@ -108,10 +108,28 @@
 * Edit Screenshot names ✅
 * blur PII \& other security vulnerabilities ✅
 * Add What I learned Doc ✅
-* Upload to LinkedIn and Portfolio Website ✅
-* Test Monitoring 
-* Create Video DEMO
+* Upload to Portfolio Website ✅
+
+
+
+\### 2026-05-25
+
+\### Planned Tasks
+
+* Test Monitoring \& Create Video DEMO ✅
 * Create License
-* Create list of simulations/projects with SIEM
 * Make GitHub repo public
+* Upload to LinkedIn 
+
+
+
+\### Upgrades 
+
+\-Create Alerts 
+
+\-Create more endpoints using VMS
+
+\-Create Auto Threat 
+
+\-Add more additions with this project 
 
