@@ -117,19 +117,19 @@
 \### Planned Tasks
 
 * Test Monitoring \& Create Video DEMO ✅
-* Create License
-* Make GitHub repo public
-* Upload to LinkedIn 
+* Create License ✅
+* Make GitHub repo public ✅
+* Upload to LinkedIn ✅
 
 
 
-\### Upgrades 
-
-\-Create Alerts 
+\### Upgrades
 
 \-Create more endpoints using VMS
 
-\-Create Auto Threat 
+\-Create Alerts
 
-\-Add more additions with this project 
+\-Create Auto Threat
+
+\-Add more additions with this project like simulated attacks
 
