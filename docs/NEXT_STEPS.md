@@ -119,7 +119,11 @@
 * Test Monitoring \& Create Video DEMO ✅
 * Create License ✅
 * Make GitHub repo public ✅
+<<<<<<< HEAD
 * Upload to LinkedIn ✅
+=======
+* Upload to LinkedIn  ✅
+>>>>>>> 891a8ed1cd4ec9c0d1707ce71fa29be78509389a
 
 
 
