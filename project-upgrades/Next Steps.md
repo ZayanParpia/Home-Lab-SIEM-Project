@@ -28,7 +28,9 @@
 
 \- Install \*\*Sysmon for Linux\*\* on all Ubuntu endpoints.
 
-\- Install \*\*auditd\*\* on all Linux endpoints for system auditing and event logging.
+\- Install \*\*auditd\*\* on all Linux endpoints for system auditing and event loggin
+
+\- configure new endpoints to have auditd and Sysmon connected to Wazuh Server Logs
 
 
 
@@ -53,6 +55,18 @@
 \- Validate all endpoints are functional and visible within the Wazuh dashboard.
 
 
+
+\### STEPS FOR 2026-06-10
+
+\- Connected Ubuntu Endpoint IV to the \*\*Wazuh Server\*\*.
+
+\- Installed and configured \*\*Sysmon for Linux\*\* on Endpoint IV.
+
+\- Installed and configured \*\*auditd\*\* on Endpoint IV.
+
+\- Verified that endpoint IV is actively reporting to Wazuh.
+
+\- Confirmed log collection and endpoint visibility within the Wazuh dashboard.
 
 
 

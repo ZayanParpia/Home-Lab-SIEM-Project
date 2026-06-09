@@ -26,3 +26,11 @@
 
 
 
+\### 2026-06-09
+
+\-Installed Ubuntu Endpoint IV on Gaming Laptop
+
+
+
+
+
