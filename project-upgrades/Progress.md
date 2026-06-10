@@ -32,5 +32,9 @@
 
 
 
+\### 2026-06-10
+
+\-Configured Sysmon and Auditd on Endpoint IV on Gaming Laptop
+
 
 
