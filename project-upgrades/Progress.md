@@ -38,3 +38,9 @@
 
 
 
+\### 2026-06-11
+
+\-Made sure Wazuh Receives logs from Endpoint IV
+
+
+
