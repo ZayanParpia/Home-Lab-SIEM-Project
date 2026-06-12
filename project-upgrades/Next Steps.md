@@ -70,7 +70,7 @@
 
 \- Connected Ubuntu Endpoint IV to the \*\*Wazuh Server\*\*. ✅
 
-\- Verified that endpoint IV is actively reporting to Wazuh. ✅ 
+\- Verified that endpoint IV is actively reporting to Wazuh. ✅
 
 \- Confirmed log collection and endpoint visibility within the Wazuh dashboard. ✅
 
@@ -78,5 +78,11 @@
 
 \### STEPS FOR 2026-06-12
 
-* Set up Sysmon for Windows on Windows Endpoint
+* Set up Sysmon for Windows on Windows Endpoint ✅
+
+
+
+\### STEPS FOR 2026-06-13
+
+* Ensure that Sysmon is sending logs to Wazuh Server
 

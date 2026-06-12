@@ -44,3 +44,9 @@
 
 
 
+\### 2026-06-12
+
+\-Installed Sysmon on Windows Endpoint
+
+
+
