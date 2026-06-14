@@ -50,3 +50,9 @@
 
 
 
+\### 2026-06-14
+
+\-Verified that Sysmon is sending logs to the Wazuh Manager. 
+
+
+

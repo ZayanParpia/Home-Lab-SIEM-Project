@@ -82,7 +82,20 @@
 
 
 
-\### STEPS FOR 2026-06-13
+\### STEPS FOR 2026-06-14
 
-* Ensure that Sysmon is sending logs to Wazuh Server
+* Ensure that Sysmon is sending logs to Wazuh Server ✅
+* Install Kali Linux to perform pen testing. 
+
+
+
+\### STEPS FOR 2026-06-15
+
+* Ensure all Endpoints work all together and collect screenshots to prove each endpoint is generating logs.
+
+
+
+
+
+
 
