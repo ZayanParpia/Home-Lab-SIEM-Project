@@ -62,5 +62,5 @@
 
 \-Captured Screenshot of all endpoints active
 
-
+\-Installed Kali Linux on VMWARE
 

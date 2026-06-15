@@ -94,5 +94,11 @@ Ensure all Endpoints work all together and collect screenshots to prove each end
 
 Install Kali Linux to perform pen testing. ✅
 
+
+
+\### STEPS FOR 2026-06-16
+
+Collect screenshots for lab
+
 List Attack Methods to use 
 
