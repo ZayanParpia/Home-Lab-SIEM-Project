@@ -78,24 +78,21 @@
 
 \### STEPS FOR 2026-06-12
 
-* Set up Sysmon for Windows on Windows Endpoint ✅
+Set up Sysmon for Windows on Windows Endpoint ✅
 
 
 
 \### STEPS FOR 2026-06-14
 
-* Ensure that Sysmon is sending logs to Wazuh Server ✅
-* Install Kali Linux to perform pen testing. 
+Ensure that Sysmon is sending logs to Wazuh Server ✅
 
 
 
 \### STEPS FOR 2026-06-15
 
-* Ensure all Endpoints work all together and collect screenshots to prove each endpoint is generating logs.
+Ensure all Endpoints work all together and collect screenshots to prove each endpoint is generating logs. ✅\*
 
+Install Kali Linux to perform pen testing. ✅
 
-
-
-
-
+List Attack Methods to use 
 

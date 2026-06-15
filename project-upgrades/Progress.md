@@ -52,7 +52,15 @@
 
 \### 2026-06-14
 
-\-Verified that Sysmon is sending logs to the Wazuh Manager. 
+\-Verified that Sysmon is sending logs to the Wazuh Manager.
+
+
+
+\### 2026-06-15
+
+\-Verified all endpoints are active and work while all are active.
+
+\-Captured Screenshot of all endpoints active
 
 
 
