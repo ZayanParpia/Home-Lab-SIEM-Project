@@ -120,6 +120,10 @@ Recreate Diagram
 
 Post upgrades on LinkedIn and portfolio project 
 
+Edit README.md for this dir for screenshots
+
+refine this file
+
 
 
 \### STEPS FOR 2026-06-19
