@@ -96,9 +96,35 @@ Install Kali Linux to perform pen testing. ✅
 
 
 
-\### STEPS FOR 2026-06-16
+\### STEPS FOR 2026-06-17
 
-Collect screenshots for lab
+Make doc to collect screenshots ✅
 
-List Attack Methods to use 
+Collect screenshots for lab ✅
+
+
+
+List Attack Methods to use ✅
+
+
+
+
+
+
+
+\### STEPS FOR 2026-06-18
+
+Edit Screenshots to remove any sensitive information
+
+Recreate Diagram 
+
+Post upgrades on LinkedIn and portfolio project 
+
+
+
+\### STEPS FOR 2026-06-19
+
+Start Creating Simulated Attacks from List and Document 
+
+
 
