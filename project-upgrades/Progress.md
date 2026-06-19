@@ -64,3 +64,11 @@
 
 \-Installed Kali Linux on VMWARE
 
+
+
+\### 2026-06-19
+
+\-Edited screenshots for project additions for the endpoints
+
+\-Created new Diagram
+

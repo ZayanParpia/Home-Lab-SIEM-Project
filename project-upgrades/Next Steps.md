@@ -114,21 +114,27 @@ List Attack Methods to use ✅
 
 \### STEPS FOR 2026-06-18
 
-Edit Screenshots to remove any sensitive information
+Edit Screenshots to remove any sensitive information ✅
 
-Recreate Diagram 
-
-Post upgrades on LinkedIn and portfolio project 
-
-Edit README.md for this dir for screenshots
-
-refine this file
+Recreate Diagram ✅
 
 
 
 \### STEPS FOR 2026-06-19
 
-Start Creating Simulated Attacks from List and Document 
+Edit README.md for this dir for screenshots ✅
+
+Post upgrades on LinkedIn and portfolio project ✅
 
 
+
+
+
+\### STEPS FOR 2026-06-20
+
+
+
+Start Creating Simulated Attacks from List and Document and add more simulations
+
+Make what I learned doc for it to
 

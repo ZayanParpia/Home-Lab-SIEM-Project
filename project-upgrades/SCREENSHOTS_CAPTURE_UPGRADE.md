@@ -57,12 +57,3 @@
 * Sysmon service running
 * Endpoint showing as active in Wazuh
 
----
-
-# ✅ Final Environment Validation
-
-* Dashboard showing all 5 endpoints connected
-* Agents page
-* Agent status summary
-* Endpoint inventory view
-* All endpoints healthy and reporting

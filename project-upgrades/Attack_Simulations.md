@@ -32,7 +32,7 @@ Why this is major:
 
 
 
-Add some MITRE attack methods with linux to btw 
+Add some MITRE attack methods with linux to btw
 
 2\. SSH Attack Detection Pipeline
 
@@ -308,9 +308,7 @@ large outbound transfers
 
 
 
-Learn to write rules to 
+Learn to write rules to
 
-Also learn to investigate attacks 
-
-
+Also learn to investigate attacks
 
