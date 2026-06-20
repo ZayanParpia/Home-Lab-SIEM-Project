@@ -134,7 +134,15 @@ Post upgrades on LinkedIn and portfolio project ✅
 
 
 
-Start Creating Simulated Attacks from List and Document and add more simulations
+Start Creating Simulated Attacks from List and Document and add more simulations ✅
+
+Make outline for steps for first attack ✅
+
+
+
+\### STEPS FOR 2026-06-20
 
 Make what I learned doc for it to
+
+Refine project outline 
 
