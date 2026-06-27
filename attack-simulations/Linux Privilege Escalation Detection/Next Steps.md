@@ -19,11 +19,28 @@
 
 
 
-\### Next Steps for 2026-06-24
+\### Next Steps for 2026-06-27
 
-* Polish Final Documentation and Simulation
-* Create ALERT for attack
+* Polish Final Documentation and Simulation ✅
+* Create ALERT for attack ✅
+
+
+
+\### Next Steps for 2026-06-28
+
+
+
+
+
+(DOCUMENT THINGS YOU TRIED EVERYTIME) 
+
+
+
+* Fix Alert and Simulate 
 * Fill out what I learned.md and Problems Encountered \& Solutions.md file
-* Create README.md for the screenshots and why it matters 
-* Finalize documentation 
+* Create README.md for the screenshots and why it matters
+* Finalize documentation
+* Publish on Portfolio Website and LinkedIn
+
+
 
