@@ -26,21 +26,26 @@
 
 
 
+
+
 \### Next Steps for 2026-06-28
 
 
 
-
-
-(DOCUMENT THINGS YOU TRIED EVERYTIME) 
+(DOCUMENT THINGS YOU TRIED EVERYTIME)
 
 
 
-* Fix Alert and Simulate 
-* Fill out what I learned.md and Problems Encountered \& Solutions.md file
+* Fix Alert and Simulate ✅
+* Fill out Lessons.md and Trobuleshooting.md  ✅
+
+
+
+\### Next Steps for 2026-06-29
+
+* Document Alert being triggered 
+* Outline any improvements to make
 * Create README.md for the screenshots and why it matters
 * Finalize documentation
 * Publish on Portfolio Website and LinkedIn
-
-
 
