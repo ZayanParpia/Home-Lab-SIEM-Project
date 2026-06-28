@@ -37,7 +37,7 @@
 
 
 * Fix Alert and Simulate ✅
-* Fill out Lessons.md and Trobuleshooting.md  ✅
+* Fill out What I learned.md and Trobuleshooting.md  ✅
 
 
 
