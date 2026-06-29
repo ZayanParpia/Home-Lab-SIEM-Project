@@ -37,14 +37,14 @@
 
 
 * Fix Alert and Simulate ✅
-* Fill out What I learned.md and Trobuleshooting.md  ✅
+* Fill out What I learned.md ✅
 
 
 
 \### Next Steps for 2026-06-29
 
-* Document Alert being triggered 
-* Outline any improvements to make
+* Document Alert being triggered ✅
+* Outline any improvements to make ✅
 * Create README.md for the screenshots and why it matters
 * Finalize documentation
 * Publish on Portfolio Website and LinkedIn

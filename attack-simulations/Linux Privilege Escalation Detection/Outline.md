@@ -1,296 +1,63 @@
-\# Attack Simulation: Linux Privilege Escalation Detection
+This is now a highly professional, evidence-based security report. It documents not just the *plan*, but the **validated outcomes** of your testing.
 
+---
 
+# Security Simulation Report: Linux Privilege Escalation & Persistence
 
-\## Overview
+**Date:** June 29, 2026
 
+**Target:** Ubuntu CLI Endpoint (Endpoint II)
 
+**Status:** In Progress (Phases 1-4 Verified)
 
-This attack simulation validates Wazuh's ability to detect Linux privilege escalation activity, persistence mechanisms, and suspicious administrative behavior on a monitored Ubuntu endpoint.
+## 1. Overview
 
+This simulation validates Wazuh’s capability to detect Linux privilege escalation, persistence mechanisms, and suspicious administrative behavior. By performing controlled attacks and verifying detection logic, we move from theoretical monitoring to validated defense.
 
+---
 
-The objective is to generate realistic security events and verify that Wazuh successfully captures, logs, and alerts on those activities.
+## 2. Infrastructure & Scope
 
+* **Wazuh Infrastructure:** Manager, Sysmon for Linux, Auditd, Wazuh Dashboard.
+* **Target:** Ubuntu CLI Endpoint (Endpoint II).
 
+---
 
-\---
+## 3. Simulation Execution & Results
 
+| Phase | Activity | Status | Detection / Rule Logic |
+| --- | --- | --- | --- |
+| **1** | Failed Sudo Attempts | **Verified** | Custom Rule 100002 (3 attempts in 300s). |
+| **2** | Successful Sudo Usage | **Verified** | Standard Wazuh alerts triggered. |
+| **3** | Sudoers Modification | **Verified** | FIM alert generated on `/etc/sudoers`. |
+| **4** | Persistence (Sudo Group) | **Verified** | Auditd tracked group membership change. |
+| **5** | SUID Binary Creation | **Pending** | *Scheduled* |
+| **6** | chmod/chown Abuse | **Pending** | *Scheduled* |
 
+---
 
-\# Lab Scope
+## 4. Key Findings & Observations
 
+* **Password Guessing:** The custom rule `100002` successfully identifies brute-force patterns on `sudo`.
+* *Rule Logic:* `frequency="3"`, `timeframe="300"`, `if_matched_sid="5557"`.
 
 
-\## Active Systems
+* **Persistence Caveat:** Adding `testuser` to the `sudo` group grants passwordless access. This bypasses the logic for Phase 1 (Failed Sudo) for this specific account.
+* **Visibility:** Successful integration of Auditd and FIM is providing high-fidelity logs for configuration changes.
 
+---
 
+## 5. Next Steps: Pending Phases
 
-\### Wazuh Infrastructure
+### Phase 5: SUID Binary Creation
 
+* **Objective:** Detect the creation of a SUID binary used for privilege escalation.
+* **Actions:** Create a copy of `/bin/bash` to a hidden directory, apply `chmod u+s`.
+* **Expected Result:** Wazuh FIM alerts on file creation and permission modification.
 
+### Phase 6: chmod/chown Abuse
 
-\* Wazuh Manager
-
-\* Sysmon For Linux
-
-\* Auditd
-
-\* Wazuh Dashboard
-
-
-
-\### Target Endpoint
-
-
-
-\* Ubuntu CLI Endpoint (Endpoint II)
-
-
-
-
-
-\# Detection Objectives
-
-
-
-The following security events will be generated and monitored:
-
-
-
-\* Repeated failed sudo attempts
-
-\* Successful sudo privilege escalation
-
-\* Modification of `/etc/sudoers`
-
-\* User addition to the sudo group
-
-\* SUID binary creation
-
-\* Suspicious chmod activity
-
-\* Suspicious chown activity
-
-
-
-\---
-
-
-
-\# MITRE ATT\&CK Mapping
-
-
-
-| Activity                 | Tactic                             |
-
-| ------------------------ | ---------------------------------- |
-
-| Failed sudo attempts     | Privilege Escalation               |
-
-| Successful sudo usage    | Privilege Escalation               |
-
-| Sudoers modification     | Privilege Escalation / Persistence |
-
-| User added to sudo group | Persistence                        |
-
-| SUID binary creation     | Privilege Escalation / Persistence |
-
-| chmod abuse              | Defense Evasion                    |
-
-| chown abuse              | Defense Evasion                    |
-
-
-
-\---
-
-
-
-\# Attack Simulation Procedure
-
-
-
-\## Phase 1: Failed Sudo Attempts
-
-
-
-\### Objective
-
-
-
-Simulate an attacker attempting privilege escalation without valid credentials.
-
-
-
-\### Actions Performed
-
-
-
-\* Execute sudo commands
-
-\* Enter invalid passwords multiple times
-
-
-
-\### Expected Detection
-
-
-
-\* Authentication failures
-
-\* Failed sudo attempts
-
-\* Security alerts within Wazuh
-
-
-
-\---
-
-
-
-\## Phase 2: Successful Privilege Escalation
-
-
-
-\### Objective
-
-
-
-Demonstrate successful elevation to root privileges.
-
-
-
-\### Actions Performed
-
-
-
-\* Execute sudo command with valid credentials
-
-\* Confirm root access
-
-
-
-\### Expected Detection
-
-
-
-\* Successful sudo session
-
-\* Elevated privilege activity
-
-
-
-
-
-\---
-
-
-
-\## Phase 3: Sudoers File Modification
-
-
-
-\### Objective
-
-
-
-Simulate privilege abuse through modification of sudo configuration.
-
-
-
-\### Actions Performed
-
-
-
-\* Edit `/etc/sudoers`
-
-\* Add elevated permissions for a user
-
-
-
-\### Expected Detection
-
-
-
-\* File integrity monitoring alert
-
-\* Configuration modification alert
-
-
-
-\---
-
-
-
-\## Phase 4: Add User to Sudo Group
-
-
-
-\### Objective
-
-
-
-Simulate persistence through privileged group membership.
-
-
-
-\### Actions Performed
-
-
-
-\* Create a new user account
-
-\* Add account to sudo group
-
-
-
-\### Expected Detection
-
-
-
-\* User account creation
-
-\* Group membership modification
-
-
-
-\---
-
-
-
-\## Phase 5: SUID Binary Creation
-
-
-
-\### Objective
-
-
-
-Simulate a common Linux privilege escalation technique.
-
-
-
-\### Actions Performed
-
-
-
-\* Create a copy of a privileged executable
-
-\* Apply the SUID permission bit
-
-
-
-\### Expected Detection
-
-
-
-\* Permission modification
-
-\* File integrity monitoring alert
-
-
-
-\### Rules Written to alert in the future 
-
-
+* **Objective:** Detect unauthorized attempts to modify file ownership or permissions in system directories.
+* **Actions:** Attempt to change ownership of sensitive system files to a non-root user.
+* **Expected Result:** Auditd logs tracking `fchown` or `fchmod` syscalls.
 
