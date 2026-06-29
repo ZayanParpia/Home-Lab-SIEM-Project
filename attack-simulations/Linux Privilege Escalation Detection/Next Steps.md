@@ -45,7 +45,8 @@
 
 * Document Alert being triggered ✅
 * Outline any improvements to make ✅
-* Create README.md for the screenshots and why it matters
+* Create README.md for the screenshots and why it matters ✅
+* Finish up with phase 5 \& 6
 * Finalize documentation
 * Publish on Portfolio Website and LinkedIn
 
