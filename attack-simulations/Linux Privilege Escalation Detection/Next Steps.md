@@ -37,7 +37,7 @@
 
 
 * Fix Alert and Simulate ✅
-* Fill out What I learned.md ✅
+* Fill out What I learned.md and Trobuleshooting.md  ✅
 
 
 
@@ -46,7 +46,9 @@
 * Document Alert being triggered ✅
 * Outline any improvements to make ✅
 * Create README.md for the screenshots and why it matters ✅
-* Finish up with phase 5 \& 6
-* Finalize documentation
+* Finish Phase 5 \& 6 ✅
+* Finalize documentation ✅
+* Create video of successful sudo and group changing
+* Edit Video of Rule being Triggered 
 * Publish on Portfolio Website and LinkedIn
 

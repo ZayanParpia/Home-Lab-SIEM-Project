@@ -31,8 +31,7 @@ This simulation validates Wazuh’s capability to detect Linux privilege escalat
 | **2** | Successful Sudo Usage | **Verified** | Standard Wazuh alerts triggered. |
 | **3** | Sudoers Modification | **Verified** | FIM alert generated on `/etc/sudoers`. |
 | **4** | Persistence (Sudo Group) | **Verified** | Auditd tracked group membership change. |
-| **5** | SUID Binary Creation | **Pending** | *Scheduled* |
-| **6** | chmod/chown Abuse | **Pending** | *Scheduled* |
+
 
 ---
 
@@ -46,18 +45,4 @@ This simulation validates Wazuh’s capability to detect Linux privilege escalat
 * **Visibility:** Successful integration of Auditd and FIM is providing high-fidelity logs for configuration changes.
 
 ---
-
-## 5. Next Steps: Pending Phases
-
-### Phase 5: SUID Binary Creation
-
-* **Objective:** Detect the creation of a SUID binary used for privilege escalation.
-* **Actions:** Create a copy of `/bin/bash` to a hidden directory, apply `chmod u+s`.
-* **Expected Result:** Wazuh FIM alerts on file creation and permission modification.
-
-### Phase 6: chmod/chown Abuse
-
-* **Objective:** Detect unauthorized attempts to modify file ownership or permissions in system directories.
-* **Actions:** Attempt to change ownership of sensitive system files to a non-root user.
-* **Expected Result:** Auditd logs tracking `fchown` or `fchmod` syscalls.
 

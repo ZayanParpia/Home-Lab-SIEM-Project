@@ -12,10 +12,6 @@ changes to /etc/sudoers
 
 new users added to sudo group
 
-SUID binary creation
-
-suspicious chmod/chown behavior
-
 Map detections to:
 
 MITRE Privilege Escalation
@@ -305,6 +301,14 @@ unusual sudo usage
 access outside normal times
 
 large outbound transfers
+
+
+
+ADD LATER
+
+SUID binary creation
+
+suspicious chmod/chown behavior
 
 
 
