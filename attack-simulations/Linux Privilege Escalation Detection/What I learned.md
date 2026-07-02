@@ -16,5 +16,11 @@
 
 \### 2026-06-30
 
-* I learned that phase 5 \& 6 are different attack vectors and I will do them later 
+* I learned that phase 5 \& 6 are different attack vectors and I will do them later
+
+
+
+\### 2026-07-01
+
+* Make Video Demos for Major Parts of an attack
 
