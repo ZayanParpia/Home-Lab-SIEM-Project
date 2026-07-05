@@ -6,7 +6,14 @@
 
 2\. \*\*Configure Kali Linux VM to have required tools (Hydra)\*\* ✅
 
-3\. \*\*Configure EndpointIII to be ready for Attack\*\*
+3\. \*\*Create test account to SSH into on endpoint (password 1234 for testing)\*\* ✅
 
 
+
+\### Steps for 2026-07-04
+
+
+
+1. \*\*Get Hydra ready for Brute Force Attack on Endpoint IV\*\* ✅
+2. Log it on the SIEM
 
