@@ -21,9 +21,14 @@
 
 \### Steps for 2026-07-06
 
-1. \*\*Simulate and Record Attack on SIEM\*\*
-2. \*\*Create new Diagram\*\*
-3. Create Plan to Patch it
+1. \*\*Simulate and Record Attack on SIEM\*\* ✅
+2. \*\*Put videos inside Videos and put in gitignore\*\* ✅
+3. \*\*Edit Diagram for this Attack\*\*
+4. \*\*Create Custom Detection Rule\*\*
+
+\### Steps for 2026-07-07
+
+1. TBD
 
 
 
