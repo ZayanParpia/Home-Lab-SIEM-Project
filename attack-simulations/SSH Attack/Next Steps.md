@@ -1,34 +1,80 @@
-\### Steps for 2026-07-03
+\# Project Progress
 
 
 
-1\. \*\*Install Kali Linux on VMware\*\* ✅
-
-2\. \*\*Configure Kali Linux VM to have required tools (Hydra)\*\* ✅
-
-3\. \*\*Create test account to SSH into on endpoint (password 1234 for testing)\*\* ✅
+\## 2026-07-03
 
 
 
-\### Steps for 2026-07-05
+\- Install Kali Linux on VMware ✅
+
+\- Configure the Kali Linux VM with the required tools (Hydra) ✅
+
+\- Create a test account on Endpoint IV for SSH access (password: `1234` for testing) ✅
 
 
 
-1. \*\*Get Hydra ready for Brute Force Attack on Endpoint IV\*\* ✅
-2. Log it on the SIEM ✅
+\---
 
 
 
-\### Steps for 2026-07-06
-
-1. \*\*Simulate and Record Attack on SIEM\*\* ✅
-2. \*\*Put videos inside Videos and put in gitignore\*\* ✅
-3. \*\*Edit Diagram for this Attack\*\*
-4. \*\*Create Custom Detection Rule\*\*
-
-\### Steps for 2026-07-07
-
-1. TBD
+\## 2026-07-05
 
 
+
+\- Prepare Hydra for a brute-force attack against Endpoint IV ✅
+
+\- Verify the attack is logged in the SIEM ✅
+
+
+
+\---
+
+
+
+\## 2026-07-06
+
+
+
+\- Simulate and record the attack in the SIEM ✅
+
+\- Store demo videos in the `Videos/` directory and add the folder to `.gitignore` ✅
+
+\- Update the attack diagram ✅
+
+
+
+\---
+
+
+
+\## 2026-07-08
+
+
+
+\- Edit and finalize the attack demonstration videos
+
+
+
+\---
+
+
+
+\## 2026-07-09
+
+
+
+\- Simulate Phase 3 by adding an SSH public key to `authorized\_keys` and changing the account password
+
+\- Document Phase 3, including what was done and the lessons learned
+
+\- Plan Phase 4
+
+\- Update this progress document
+
+\- Create a custom SIEM detection rule
+
+\- Upload the completed project to GitHub Portfolio and LinkedIn
+
+\- Create a comprehensive `README.md` for the project
 
