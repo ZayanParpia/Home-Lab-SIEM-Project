@@ -14,7 +14,11 @@ Saw logs on SIEM system
 
 2026-07-06
 
-Simulated Attack again and this time captured on Wazuh 
+Simulated Attack again and this time captured on Wazuh
 
 
+
+2026-07-09
+
+Today I edited the videos of the DEMO(s)
 
