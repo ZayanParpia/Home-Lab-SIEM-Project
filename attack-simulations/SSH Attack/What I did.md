@@ -22,3 +22,15 @@ Simulated Attack again and this time captured on Wazuh
 
 Today I edited the videos of the DEMO(s)
 
+
+
+2026-07-10
+
+Today I ran into a problem where I cant find the keys for when I logged into ssh, I then learned that I used password login instead of key login, I can add a new part of this attack simulation by enabling key login and generating a new key to copy, so now I learned about that attack vector aswell, where a bad actor can enable key login and use a key to login instead of a password or vise versa.
+
+
+
+I ran cat /etc/ssh/sshd\_config to see if key authentication is enabled 
+
+I learned that it is already enabled, so I just have to generate a new key and save it 
+
