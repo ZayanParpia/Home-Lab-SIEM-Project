@@ -34,3 +34,13 @@ I ran cat /etc/ssh/sshd\_config to see if key authentication is enabled
 
 I learned that it is already enabled, so I just have to generate a new key and save it 
 
+
+
+I ran ssh-keygen -t ed25519 to generate a new key
+
+
+
+Its not working so im going to watch a tutorial on how to use SSH key login 
+
+I watched a tutorial and learned that, to generate ssh keys I type ssh-keygen -t Encryption Algorithm, then to add it to the server I do ssh-copy-id USERNAME@USERNAME
+
