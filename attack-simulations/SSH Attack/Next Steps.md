@@ -60,13 +60,17 @@
 
 
 
-\## 2026-07-09
 
 
 
-\- Simulate Phase 3 by adding an SSH public key to `authorized\_keys` and changing the account password
+\- Simulate Phase 3 by adding an SSH public key to `authorized\_keys` and changing the account password ✅
 
-\- Document Phase 3, including what was done and the lessons learned
+\- Document Phase 3, including what was done and the lessons learned videos ✅
+
+
+\## 2026-07-11
+
+\- Video Demo for Phase 3 
 
 \- Plan Phase 4
 
