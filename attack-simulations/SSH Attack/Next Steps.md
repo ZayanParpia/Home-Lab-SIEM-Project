@@ -74,14 +74,16 @@
 
 \## 2026-07-14
 
+\- Get demo videos out of gitignore and upload to github
+
 \- Create Custom Detection rules for this simulation
 
-\- Reset Environment for full attack simulation with rules and videos and all  
+\- Reset Environment for full attack simulation with rules and videos and all and plan for steps 
  
 
 \## 2026-07-15
 
-\- Create Full Attack Simulation from start to end
+\- Create Full Attack Simulation from start to end 
 
 
 
