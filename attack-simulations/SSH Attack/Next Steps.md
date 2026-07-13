@@ -58,25 +58,40 @@
 
 \---
 
-
-
-
-
+\## 2026-07-12
 
 \- Simulate Phase 3 by adding an SSH public key to `authorized\_keys` and changing the account password ✅
 
-\- Document Phase 3, including what was done and the lessons learned videos ✅
+\- Document Phase 3 with screenshots and video demo, including what was done and the lessons learned✅
+
+\- Edit ossec.conf so that it captures authorized\_keys ✅
 
 
-\## 2026-07-11
+\## 2026-07-13
 
-\- Video Demo for Phase 3 
+\- Edit Videos and screenshot Demo for Phase 3 & 4 ✅
 
-\- Plan Phase 4
 
-\- Update this progress document
+\## 2026-07-14
 
-\- Create a custom SIEM detection rule
+\- Create Custom Detection rules for this simulation
+
+\- Reset Environment for full attack simulation with rules and videos and all  
+ 
+
+\## 2026-07-15
+
+\- Create Full Attack Simulation from start to end
+
+
+
+\## 2026-07-16
+
+\- Edit Attack Simulation Video 
+
+
+\## Publishing phase 
+
 
 \- Upload the completed project to GitHub Portfolio and LinkedIn
 

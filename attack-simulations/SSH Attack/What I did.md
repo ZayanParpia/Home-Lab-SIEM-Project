@@ -30,9 +30,9 @@ Today I ran into a problem where I cant find the keys for when I logged into ssh
 
 
 
-I ran cat /etc/ssh/sshd\_config to see if key authentication is enabled 
+I ran cat /etc/ssh/sshd\_config to see if key authentication is enabled
 
-I learned that it is already enabled, so I just have to generate a new key and save it 
+I learned that it is already enabled, so I just have to generate a new key and save it
 
 
 
@@ -40,7 +40,19 @@ I ran ssh-keygen -t ed25519 to generate a new key
 
 
 
-Its not working so im going to watch a tutorial on how to use SSH key login 
+Its not working so im going to watch a tutorial on how to use SSH key login
 
 I watched a tutorial and learned that, to generate ssh keys I type ssh-keygen -t Encryption Algorithm, then to add it to the server I do ssh-copy-id USERNAME@USERNAME
+
+
+
+2026-07-12
+
+
+
+Today I documented what happens when I add a ssh key to the authorized key file for ssh and I saw I could login even though the password was changed. I also saw that it wasn't being detected on the SIEM so I edited the ossec.conf so that it monitors that file for changes
+
+
+
+2026-07-12
 
