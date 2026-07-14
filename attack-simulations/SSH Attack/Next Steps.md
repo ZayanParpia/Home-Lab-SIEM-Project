@@ -79,22 +79,33 @@
 \- Reset Environment for full attack simulation with rules and videos and all and plan for steps ✅
 
 
-\- Create Custom Detection rules for this simulation
+\- Create Custom Detection rules for this simulation outline ✅
 
 
  
 
 \## 2026-07-15
 
-\- Create Full Attack Simulation from start to end 
+\- Add References to Custom Detection Rule Outline 
+
+\- Create Detection Rules and Response and test
+
+\- Reset Environment Again for Final Attack Simulation 
 
 
 
 \## 2026-07-16
 
+\- Create Full Attack Simulation from start to end 
+
+\## 2026-07-17
+
+
 \- Edit Attack Simulation Video 
 
 \- Explain Screenshots 
+
+\- Redo Diagram to have Response
 
 
 \## Publishing phase 

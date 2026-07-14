@@ -54,5 +54,7 @@ Today I documented what happens when I add a ssh key to the authorized key file 
 
 
 
-2026-07-12
+2026-07-14
+
+Today I reset my vms to be fresh when I initiate the real attack vector.
 
