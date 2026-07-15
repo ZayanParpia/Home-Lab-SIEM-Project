@@ -1,0 +1,8 @@
+<rule id="50180" level="10" frequency="8" timeframe="120" ignore="60">
+  <if_matched_sid>50125</if_matched_sid>
+  <description>MySQL: Multiple errors.</description>
+  <mitre>
+    <id>T1499</id>
+  </mitre>
+  <group>service_availability,pci_dss_10.6.1,gpg13_4.3,gdpr_IV_35.7.d,hipaa_164.312.b,nist_800_53_AU.6,tsc_CC7.2,tsc_CC7.3,</group>
+</rule>

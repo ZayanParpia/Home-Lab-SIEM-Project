@@ -58,3 +58,11 @@ Today I documented what happens when I add a ssh key to the authorized key file 
 
 Today I reset my vms to be fresh when I initiate the real attack vector.
 
+
+
+2026-07-15
+
+Today I downloaded suricata so that my wazuh can see the nmap scans. I changed the ossec.conf file so that it attaches to it properly.
+
+
+

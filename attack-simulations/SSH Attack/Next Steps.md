@@ -88,7 +88,11 @@
 
 \- Add References to Custom Detection Rule Outline ✅
 
+
+\## 2026-07-16
+
 \- Create Detection Rules and Response and test
+
 
 \- Reset Environment Again for Final Attack Simulation 
 
