@@ -38,7 +38,23 @@ Phase 4: Persistence / Account Manipulation (T1098.004)
 
 
 
-\[🚨 CRITICAL TRIGGER CONDITION]: 
+\[🚨 CRITICAL TRIGGER CONDITION]:
 
 If Phase 1, Phase 2, Phase 3, and Phase 4 occur sequentially from the same Source IP within a strict 15-minute timeframe, escalate immediately to a High-Severity Alert (Level 15).
+
+
+
+
+
+REFRENCES
+
+https://attack.mitre.org/techniques/T1595/001/
+
+https://attack.mitre.org/techniques/T1110/001/
+
+https://attack.mitre.org/techniques/T1021/004/
+
+https://attack.mitre.org/techniques/T1098/004/
+
+
 
