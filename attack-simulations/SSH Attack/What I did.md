@@ -66,3 +66,13 @@ Today I downloaded suricata so that my wazuh can see the nmap scans. I changed t
 
 
 
+2026-07-16
+
+Today I configured suricata by adding a custom rule where if any scanner touches port 22, it triggers and alert.
+
+alert tcp any any -> any 22 (msg:"SIEM PROJECT: Nmap Scan to SSH Port 22"; flags:S; sid:1000002; rev:1;)
+
+I also made the rule for this entire attack simulation, I learned to read the docs and do it all myself
+
+
+

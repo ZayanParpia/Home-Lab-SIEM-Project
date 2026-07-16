@@ -91,8 +91,14 @@
 
 \## 2026-07-16
 
-\- Create Detection Rules and Response and test
+\- Create Detection Rules and Response and test ✅
 
+
+\## 2026-07-17
+
+\- Make Final Edits to Rules and test 
+
+\- Make SOAR Responses
 
 \- Reset Environment Again for Final Attack Simulation 
 

@@ -1,8 +1,52 @@
-<rule id="50180" level="10" frequency="8" timeframe="120" ignore="60">
-  <if_matched_sid>50125</if_matched_sid>
-  <description>MySQL: Multiple errors.</description>
-  <mitre>
-    <id>T1499</id>
-  </mitre>
-  <group>service_availability,pci_dss_10.6.1,gpg13_4.3,gdpr_IV_35.7.d,hipaa_164.312.b,nist_800_53_AU.6,tsc_CC7.2,tsc_CC7.3,</group>
-</rule>
+<group name="Brute Force Detection">
+
+  <rule id="100010" level="10" frequency="3" timeframe="60">
+  	<if_matched_sid>5710</if_matched_sid>
+  	<same_srcip />
+
+    	<description>SSH brute force attack detected from a single source IP</description>
+  </rule>
+
+</group>
+
+
+<group name = "Brute Force Escalation">
+
+  <rule id="100011" level="10" timeframe="900">
+
+    <if_sid>5715</if_sid> 
+
+    <if_matched_sid>100010, 86601</if_matched_sid>
+
+    <same_srcip /> 
+
+    <description>Possible Unauthorized User inside Machine</description>
+    <mitre>
+      <id>T1595.001</id>
+      <id>T1110.001</id>
+      <id>T1021.004</id>
+      <id>T1098.004</id>
+    </mitre>
+  </rule>
+
+</group>
+
+<group name = "FIM trigger">
+
+  <rule id="100012" level="10" timeframe="900">
+
+    <if_sid>550</if_sid> 
+
+    <if_matched_sid>86601, 100010, 100011</if_matched_sid>
+
+    <description>Unauthorized Added key inside /.ssh/authorized_keys, initiating machine lockdown</description>
+    <mitre>
+      <id>T1595.001</id>
+      <id>T1110.001</id>
+      <id>T1021.004</id>
+      <id>T1098.004</id>
+    </mitre>
+  </rule>
+
+</group>
+
