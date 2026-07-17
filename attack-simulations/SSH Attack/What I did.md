@@ -76,3 +76,9 @@ I also made the rule for this entire attack simulation, I learned to read the do
 
 
 
+2026-07-17
+
+Today I tested my rules to see if they worked, they didn't seem to be working as intended so I spent today adjusting my rules and testing
+
+
+

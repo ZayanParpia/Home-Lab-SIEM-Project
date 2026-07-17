@@ -2,7 +2,10 @@
 
   <rule id="100010" level="10" frequency="3" timeframe="60">
   	<if_matched_sid>5710</if_matched_sid>
-  	<same_srcip />
+  	<same_srcip /> 
+    <mitre>
+       <id>T1098.004</id>
+    </mitre>
 
     	<description>SSH brute force attack detected from a single source IP</description>
   </rule>
@@ -10,9 +13,9 @@
 </group>
 
 
-<group name = "Brute Force Escalation">
+<group name = "Possible Unauthorized Access">
 
-  <rule id="100011" level="10" timeframe="900">
+  <rule id="100011" level="10" timeframe="900"> 
 
     <if_sid>5715</if_sid> 
 
@@ -22,10 +25,8 @@
 
     <description>Possible Unauthorized User inside Machine</description>
     <mitre>
-      <id>T1595.001</id>
       <id>T1110.001</id>
       <id>T1021.004</id>
-      <id>T1098.004</id>
     </mitre>
   </rule>
 
@@ -41,9 +42,6 @@
 
     <description>Unauthorized Added key inside /.ssh/authorized_keys, initiating machine lockdown</description>
     <mitre>
-      <id>T1595.001</id>
-      <id>T1110.001</id>
-      <id>T1021.004</id>
       <id>T1098.004</id>
     </mitre>
   </rule>

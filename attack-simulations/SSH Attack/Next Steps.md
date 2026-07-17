@@ -96,7 +96,12 @@
 
 \## 2026-07-17
 
-\- Make Final Edits to Rules and test 
+\- Make Final Edits to Rules and test ✅
+
+
+\## 2026-07-18
+
+\- Fix Rule 100011 not firing 
 
 \- Make SOAR Responses
 
