@@ -92,3 +92,9 @@ suppress gen\_id 1, sig\_id 1000002, track by\_src, ip 10.0.0.xxx
 
 
 
+I noticed that any time I just normally SSH into the target machine, my nmap scan rule would get triggered and I realize that that's a false positive so I try to adjust it. What I did was I excluded the admin IP, aka my IP address, from the rule so that I can SSH into it normally. I noticed that when I tried SSHing from my Kali Linux machine, it didn't trigger and I was looking into why. I realized that my Kali Linux virtual machine is set to NAT instead of bridge mode, which used the same IP as my computer, so it used the exclusion on that machine as well. I changed it to bridge mode and it worked and it was triggered. From the Kali Linux machine when I ran nmap and I logged into it 
+
+
+
+I then ran the script for me to run the entire attack simulation and it triggered rule 10012, which is the rule for the final account lockout. The target machine should be locked down now because it detected this attack pipeline where someone brute-forced into SSH and put a key there. Even though they change the password, they can still log 
+
