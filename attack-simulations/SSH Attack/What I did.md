@@ -82,3 +82,13 @@ Today I tested my rules to see if they worked, they didn't seem to be working as
 
 
 
+2026-07-18
+
+Today I learned that the rule 86601 for Nmap Scan also triggers when I just ssh into the machine, which is a false positive.
+
+I fixed it by excluding my ip address as the admin by using
+
+suppress gen\_id 1, sig\_id 1000002, track by\_src, ip 10.0.0.xxx
+
+
+

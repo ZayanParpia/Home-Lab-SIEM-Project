@@ -101,7 +101,7 @@
 
 \## 2026-07-18
 
-\- Fix Rule 100011 not firing 
+\- Fix Rule 100011 not firing ✅
 
 \- Make SOAR Responses
 
@@ -119,6 +119,9 @@
 \- Edit Attack Simulation Video 
 
 \- Explain Screenshots 
+
+\- Make README.md
+
 
 \- Redo Diagram to have Response
 
