@@ -106,7 +106,11 @@
 
 \## 2026-07-19
 
-\- Make SOAR Responses
+\- Make SOAR Responses plan ✅
+
+\## 2026-07-20
+
+\- Make SOAR Response
 
 \- Reset Environment Again for Final Attack Simulation 
 

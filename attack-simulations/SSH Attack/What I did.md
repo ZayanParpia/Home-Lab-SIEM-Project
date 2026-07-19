@@ -102,63 +102,7 @@ I then ran the script for me to run the entire attack simulation and it triggere
 
 2026-07-19
 
-I created a skeleton script in
-
-/var/ossec/active-response/bin/contain-ssh-persistence.sh
-
-with the code
-
-
-
-\#!/bin/bash
-
-\# Wazuh Active Response: contain-ssh-persistence.sh
-
-\# Triggered by rule 100012 (unauthorized authorized\_keys write)
-
-
-
-LOG\_FILE="/var/ossec/logs/active-responses.log"
-
-echo "$(date '+%Y-%m-%d %H:%M:%S') contain-ssh-persistence.sh triggered" >> $LOG\_FILE
-
-
-
-to start making the SOAR response 
-
-
-
-Added
-
-<command>
-
-&#x20; <name>contain-ssh-persistence</name>
-
-&#x20; <executable>contain-ssh-persistence.sh</executable>
-
-&#x20; <timeout\_allowed>no</timeout\_allowed>
-
-</command>
-
-
-
-<active-response>
-
-&#x20; <disabled>no</disabled>
-
-&#x20; <command>contain-ssh-persistence</command>
-
-&#x20; <location>local</location>
-
-&#x20; <rules\_id>100012</rules\_id>
-
-</active-response>
-
-
-
-to /var/ossec/etc/ossec.conf in the manager
-
-
+I played around with some theory of how a SOAR will work and will implement a third party SOAR instead of writing local scripts for realism 
 
 
 
