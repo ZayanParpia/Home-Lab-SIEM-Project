@@ -16,3 +16,11 @@ July 18, 2026
 
 \-I learned that my wazuh deletes logs when I off my computer, I should fix that for the next attack vector
 
+
+
+July 19, 2026
+
+I decided for my next attack simulation, im going to write all the rules myself aswell as the SOAR responses 
+
+
+
