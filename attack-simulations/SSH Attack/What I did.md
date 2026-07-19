@@ -128,5 +128,37 @@ to start making the SOAR response
 
 
 
+Added
+
+<command>
+
+&#x20; <name>contain-ssh-persistence</name>
+
+&#x20; <executable>contain-ssh-persistence.sh</executable>
+
+&#x20; <timeout\_allowed>no</timeout\_allowed>
+
+</command>
+
+
+
+<active-response>
+
+&#x20; <disabled>no</disabled>
+
+&#x20; <command>contain-ssh-persistence</command>
+
+&#x20; <location>local</location>
+
+&#x20; <rules\_id>100012</rules\_id>
+
+</active-response>
+
+
+
+to /var/ossec/etc/ossec.conf in the manager
+
+
+
 
 
