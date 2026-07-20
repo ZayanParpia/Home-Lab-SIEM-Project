@@ -12,7 +12,7 @@ When Wazuh rule \*\*100012\*\* is triggered, the following automated response ac
 
 
 
-\### 1. Remove SSH Authorized Keys and Terminate Attackers Session 
+\### 1. Remove SSH Authorized Keys and Terminate Attackers Session
 
 The contents of the SSH authorized keys file will be cleared to prevent unauthorized persistence through previously added SSH keys.
 
@@ -28,7 +28,7 @@ Action:
 
 * Remove all existing SSH public keys.
 * Prevent attackers from continuing access through compromised keys.
-* Terminate Attackers session via their IP 
+* Terminate Attackers session via their IP
 
 
 
@@ -38,7 +38,7 @@ Action:
 
 \### 2. Reset User Password
 
-The affected user's password will be changed to a predefined secure emergency password.
+The affected user's password will be changed to a predefined secure emergency password (New password is NEWPASSWORD2468).
 
 
 
@@ -54,7 +54,7 @@ Action:
 
 
 
-\### 3. Block Network Traffic From Attacking IP
+\### 3. Block Network Traffic From Attacking IP (IP src from rule 100012)
 
 All network traffic originating from the detected malicious IP address will be blocked.
 
@@ -79,6 +79,10 @@ Protocol: All
 Action: Deny
 
 
+
+
+
+\### 4. If attacker is inside machine terminate session.
 
 
 
@@ -109,8 +113,4 @@ After execution:
 \- Generate an incident response log.
 
 \- Continue monitoring for additional suspicious activity.
-
-
-
-
 

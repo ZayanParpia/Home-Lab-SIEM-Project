@@ -94,7 +94,7 @@ Why this is major:
 
 
 
-4\. Web Server Attack Detection
+4\. Web Server Attack Detection (Atomic Red Team )
 
 Host:
 

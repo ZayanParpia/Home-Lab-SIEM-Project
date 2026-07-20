@@ -102,7 +102,13 @@ I then ran the script for me to run the entire attack simulation and it triggere
 
 2026-07-19
 
-I played around with some theory of how a SOAR will work and will implement a third party SOAR instead of writing local scripts for realism 
+I played around with some theory of how a SOAR will work and will implement a third party SOAR instead of writing local scripts for realism
+
+
+
+2026-07-20
+
+I tried to implement the SOAR response but I keep running into errors, I will try again next session 
 
 
 
