@@ -108,7 +108,7 @@
 
 \- Make SOAR Responses plan ✅
 
-\## 2026-07-20 and 2026-07-20
+\## 2026-07-20 and 2026-07-21 and 2026-07-22
 
 \- Make SOAR Response
 

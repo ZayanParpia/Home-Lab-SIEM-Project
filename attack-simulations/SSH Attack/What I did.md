@@ -108,7 +108,13 @@ I played around with some theory of how a SOAR will work and will implement a th
 
 2026-07-20
 
-I tried to implement the SOAR response but I keep running into errors, I will try again next session 
+I tried to implement the SOAR response but I keep running into errors, I will try again next session
+
+
+
+2026-07-21
+
+Today I changed the script to a Python script and I tried to play around with the configuration and I'm getting really close to it because it's showing that it's showing on sudo tail -f /var/ossec/logs/active-responses.log that my script is running is just not running as intended so I'm just very close to solving that issue. 
 
 
 
