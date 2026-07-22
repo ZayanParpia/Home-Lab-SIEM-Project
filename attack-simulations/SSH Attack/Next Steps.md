@@ -110,10 +110,13 @@
 
 \## 2026-07-20 and 2026-07-21 and 2026-07-22
 
-\- Make SOAR Response
+\- Make SOAR Response ✅
 
-\- Reset Environment Again for Final Attack Simulation 
+\- Reset Environment Again for Final Attack Simulation ✅
 
+\## 2026-07-23
+
+\- Document what you did previous session 
 
 
 \## 2026-07-16
@@ -135,6 +138,8 @@
 
 \## Publishing phase 
 
+
+\- Create what could I do better next time doc
 
 \- Upload the completed project to GitHub Portfolio and LinkedIn
 

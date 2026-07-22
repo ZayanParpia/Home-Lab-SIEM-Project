@@ -114,7 +114,21 @@ I tried to implement the SOAR response but I keep running into errors, I will tr
 
 2026-07-21
 
-Today I changed the script to a Python script and I tried to play around with the configuration and I'm getting really close to it because it's showing that it's showing on sudo tail -f /var/ossec/logs/active-responses.log that my script is running is just not running as intended so I'm just very close to solving that issue. 
+Today I changed the script to a Python script and I tried to play around with the configuration and I'm getting really close to it because it's showing that it's showing on sudo tail -f /var/ossec/logs/active-responses.log that my script is running is just not running as intended so I'm just very close to solving that issue.
 
 
+
+2026-07-22
+
+Today I think I found the main problem as to why my script isn't triggering, I see that it's triggering sometimes even when I reset the environment so I can resimulate the attack but it doesn't seem to be triggering at the right time. That's when I noticed that it seems to trigger because the wool gets fired even after I reset the environment because I was testing it previously. I know that it fires as soon as the rule is triggered. I learned that I should reset all the log files and restart from scratch and then do it instantly and then simulate the attack as soon as I turn on the system, as soon as I turn on the siem system for fresh logs so that it triggers the first time. 
+
+
+
+My theory is right. It only triggers one time until I restart the agent. 
+
+
+
+It worked
+
+Will Document what I did next session
 
