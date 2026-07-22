@@ -20,9 +20,9 @@ July 18, 2026
 
 July 19, 2026
 
-I decided for my next attack simulation, im going to write all the rules myself aswell as the SOAR responses 
+I decided for my next attack simulation, im going to write all the rules myself aswell as the SOAR responses
 
 I should keep snapshots of my vms
 
-The script I ran accidently changed my passwords of my vm and I was locked out, I learned that I should create snapshots of my vms often 
+The script I ran accidently changed my passwords of my vm and I was locked out, I learned that I should create snapshots of my vms often
 
