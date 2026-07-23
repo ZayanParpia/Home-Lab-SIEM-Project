@@ -120,15 +120,65 @@ Today I changed the script to a Python script and I tried to play around with th
 
 2026-07-22
 
-Today I think I found the main problem as to why my script isn't triggering, I see that it's triggering sometimes even when I reset the environment so I can resimulate the attack but it doesn't seem to be triggering at the right time. That's when I noticed that it seems to trigger because the wool gets fired even after I reset the environment because I was testing it previously. I know that it fires as soon as the rule is triggered. I learned that I should reset all the log files and restart from scratch and then do it instantly and then simulate the attack as soon as I turn on the system, as soon as I turn on the siem system for fresh logs so that it triggers the first time. 
+Today I think I found the main problem as to why my script isn't triggering, I see that it's triggering sometimes even when I reset the environment so I can resimulate the attack but it doesn't seem to be triggering at the right time. That's when I noticed that it seems to trigger because the wool gets fired even after I reset the environment because I was testing it previously. I know that it fires as soon as the rule is triggered. I learned that I should reset all the log files and restart from scratch and then do it instantly and then simulate the attack as soon as I turn on the system, as soon as I turn on the siem system for fresh logs so that it triggers the first time.
 
 
 
-My theory is right. It only triggers one time until I restart the agent. 
+My theory is right. It only triggers one time until I restart the agent.
 
 
 
 It worked
 
 Will Document what I did next session
+
+
+
+Here is the precise breakdown of the changes we made and the exact files we edited:
+
+
+
+\### 1. Python Remediation Script
+
+
+
+\* \*\*File Edited:\*\* `/var/ossec/active-response/bin/soar-remediate-100012.py`
+
+\* \*\*What we did:\*\*
+
+\* Replaced the blocking, interactive `/usr/bin/passwd` command with the non-interactive `/usr/sbin/chpasswd` utility to prevent the script from hanging on input prompts.
+
+\* Added secure string encoding (`.encode()`) to pass the emergency password directly into `chpasswd`.
+
+\* Configured proper standard output and error redirection (`subprocess.PIPE`) for all system commands (including `iptables`, `passwd -e`, and `pkill`) to ensure clean execution.
+
+\* Added an explicit `sys.exit(0)` at the end of the script to ensure clean termination.
+
+
+
+
+
+
+
+\### 2. Bash Active Response Wrapper Script
+
+
+
+\* \*\*File Edited:\*\* `/var/ossec/active-response/bin/soar-remediate-100012` (the Wazuh wrapper)
+
+\* \*\*What we did:\*\*
+
+\* Initially updated it to use `exec` and backgrounding (`\&`) to detach the Python process from Wazuh's tracking pipe, preventing Wazuh's execution queue from locking up.
+
+\* Refined the wrapper to explicitly capture Wazuh's incoming JSON payload upfront using `read -r INPUT` and feed it back into the backgrounded Python process via `<<< "$INPUT"`, resolving the standard input starvation error.
+
+
+
+2026-07-23 \*Simulation Day\*
+
+I simulated the attack fully
+
+
+
+
 

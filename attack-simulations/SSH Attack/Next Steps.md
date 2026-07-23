@@ -116,12 +116,12 @@
 
 \## 2026-07-23
 
-\- Document what you did previous session 
+\- Document what you did previous session  ✅
+\- Create Full Attack Simulation from start to end  ✅
 
 
 \## 2026-07-16
 
-\- Create Full Attack Simulation from start to end 
 
 \## 2026-07-17
 
@@ -132,6 +132,7 @@
 
 \- Make README.md
 
+\- Script Paste
 
 \- Redo Diagram to have Response
 
@@ -140,6 +141,7 @@
 
 
 \- Create what could I do better next time doc
+-Auto Refresh
 
 \- Upload the completed project to GitHub Portfolio and LinkedIn
 
