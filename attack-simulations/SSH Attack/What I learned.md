@@ -26,3 +26,17 @@ I should keep snapshots of my vms
 
 The script I ran accidently changed my passwords of my vm and I was locked out, I learned that I should create snapshots of my vms often
 
+
+
+July 25, 2026
+
+I should make sure that my files are saved before I close them because this file has been deleted or this file has been unsaved and closed. I keep losing my information several times so that's something I'm going to take into consideration next time 
+
+
+
+I should map out the entire attack pipeline before I start to avoid scrambling for the next steps. 
+
+
+
+I should come up with the detection rules and all that before coming up with the custom rule. 
+
