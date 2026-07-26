@@ -126,7 +126,7 @@
 
 \- Explain Screenshots ✅
 
-\- Make README.md
+\- Make README.md ✅
 
 \- Script Paste
 
