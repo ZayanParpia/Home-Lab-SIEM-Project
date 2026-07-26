@@ -1,4 +1,4 @@
-﻿<h1 align="center">🛡️ Home SIEM Lab — Wazuh Detection & Response Project</h1>
+<h1 align="center">🛡️ Home SIEM Lab - Wazuh Detection & Response Project</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/SIEM-Wazuh%20v4.14-blue?style=for-the-badge&logo=linux" alt="Wazuh"/>
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  A hands-on, home-built Security Information and Event Management (SIEM) lab demonstrating real-world SOC workflows — from infrastructure deployment to live attack simulation and automated incident response.
+  A hands-on, home-built Security Information and Event Management (SIEM) lab demonstrating real-world SOC workflows - from infrastructure deployment to live attack simulation and automated incident response.
 </p>
 
 ---
@@ -18,12 +18,11 @@
 
 - [Project Summary](#-project-summary)
 - [Lab Architecture](#️-lab-architecture)
-- [Hardware Specifications](#️-hardware-specifications)
 - [Tech Stack](#-tech-stack)
 - [Repository Structure](#-repository-structure)
 - [What Was Built](#-what-was-built)
 - [Attack Simulations](#-attack-simulations)
-- [SOAR — Automated Response](#-soar--automated-incident-response)
+- [SOAR - Automated Response](#-soar---automated-incident-response)
 - [Custom Detection Rules](#-custom-detection-rules)
 - [Screenshots](#-screenshots)
 - [What I Learned](#-what-i-learned)
@@ -42,61 +41,15 @@ This project builds a small, realistic **security monitoring lab** designed to s
 - Build and tune custom Wazuh detection rules
 - Implement automated SOAR-style incident response
 
-> This project is **100% free** and runs on consumer-grade hardware — demonstrating that effective security monitoring does not require expensive infrastructure.
+> This project is **100% free** and runs on consumer-grade hardware, demonstrating that effective security monitoring does not require expensive infrastructure.
 
 ---
 
 ## 🏗️ Lab Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                         HOME NETWORK                            │
-│                                                                 │
-│  ┌──────────────────────┐       ┌──────────────────────────┐    │
-│  │   SIEM SERVER        │◄─────►│   UBUNTU ENDPOINT        │    │
-│  │   (Old Desktop PC)   │       │   (Ubuntu Laptop)        │    │
-│  │                      │       │                          │    │
-│  │  • Ubuntu Server     │       │  • Wazuh Agent           │    │
-│  │  • Wazuh Manager     │       │  • Sysmon for Linux      │    │
-│  │  • Wazuh Indexer     │       │  • Auditd                │    │
-│  │  • Wazuh Dashboard   │       │                          │    │
-│  └──────────────────────┘       └──────────────────────────┘    │
-│                                                                 │
-│  ┌──────────────────────┐                                        │
-│  │   ATTACKER NODE      │  (Attack Simulations Only)            │
-│  │   (Kali Linux VM)    │                                        │
-│  │  • Hydra             │                                        │
-│  │  • Nmap              │                                        │
-│  └──────────────────────┘                                        │
-└─────────────────────────────────────────────────────────────────┘
-```
+![Lab Architecture Diagram](./Infrastructure/Diagrams/DIAGRAM%20v2.png)
 
-Log flow: `Endpoint → Wazuh Agent → Wazuh Manager → Wazuh Indexer → Wazuh Dashboard`
-
-Architecture diagrams are located in [`Infrastructure/Diagrams/`](./Infrastructure/Diagrams/).
-
----
-
-## 🖥️ Hardware Specifications
-
-### 🛡️ SIEM Server — Old Desktop PC
-
-| Component | Specification |
-|-----------|---------------|
-| 🧠 CPU | Intel Core i5-6400 @ 2.70GHz |
-| 🧬 RAM | 16 GB DDR3 |
-| 💾 Storage | Fanxiang S101 512GB SATA SSD |
-| 🎮 GPU | Intel HD Graphics 530 |
-| 🐧 OS | Ubuntu Server |
-
-### 💻 Monitored Endpoint — Ubuntu Laptop
-
-| Component | Specification |
-|-----------|---------------|
-| 🧠 CPU | Intel Core i3-1005G1 |
-| 🧬 RAM | 8 GB DDR4 |
-| 💾 Free Storage | ~200 GB |
-| 🐧 OS | Ubuntu Desktop |
+> **Log Flow:** `Activity on Endpoint` -> `Sysmon & Auditd capture logs` -> `Logs written to local log files` -> `Wazuh Agent reads & sends to Manager` -> `Wazuh Manager processes & applies rules` -> `Alerts generated in Dashboard`
 
 ---
 
@@ -104,12 +57,12 @@ Architecture diagrams are located in [`Infrastructure/Diagrams/`](./Infrastructu
 
 | Tool | Role |
 |------|------|
-| 🛡️ **Wazuh v4.14** | SIEM platform — log collection, alerting, dashboards |
+| 🛡️ **Wazuh v4.14** | SIEM platform - log collection, alerting, dashboards |
 | 🐧 **Ubuntu Server** | OS for SIEM host |
 | 📡 **Wazuh Agent** | Endpoint telemetry forwarding |
 | 🔬 **Sysmon for Linux** | Enhanced process and network telemetry |
 | 📋 **Auditd** | Linux kernel-level syscall audit logging |
-| 🌐 **Suricata** | Network IDS/IPS — detects Nmap scans and network threats |
+| 🌐 **Suricata** | Network IDS/IPS - detects Nmap scans and network threats |
 | 🐉 **Kali Linux** | Attack simulation node (Hydra, Nmap) |
 | 🐍 **Python** | SOAR automated response scripting |
 
@@ -120,7 +73,7 @@ Architecture diagrams are located in [`Infrastructure/Diagrams/`](./Infrastructu
 ```
 📦 Home SIEM Lab
 │
-├── 📄 README.md                        # This file — project overview
+├── 📄 README.md                        # This file - project overview
 ├── 📄 AI-PROMPTS.md                    # AI prompts used during the project
 ├── 📄 License                          # Project license
 ├── 📄 .gitignore                       # Git ignore rules
@@ -139,7 +92,7 @@ Architecture diagrams are located in [`Infrastructure/Diagrams/`](./Infrastructu
 │   ├── 📂 SSH Attack/                  # Full SSH brute-force attack pipeline
 │   │   ├── 📄 Outline.md               # Attack simulation plan & phase breakdown
 │   │   ├── 📄 Full Attack Simulation Steps.md  # Step-by-step execution log
-│   │   ├── 📄 What I did.md            # Detailed session journal (Jul 5–23, 2026)
+│   │   ├── 📄 What I did.md            # Detailed session journal (Jul 5-23, 2026)
 │   │   ├── 📄 What I learned.md        # Key takeaways from this simulation
 │   │   ├── 📄 SOAR Response Plan.md    # Automated response plan for Rule 100012
 │   │   ├── 📄 Rule Outline.md          # Detection rule design notes
@@ -163,7 +116,7 @@ Architecture diagrams are located in [`Infrastructure/Diagrams/`](./Infrastructu
 │       └── 📂 Video Demo/              # Module video demonstrations
 │
 ├── 📂 docs/                            # Project-wide documentation
-│   ├── 📄 PROGRESS.md                  # Chronological build log (May–Jul 2026)
+│   ├── 📄 PROGRESS.md                  # Chronological build log (May-Jul 2026)
 │   ├── 📄 NEXT_STEPS.md                # Task tracker with completion status
 │   ├── 📄 WHAT_I_LEARNED.md            # Skills and concepts gained
 │   ├── 📄 PROJECT_LOGS.md              # High-level project log
@@ -202,23 +155,23 @@ Architecture diagrams are located in [`Infrastructure/Diagrams/`](./Infrastructu
 
 ## 🔨 What Was Built
 
-### Phase 1 — Infrastructure Setup ✅
+### Phase 1 - Infrastructure Setup ✅
 
 1. **Installed Ubuntu Server** on a physical desktop PC to serve as the centralized SIEM host
 2. **Deployed Wazuh All-in-One** (Manager + Indexer + Dashboard) on the Ubuntu Server
 3. **Configured the Wazuh Dashboard** and verified remote web access from the network
 4. **Prepared the Ubuntu endpoint laptop** as the monitored client machine
 5. **Installed and registered the Wazuh Agent** on the Ubuntu laptop endpoint
-6. **Verified log ingestion** — confirmed the endpoint appeared active in the Wazuh dashboard
+6. **Verified log ingestion** - confirmed the endpoint appeared active in the Wazuh dashboard
 
-### Phase 2 — Endpoint Telemetry Enhancement ✅
+### Phase 2 - Endpoint Telemetry Enhancement ✅
 
 7. **Installed Sysmon for Linux** via the Microsoft package repository for enhanced process and network telemetry
 8. **Installed and configured Auditd** for kernel-level syscall monitoring
-9. **Configured command logging** — solved archive configuration issues to surface commands like `whoami`, `ls`, etc. in the Wazuh dashboard
+9. **Configured command logging** - solved archive configuration issues to surface commands like `whoami`, `ls`, etc. in the Wazuh dashboard
 10. **Installed Suricata IDS** and configured it to detect Nmap port scans targeting SSH (port 22)
 
-### Phase 3 — Attack Simulations & Detection ✅
+### Phase 3 - Attack Simulations & Detection ✅
 
 > See [Attack Simulations](#-attack-simulations) section below.
 
@@ -226,7 +179,7 @@ Architecture diagrams are located in [`Infrastructure/Diagrams/`](./Infrastructu
 
 ## ⚔️ Attack Simulations
 
-### 🔐 Simulation 1 — SSH Brute-Force Attack Pipeline
+### 🔐 Simulation 1 - SSH Brute-Force Attack Pipeline
 
 **Status:** ✅ Fully Simulated & Documented
 
@@ -245,11 +198,11 @@ Architecture diagrams are located in [`Infrastructure/Diagrams/`](./Infrastructu
 - Identified and resolved Kali Linux **NAT vs Bridge mode** issue affecting rule triggering
 - Configured Kali Linux VM in **Bridge mode** so it uses a unique IP on the network (critical for accurate detection)
 - Built a **composite Wazuh detection rule** chaining brute-force + persistence detection into a single high-severity alert
-- Implemented and debugged **SOAR automated response** — a Python script triggered by Wazuh active response
+- Implemented and debugged **SOAR automated response** - a Python script triggered by Wazuh active response
 
 ---
 
-### 🔑 Simulation 2 — Linux Privilege Escalation Detection
+### 🔑 Simulation 2 - Linux Privilege Escalation Detection
 
 **Status:** ✅ Phases 1–4 Complete | 🔄 Phases 5–6 In Progress
 
@@ -257,22 +210,22 @@ Architecture diagrams are located in [`Infrastructure/Diagrams/`](./Infrastructu
 
 | Phase | Technique | Detection |
 |-------|-----------|-----------|
-| **Phase 1: Failed Sudo** | Password guessing against sudo | Custom Rule 100002 — 3 failures in 120 seconds |
-| **Phase 2: Successful Sudo** | Monitoring legitimate privilege escalation | Wazuh Rule 5403 — sudo session detection |
+| **Phase 1: Failed Sudo** | Password guessing against sudo | Custom Rule 100002 - 3 failures in 120 seconds |
+| **Phase 2: Successful Sudo** | Monitoring legitimate privilege escalation | Wazuh Rule 5403 - sudo session detection |
 | **Phase 3: Sudoers FIM** | Unauthorized `/etc/sudoers` modification | Wazuh FIM alert + Auditd syscall monitoring |
-| **Phase 4: Persistence** | Adding a user account to the `sudo` group | Wazuh Rule 510 — user group modification alert |
+| **Phase 4: Persistence** | Adding a user account to the `sudo` group | Wazuh Rule 510 - user group modification alert |
 | **Phase 5: SUID Binaries** | SUID binary creation | 🔄 In Progress |
 | **Phase 6: Defense Evasion** | Suspicious `chmod`/`chown` abuse | 🔄 In Progress |
 
 **MITRE ATT&CK Mapping:**
-- `T1110` — Brute Force
-- `T1548.003` — Abuse Elevation Control Mechanism: Sudo and Sudo Caching
-- `T1078` — Valid Accounts
-- `T1098` — Account Manipulation
+- `T1110` - Brute Force
+- `T1548.003` - Abuse Elevation Control Mechanism: Sudo and Sudo Caching
+- `T1078` - Valid Accounts
+- `T1098` - Account Manipulation
 
 ---
 
-## 🤖 SOAR — Automated Incident Response
+## 🤖 SOAR - Automated Incident Response
 
 When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, a custom automated response executes the following containment actions:
 
@@ -319,19 +272,19 @@ Attack simulation detection screenshots are located within each simulation's `Sc
 ## 🧠 What I Learned
 
 ### 🔧 Technical Skills
-- **Wazuh SIEM** — Full deployment, configuration, agent management, and custom rule authoring
-- **Linux systemd / systemctl** — Managing, troubleshooting, and validating service states
-- **Sysmon for Linux** — Installing via Microsoft package repos and configuring telemetry collection
-- **Auditd** — Kernel-level syscall monitoring and log archiving to surface terminal commands
-- **Suricata IDS** — Writing custom network detection rules and managing false positives with suppression lists
-- **Wazuh FIM** — File Integrity Monitoring configuration for critical paths (`/etc/sudoers`, `~/.ssh/authorized_keys`)
-- **SOAR Scripting** — Writing Python active response scripts integrated with Wazuh's active response framework
-- **Networking (nmcli)** — Managing interfaces via CLI, debugging NAT vs Bridge mode in VM environments
-- **SSH Key Authentication** — Generating keys with `ssh-keygen`, using `ssh-copy-id`, understanding `authorized_keys`
+- **Wazuh SIEM** - Full deployment, configuration, agent management, and custom rule authoring
+- **Linux systemd / systemctl** - Managing, troubleshooting, and validating service states
+- **Sysmon for Linux** - Installing via Microsoft package repos and configuring telemetry collection
+- **Auditd** - Kernel-level syscall monitoring and log archiving to surface terminal commands
+- **Suricata IDS** - Writing custom network detection rules and managing false positives with suppression lists
+- **Wazuh FIM** - File Integrity Monitoring configuration for critical paths (`/etc/sudoers`, `~/.ssh/authorized_keys`)
+- **SOAR Scripting** - Writing Python active response scripts integrated with Wazuh's active response framework
+- **Networking (nmcli)** - Managing interfaces via CLI, debugging NAT vs Bridge mode in VM environments
+- **SSH Key Authentication** - Generating keys with `ssh-keygen`, using `ssh-copy-id`, understanding `authorized_keys`
 
 ### 🔐 Security Concepts
 - SIEM log pipeline: `Endpoint → Agent → Manager → Indexer → Dashboard`
-- Correlation rules — chaining multiple events with `frequency`, `timeframe`, and `if_matched_sid`
+- Correlation rules - chaining multiple events with `frequency`, `timeframe`, and `if_matched_sid`
 - MITRE ATT&CK framework mapping for detection engineering
 - False positive management and rule tuning in real environments
 - PII awareness and handling sensitive data in logs
@@ -351,7 +304,7 @@ Attack simulation detection screenshots are located within each simulation's `Sc
 | 🔥 High | Defense evasion via `chmod`/`chown` abuse (Phase 6) | 🔄 In Progress |
 | 🟡 Medium | File Integrity Monitoring expansion (`/etc/passwd`, `/etc/shadow`) | 📋 Planned |
 | 🟡 Medium | Web server attack detection (Apache/NGINX + Suricata) | 📋 Planned |
-| 🟡 Medium | Persistence detection — cron, systemd, shell profiles | 📋 Planned |
+| 🟡 Medium | Persistence detection - cron, systemd, shell profiles | 📋 Planned |
 | 🟢 Low | Lateral movement simulation with multiple Ubuntu VMs | 📋 Planned |
 | 🟢 Low | MITRE ATT&CK coverage dashboard in Wazuh | 📋 Planned |
 | 🟢 Low | Container security monitoring with Falco | 📋 Planned |
@@ -364,18 +317,18 @@ Attack simulation detection screenshots are located within each simulation's `Sc
 
 | Date | Milestone |
 |------|-----------|
-| May 2026 | Project initialized — GitHub structure, outline created |
-| May 10, 2026 | Wazuh services verified; identified v4.7.5 → v4.14 upgrade needed |
-| May 11–12, 2026 | Wazuh upgraded and all services restored |
+| May 2026 | Project initialized - GitHub structure, outline created |
+| May 10, 2026 | Wazuh services verified; identified v4.7.5 -> v4.14 upgrade needed |
+| May 11-12, 2026 | Wazuh upgraded and all services restored |
 | May 12, 2026 | Ubuntu laptop endpoint connected and actively forwarding logs |
 | May 14, 2026 | Sysmon for Linux installed; endpoint telemetry enabled |
 | May 15, 2026 | Auditd installed and configured for command logging |
 | May 17, 2026 | Diagrams refined; documentation polished |
 | May 23, 2026 | Screenshots captured, PII removed, project made public |
 | May 25, 2026 | Demo video recorded; uploaded to portfolio and LinkedIn |
-| July 2–23, 2026 | SSH brute-force attack simulation built, tuned, and fully executed |
-| July 2026 | Linux Privilege Escalation module — Phases 1–4 completed |
-| July 22–23, 2026 | SOAR automated response built, debugged, and verified working |
+| July 2-23, 2026 | SSH brute-force attack simulation built, tuned, and fully executed |
+| July 2026 | Linux Privilege Escalation module - Phases 1-4 completed |
+| July 22-23, 2026 | SOAR automated response built, debugged, and verified working |
 
 ---
 
@@ -386,7 +339,7 @@ This project is licensed under the terms found in the [`License`](./License) fil
 ---
 
 <p align="center">
-  <em>Built as a hands-on cybersecurity portfolio project. Documenting the real process — including the failures, the troubleshooting, and the wins.</em>
+  <em>Built as a hands-on cybersecurity portfolio project. Documenting the real process - including the failures, the troubleshooting, and the wins.</em>
 </p>
 
 <p align="center">
