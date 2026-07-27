@@ -1,74 +1,50 @@
-\#!/bin/bash
+&#x20;       try:
 
-\# Wazuh Active Response: contain-ssh-persistence.sh
+&#x20;           check\_rule = subprocess.run(\["/usr/sbin/iptables", "-C", "INPUT", "-s", src\_ip, "-j", "DROP"],
 
-\# Triggered by rule 100012 (unauthorized authorized\_keys write)
+&#x20;                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
+&#x20;           if check\_rule.returncode != 0:
 
+&#x20;               subprocess.run(\["/usr/sbin/iptables", "-A", "INPUT", "-s", src\_ip, "-j", "DROP"], check=True)
 
-LOG\_FILE="/var/ossec/logs/active-responses.log"
+&#x20;               log\_action(f"SUCCESS: Blocked source IP via iptables: {src\_ip}")
 
+&#x20;           else:
 
+&#x20;               log\_action(f"NOTICE: IP {src\_ip} is already blocked.")
 
-\# Read the JSON alert data Wazuh sends via stdin
+&#x20;       except Exception as e:
 
-read INPUT\_JSON
+&#x20;           log\_action(f"ERROR applying network block for {src\_ip}: {e}")
 
+&#x20;   else:
 
-
-\# Extract the attacker's source IP and affected agent/user info
-
-ATTACKER\_IP=$(echo "$INPUT\_JSON" | jq -r '.parameters.alert.data.srcip // "unknown"')
-
-
-
-echo "$(date '+%Y-%m-%d %H:%M:%S') contain-ssh-persistence.sh triggered - attacker IP: $ATTACKER\_IP" >> $LOG\_FILE
+&#x20;       log\_action(f"NOTICE: Skipping IP block, invalid src\_ip: {src\_ip}")
 
 
 
-\# --- Action 1: Backup and clear authorized\_keys for all local users ---
+&#x20;   # Action 4: Terminate Active Sessions
 
-for USER\_HOME in /home/\*; do
+&#x20;   try:
 
-&#x20; AUTH\_KEYS="$USER\_HOME/.ssh/authorized\_keys"
+&#x20;       subprocess.run(\["/usr/bin/pkill", "-u", user], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-&#x20; if \[ -f "$AUTH\_KEYS" ]; then
+&#x20;       log\_action(f"SUCCESS: Terminated active sessions for user: {user}")
 
-&#x20;   BACKUP\_FILE="${AUTH\_KEYS}.bak.$(date +%s)"
+&#x20;   except Exception as e:
 
-&#x20;   cp "$AUTH\_KEYS" "$BACKUP\_FILE"
-
-&#x20;   echo "$(date '+%Y-%m-%d %H:%M:%S') Backed up $AUTH\_KEYS to $BACKUP\_FILE" >> $LOG\_FILE
+&#x20;       log\_action(f"ERROR terminating sessions: {e}")
 
 
 
-&#x20;   > "$AUTH\_KEYS"
+&#x20;   log\_action("SOAR Response execution cycle finished for Rule 100012.")
 
-&#x20;   echo "$(date '+%Y-%m-%d %H:%M:%S') Cleared $AUTH\_KEYS" >> $LOG\_FILE
-
-&#x20; fi
-
-done
+&#x20;   sys.exit(0)
 
 
 
-\# Also check root, since attackers sometimes target it directly
+if \_\_name\_\_ == "\_\_main\_\_":
 
-ROOT\_AUTH\_KEYS="/root/.ssh/authorized\_keys"
-
-if \[ -f "$ROOT\_AUTH\_KEYS" ]; then
-
-&#x20; BACKUP\_FILE="${ROOT\_AUTH\_KEYS}.bak.$(date +%s)"
-
-&#x20; cp "$ROOT\_AUTH\_KEYS" "$BACKUP\_FILE"
-
-&#x20; echo "$(date '+%Y-%m-%d %H:%M:%S') Backed up $ROOT\_AUTH\_KEYS to $BACKUP\_FILE" >> $LOG\_FILE
-
-
-
-&#x20; > "$ROOT\_AUTH\_KEYS"
-
-&#x20; echo "$(date '+%Y-%m-%d %H:%M:%S') Cleared $ROOT\_AUTH\_KEYS" >> $LOG\_FILE
-
-fi
+&#x20;   main()
 

@@ -128,9 +128,9 @@
 
 \- Make README.md ✅
 
-\- Script Paste
+\- Script Paste ✅
 
-\- Redo Diagram to have Response
+\- Redo Diagram to have Response ✅
 
 
 \## Publishing phase 
