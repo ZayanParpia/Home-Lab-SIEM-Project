@@ -1,0 +1,3 @@
+#!/bin/bash
+read -r INPUT
+python3 /var/ossec/active-response/bin/soar-remediate-100012.py "$@" <<< "$INPUT" &
