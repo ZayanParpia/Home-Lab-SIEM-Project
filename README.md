@@ -26,7 +26,6 @@
 - [Custom Detection Rules](#-custom-detection-rules)
 - [Screenshots](#-screenshots)
 - [What I Learned](#-what-i-learned)
-- [Future Roadmap](#-future-roadmap)
 - [License](#-license)
 
 ---
