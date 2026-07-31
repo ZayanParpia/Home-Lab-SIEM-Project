@@ -227,7 +227,9 @@ This project builds a small, realistic **security monitoring lab** designed to s
 
 ## 🤖 SOAR - Automated Incident Response
 
-When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, a custom automated response executes the following containment actions:
+This is my **first SOAR response implementation**, built for the [SSH brute-force attack simulation](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations). It automates containment the moment Wazuh confirms a full attack chain — no manual intervention required between detection and response.
+
+When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, the automated response executes the following containment actions:
 
 | Step | Action | Target |
 |------|--------|--------|
@@ -238,8 +240,7 @@ When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, a custom aut
 
 **Implementation:** The response is a **Python script** (wrapped in a Bash active response handler) deployed at `/var/ossec/active-response/bin/soar-remediate-100012.py`, invoked by Wazuh's active response framework when the rule fires.
 
-> 📄 Full details in [`attack-simulations/SSH Attack/SOAR Response Plan.md`](./attack-simulations/SSH%20Attack/SOAR%20Response%20Plan.md)
-
+> 📄 Full breakdown and walkthrough: [SSH Attack Simulation](https://zayanparpia.github.io/Portfolio/ssh-attack-simulation.html)
 ---
 
 ## 📏 Custom Detection Rules
