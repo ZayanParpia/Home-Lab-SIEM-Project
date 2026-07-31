@@ -10,5 +10,5 @@ Based on my lessons I learned from my previous attack simulation (SSH Brute Forc
 * I should test my rules before firing them
 * I need to make sure my files are saved before committing them and closing my session
 * I should create the entire detection and response pipeline first before trying to implement it
-* 
+* I should have my other endpoints simulating traffic aswell to simulate realism
 
