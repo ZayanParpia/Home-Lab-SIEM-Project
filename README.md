@@ -294,24 +294,6 @@ Attack simulation detection screenshots are located within each simulation's `Sc
 - GitHub project organization for security engineering portfolios
 - Patience and systematic troubleshooting in complex multi-service environments
 
----
-
-## 🚀 Future Roadmap
-
-| Priority | Feature | Status |
-|----------|---------|--------|
-| 🔥 High | SUID binary creation detection (Phase 5) | 🔄 In Progress |
-| 🔥 High | Defense evasion via `chmod`/`chown` abuse (Phase 6) | 🔄 In Progress |
-| 🟡 Medium | File Integrity Monitoring expansion (`/etc/passwd`, `/etc/shadow`) | 📋 Planned |
-| 🟡 Medium | Web server attack detection (Apache/NGINX + Suricata) | 📋 Planned |
-| 🟡 Medium | Persistence detection - cron, systemd, shell profiles | 📋 Planned |
-| 🟢 Low | Lateral movement simulation with multiple Ubuntu VMs | 📋 Planned |
-| 🟢 Low | MITRE ATT&CK coverage dashboard in Wazuh | 📋 Planned |
-| 🟢 Low | Container security monitoring with Falco | 📋 Planned |
-| 🟢 Low | Insider threat detection scenario | 📋 Planned |
-| 🟢 Low | Threat hunting query library | 📋 Planned |
-
----
 
 ## 📊 Project Timeline
 
