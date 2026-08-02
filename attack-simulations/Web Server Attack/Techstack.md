@@ -42,7 +42,7 @@
 
 
 
-\- Apache HTTP Server \*(or NGINX)\*
+\- Apache HTTP Server
 
 
 
@@ -50,9 +50,7 @@
 
 
 
-\- OWASP Juice Shop \*(recommended)\*
-
-\- DVWA \*(optional alternative)\*
+\- OWASP Juice Shop 
 
 
 
@@ -60,7 +58,7 @@
 
 
 
-* Wazuh Active Responses 
+* Wazuh Active Responses
 * Python Script
 
 &#x20;

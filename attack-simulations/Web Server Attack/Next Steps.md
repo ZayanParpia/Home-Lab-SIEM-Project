@@ -22,21 +22,26 @@ July 31, 2026
 
 
 
-I should use MITRE to structure my pipelines
+Install Vuln Juice Shop on endpoint4 ✅
 
-I should have a clear outline as to what goes on my portfolio website and GitHub repo
+Install Apache on endpoint4 
 
-Incident write ups
 
-Attack simulations on README.md
 
-false positives
 
-How the tech stack comes together
 
-what is Sysmon and auditd for here
 
-add check marks
 
-Be specific for the SOAR response
+# **Things to keep in mind** 
+
+
+
+* I should use MITRE to structure my pipelines
+* I should have a clear outline as to what goes on my portfolio website and GitHub repo
+* Incident write ups
+* Attack simulations on README.md
+* Reduce false positives
+* How the tech stack comes together
+* what is Sysmon and auditd for here
+* Be specific for the SOAR response
 
