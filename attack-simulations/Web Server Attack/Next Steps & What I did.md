@@ -18,21 +18,23 @@ Today just fix my repo ✅
 
 
 
-July 31, 2026
+August 2, 2026
 
 
 
 Install Vuln Juice Shop on endpoint4 ✅
 
-Install Apache on endpoint4 
+Install Apache on endpoint4 ✅
 
 
 
 
 
+August 3, 2026
 
 
-# **Things to keep in mind** 
+
+# **Things to keep in mind**
 
 
 
