@@ -42,7 +42,13 @@ August 4, 2026
 
 
 
+See why traffic is not being recorded in Wazuh 
+
+
+
 Make Things to learn after simulation doc
+
+Explain what is tech stack for 
 
 Also learn to use man command and find docs
 
