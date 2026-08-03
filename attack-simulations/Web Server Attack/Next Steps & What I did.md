@@ -34,6 +34,22 @@ August 3, 2026
 
 
 
+Read the docs and edit the conf file yourself and understand it ✅
+
+
+
+August 4, 2026
+
+
+
+Make Things to learn after simulation doc
+
+Also learn to use man command and find docs
+
+Learn curl
+
+
+
 # **Things to keep in mind**
 
 
