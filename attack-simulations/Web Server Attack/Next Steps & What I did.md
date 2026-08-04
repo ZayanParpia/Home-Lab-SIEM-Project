@@ -42,13 +42,31 @@ August 4, 2026
 
 
 
-See why traffic is not being recorded in Wazuh 
+See why traffic is not being recorded in Wazuh ✅
+
+Try to connect Apache logs to Wazuh ✅
+
+Created Rules for SQL Injection ✅
+
+
+
+August 5, 2026
+
+
+
+Paste rule in this dir
+
+Troubleshoot why Apache isn't sending logs to wazuh 
 
 
 
 Make Things to learn after simulation doc
 
-Explain what is tech stack for 
+* Cat
+* Man
+* User Permissions 
+
+Explain what is tech stack for
 
 Also learn to use man command and find docs
 
