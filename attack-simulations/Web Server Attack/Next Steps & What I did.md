@@ -52,11 +52,27 @@ Created Rules for SQL Injection ✅
 
 August 5, 2026
 
+&#x20;
+
+Paste rule in this dir ✅
+
+Troubleshoot why Apache isn't sending logs to wazuh ✅
+
+I got the sql detection rule to fire 
+
+learn SQL map
 
 
-Paste rule in this dir
 
-Troubleshoot why Apache isn't sending logs to wazuh 
+August 6, 2026
+
+
+
+
+
+
+
+README for conf and rules
 
 
 
@@ -64,7 +80,8 @@ Make Things to learn after simulation doc
 
 * Cat
 * Man
-* User Permissions 
+* User Permissions
+* Learn Theroy
 
 Explain what is tech stack for
 

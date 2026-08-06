@@ -1,4 +1,4 @@
-SSH BRUTE FORCE SIMULATION 
+SSH BRUTE FORCE SIMULATION
 
 
 
@@ -55,4 +55,12 @@ I shouldn't wait to finish a simulation to work on another project
 
 
 \-------------------
+
+Web Server Attack
+
+
+
+August 6, 2026
+
+* there are pre defined rules for apache for Wazuh for things like sql injections, so I dont have to write my own rules fully from scratch. 
 

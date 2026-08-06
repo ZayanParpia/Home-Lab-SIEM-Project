@@ -100,21 +100,6 @@ Successful password guessing attacks could allow an attacker to:
 
 
 
-\## Recommended Response
-
-
-
-\* Identify the source user and host.
-
-\* Review authentication logs for additional failed attempts.
-
-\* Determine whether the activity was legitimate or malicious.
-
-\* Lock or monitor the affected account if necessary.
-
-\* Consider implementing account lockout policies or multi-factor authentication.
-
-
 
 <!-- SSH Attack -->
 
