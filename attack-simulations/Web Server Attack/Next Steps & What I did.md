@@ -60,15 +60,27 @@ Troubleshoot why Apache isn't sending logs to wazuh ✅
 
 I got the sql detection rule to fire 
 
-learn SQL map
-
-
-
-August 6, 2026
 
 
 
 
+August 12, 2026
+
+Try to get SQL injection to fire on wazuh dashboard ✅
+
+I got wazuh to fire my rule for SQL injection when I use a curl command
+
+
+
+
+
+August 14, 2026
+
+Set up apache as a WAF to catch sql injection 
+
+Paste rule in this dir
+
+Clean up Outline
 
 
 
@@ -79,6 +91,8 @@ README for conf and rules
 Make Things to learn after simulation doc
 
 * Cat
+* SQL map
+* Decoders
 * Man
 * User Permissions
 * Learn Theroy
