@@ -58,7 +58,7 @@ Paste rule in this dir ✅
 
 Troubleshoot why Apache isn't sending logs to wazuh ✅
 
-I got the sql detection rule to fire 
+I got the sql detection rule to fire
 
 
 
@@ -74,13 +74,39 @@ I got wazuh to fire my rule for SQL injection when I use a curl command
 
 
 
-August 14, 2026
+August 16, 2026
 
-Set up apache as a WAF to catch sql injection 
+Today I was learning about how apache sends logs and acts as a reverse proxy.
 
-Paste rule in this dir
+the SQL rule fires only when I run the echo directly to the apache logs file
+
+
+
+August 17, 2026
+
+
+
+Watch
+
+https://www.youtube.com/watch?v=CTaQq02uAww
+
+
+
+and use it as a reverse proxy
+
+
 
 Clean up Outline
+
+Format Github
+
+Get rid of NGINX Mentions
+
+Use atomic red team to
+
+Make different DIRS for each attack simulation here aswell
+
+Create outline for how I should approach project purposes and what I learned, what I found etc
 
 
 
@@ -91,6 +117,8 @@ README for conf and rules
 Make Things to learn after simulation doc
 
 * Cat
+* How to write the test line rules
+* Mire mapping
 * SQL map
 * Decoders
 * Man
@@ -102,6 +130,10 @@ Explain what is tech stack for
 Also learn to use man command and find docs
 
 Learn curl
+
+Create Report
+
+One more attack vector main
 
 
 
