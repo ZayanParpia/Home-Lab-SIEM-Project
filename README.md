@@ -221,17 +221,44 @@ This project builds a small, realistic **security monitoring lab** designed to s
 
 In this project, I simulated and detected the following attack scenarios to validate security monitoring, rule triggering, and incident response capabilities:
 
-- **[I simulated SSH brute force detection](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack)**
-- **[Linux privilege escalation](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Linux%20Privilege%20Escalation%20Detection)**
+- **[Linux privilege escalation (Completed)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Linux%20Privilege%20Escalation%20Detection)**
+- **[I simulated SSH brute force detection (Completed)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack)**
 - **[SQL DETECTION (POC)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Web%20Server%20Attack)**
 
 ---
 
-### 🔐 Simulation 1 - SSH Brute-Force Attack Pipeline
+### 🔑 Simulation 1 - Linux Privilege Escalation Detection
+
+**Status:** ✅ Fully Simulated & Documented
+
+**Objective:** Validate Wazuh's ability to detect Linux privilege escalation techniques mapped to MITRE ATT&CK.
+
+[![View Documentation](https://img.shields.io/badge/View_Documentation-2ea44f?style=for-the-badge&logo=github)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Linux%20Privilege%20Escalation%20Detection)
+
+| Phase | Technique | Detection |
+|-------|-----------|-----------|
+| **Phase 1: Failed Sudo** | Password guessing against sudo | Custom Rule 100002 - 3 failures in 120 seconds |
+| **Phase 2: Successful Sudo** | Monitoring legitimate privilege escalation | Wazuh Rule 5403 - sudo session detection |
+| **Phase 3: Sudoers FIM** | Unauthorized `/etc/sudoers` modification | Wazuh FIM alert + Auditd syscall monitoring |
+| **Phase 4: Persistence** | Adding a user account to the `sudo` group | Wazuh Rule 510 - user group modification alert |
+| **Phase 5: SUID Binaries** | SUID binary creation | Wazuh Rule 510 + Auditd syscall monitoring (Complete) |
+| **Phase 6: Defense Evasion** | Suspicious `chmod`/`chown` abuse | Command auditing via Auditd (Complete) |
+
+**MITRE ATT&CK Mapping:**
+- `T1110` - Brute Force
+- `T1548.003` - Abuse Elevation Control Mechanism: Sudo and Sudo Caching
+- `T1078` - Valid Accounts
+- `T1098` - Account Manipulation
+
+---
+
+### 🔐 Simulation 2 - SSH Brute-Force Attack Pipeline
 
 **Status:** ✅ Fully Simulated & Documented
 
 **Objective:** Simulate a realistic multi-stage SSH attack and validate end-to-end detection in Wazuh.
+
+[![View Documentation](https://img.shields.io/badge/View_Documentation-2ea44f?style=for-the-badge&logo=github)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack)
 
 | Phase | Description | Detection |
 |-------|-------------|-----------|
@@ -250,34 +277,13 @@ In this project, I simulated and detected the following attack scenarios to vali
 
 ---
 
-### 🔑 Simulation 2 - Linux Privilege Escalation Detection
-
-**Status:** ✅ Phases 1–4 Complete | 🔄 Phases 5–6 In Progress
-
-**Objective:** Validate Wazuh's ability to detect Linux privilege escalation techniques mapped to MITRE ATT&CK.
-
-| Phase | Technique | Detection |
-|-------|-----------|-----------|
-| **Phase 1: Failed Sudo** | Password guessing against sudo | Custom Rule 100002 - 3 failures in 120 seconds |
-| **Phase 2: Successful Sudo** | Monitoring legitimate privilege escalation | Wazuh Rule 5403 - sudo session detection |
-| **Phase 3: Sudoers FIM** | Unauthorized `/etc/sudoers` modification | Wazuh FIM alert + Auditd syscall monitoring |
-| **Phase 4: Persistence** | Adding a user account to the `sudo` group | Wazuh Rule 510 - user group modification alert |
-| **Phase 5: SUID Binaries** | SUID binary creation | 🔄 In Progress |
-| **Phase 6: Defense Evasion** | Suspicious `chmod`/`chown` abuse | 🔄 In Progress |
-
-**MITRE ATT&CK Mapping:**
-- `T1110` - Brute Force
-- `T1548.003` - Abuse Elevation Control Mechanism: Sudo and Sudo Caching
-- `T1078` - Valid Accounts
-- `T1098` - Account Manipulation
-
----
-
 ### 🌐 Simulation 3 - Web Server SQL Detection (POC)
 
 **Status:** ✅ POC Complete | 🔄 Advanced Correlation In Progress
 
 **Objective:** Validate SIEM/Wazuh capability to detect SQL injection attempts targeting a vulnerable web application (OWASP Juice Shop / Apache).
+
+[![View Documentation](https://img.shields.io/badge/View_Documentation-2ea44f?style=for-the-badge&logo=github)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Web%20Server%20Attack)
 
 | Phase | Technique | Detection |
 |-------|-----------|-----------|
