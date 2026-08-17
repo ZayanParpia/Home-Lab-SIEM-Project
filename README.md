@@ -1,15 +1,15 @@
 <h1 align="center">🛡️ Home SIEM Lab - Wazuh Detection & Response Project</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/SIEM-Wazuh%20v4.14-blue?style=for-the-badge&logo=linux" alt="Wazuh"/>
-  <img src="https://img.shields.io/badge/OS-Ubuntu%20Server-orange?style=for-the-badge&logo=ubuntu" alt="Ubuntu"/>
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status"/>
-  <img src="https://img.shields.io/badge/Type-Portfolio%20Project-purple?style=for-the-badge" alt="Type"/>
-  <img src="https://img.shields.io/badge/MITRE-ATT%26CK%20Mapped-red?style=for-the-badge" alt="MITRE"/>
+  <img src="https://img.shields.io/badge/SIEM-Wazuh%20v4.14-blue?style=for-the-badge&logo=linux" alt="Wazuh"/>
+  <img src="https://img.shields.io/badge/OS-Ubuntu%20Server-orange?style=for-the-badge&logo=ubuntu" alt="Ubuntu"/>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status"/>
+  <img src="https://img.shields.io/badge/Type-Portfolio%20Project-purple?style=for-the-badge" alt="Type"/>
+  <img src="https://img.shields.io/badge/MITRE-ATT%26CK%20Mapped-red?style=for-the-badge" alt="MITRE"/>
 </p>
 
 <p align="center">
-  A hands-on, home-built Security Information and Event Management (SIEM) lab demonstrating real-world SOC workflows - from infrastructure deployment to live attack simulation and automated incident response.
+  A hands-on, home-built Security Information and Event Management (SIEM) lab demonstrating real-world SOC workflows - from infrastructure deployment to live attack simulation and automated incident response.
 </p>
 
 ---
@@ -26,7 +26,6 @@
 - [Custom Detection Rules](#-custom-detection-rules)
 - [Screenshots](#-screenshots)
 - [What I Learned](#-what-i-learned)
-- [Project Timeline](#-project-timeline)
 - [License](#-license)
 
 ---
@@ -70,87 +69,86 @@ This project builds a small, realistic **security monitoring lab** designed to s
 
 ## 📁 Repository Structure
 
+```
 📦 Home SIEM Lab
 │
-├── 📄 README.md                        # This file - project overview
-├── 📄 AI-PROMPTS.md                    # AI prompts used during the project
-├── 📄 License                          # Project license
-├── 📄 .gitignore                       # Git ignore rules
+├── 📄 README.md                        # This file - project overview
+├── 📄 AI-PROMPTS.md                    # AI prompts used during the project
+├── 📄 License                          # Project license
+├── 📄 .gitignore                       # Git ignore rules
 │
-├── 📂 Infrastructure/                  # Core SIEM setup & architecture
-│   ├── 📄 PROJECT_OUTLINE.md           # Full project outline and build plan
-│   ├── 📂 Diagrams/                    # Network and lab architecture diagrams
-│   │   ├── 🖼️  DIAGRAM v1.png          # Initial architecture diagram
-│   │   ├── 🖼️  DIAGRAM v2.png          # Updated architecture diagram
-│   │   └── 🖼️  Attack Simulation 1.png # Attack simulation diagram
-│   └── 📂 config/                      # Configuration files (reserved)
+├── 📂 Infrastructure/                  # Core SIEM setup & architecture
+│   ├── 📄 PROJECT_OUTLINE.md           # Full project outline and build plan
+│   ├── 📂 Diagrams/                    # Network and lab architecture diagrams
+│   │   ├── 🖼️  DIAGRAM v1.png          # Initial architecture diagram
+│   │   ├── 🖼️  DIAGRAM v2.png          # Updated architecture diagram
+│   │   └── 🖼️  Attack Simulation 1.png # Attack simulation diagram
+│   └── 📂 config/                      # Configuration files (reserved)
 │
-├── 📂 attack-simulations/              # All attack scenarios & detection work
-│   ├── 📄 Rules.md                     # Custom Wazuh detection rule documentation
-│   │
-│   ├── 📂 SSH Attack/                  # Full SSH brute-force attack pipeline
-│   │   ├── 📄 Outline.md               # Attack simulation plan & phase breakdown
-│   │   ├── 📄 Full Attack Simulation Steps.md  # Step-by-step execution log
-│   │   ├── 📄 What I did.md            # Detailed session journal (Jul 5-23, 2026)
-│   │   ├── 📄 What I learned.md        # Key takeaways from this simulation
-│   │   ├── 📄 SOAR Response Plan.md    # Automated response plan for Rule 100012
-│   │   ├── 📄 Rule Outline.md          # Detection rule design notes
-│   │   ├── 📄 Prompt.txt               # AI prompts used for this module
-│   │   ├── 📄 ruletest.txt             # Rule testing notes
-│   │   ├── 📂 Scripts/                 # SOAR response scripts
-│   │   │   └── 📄 SSH SOAR response script.md  # Python/Bash remediation script doc
-│   │   ├── 📂 Screenshots/             # Evidence of attack detection
-│   │   ├── 📂 Video Demo/              # Attack simulation video recordings
-│   │   └── 📂 DEMO edit/               # Edited demo footage
-│   │
-│   ├── 📂 Linux Privilege Escalation Detection/  # Privilege escalation module
-│   │   ├── 📄 README.md                # Module overview and achievements
-│   │   ├── 📄 Outline.md               # Detection strategy and phase plan
-│   │   ├── 📄 Next Steps.md            # Upcoming phases (SUID, chmod abuse)
-│   │   ├── 📄 What I learned.md        # Technical takeaways
-│   │   ├── 📄 Problems Encountered.md  # Issues encountered and resolved
-│   │   ├── 📄 Prompt.txt               # AI prompts used for this module
-│   │   ├── 🖼️  Attack Simulation 1.png # Simulation diagram
-│   │   ├── 📂 Screenshots/             # Detection evidence (Wazuh alerts)
-│   │   └── 📂 Video Demo/              # Module video demonstrations
-│   │
-│   └── 📂 Web Server Attack/           # Web server attack simulation module
+├── 📂 attack-simulations/              # All attack scenarios & detection work
+│   ├── 📄 Rules.md                     # Custom Wazuh detection rule documentation
+│   │
+│   ├── 📂 SSH Attack/                  # Full SSH brute-force attack pipeline
+│   │   ├── 📄 Outline.md               # Attack simulation plan & phase breakdown
+│   │   ├── 📄 Full Attack Simulation Steps.md  # Step-by-step execution log
+│   │   ├── 📄 What I did.md            # Detailed session journal (Jul 5-23, 2026)
+│   │   ├── 📄 What I learned.md        # Key takeaways from this simulation
+│   │   ├── 📄 SOAR Response Plan.md    # Automated response plan for Rule 100012
+│   │   ├── 📄 Rule Outline.md          # Detection rule design notes
+│   │   ├── 📄 Prompt.txt               # AI prompts used for this module
+│   │   ├── 📄 ruletest.txt             # Rule testing notes
+│   │   ├── 📂 Scripts/                 # SOAR response scripts
+│   │   │   └── 📄 SSH SOAR response script.md  # Python/Bash remediation script doc
+│   │   ├── 📂 Screenshots/             # Evidence of attack detection
+│   │   ├── 📂 Video Demo/              # Attack simulation video recordings
+│   │   └── 📂 DEMO edit/               # Edited demo footage
+│   │
+│   └── 📂 Linux Privilege Escalation Detection/  # Privilege escalation module
+│       ├── 📄 README.md                # Module overview and achievements
+│       ├── 📄 Outline.md               # Detection strategy and phase plan
+│       ├── 📄 Next Steps.md            # Upcoming phases (SUID, chmod abuse)
+│       ├── 📄 What I learned.md        # Technical takeaways
+│       ├── 📄 Problems Encountered.md  # Issues encountered and resolved
+│       ├── 📄 Prompt.txt               # AI prompts used for this module
+│       ├── 🖼️  Attack Simulation 1.png # Simulation diagram
+│       ├── 📂 Screenshots/             # Detection evidence (Wazuh alerts)
+│       └── 📂 Video Demo/              # Module video demonstrations
 │
-├── 📂 docs/                            # Project-wide documentation
-│   ├── 📄 PROGRESS.md                  # Chronological build log (May-Jul 2026)
-│   ├── 📄 NEXT_STEPS.md                # Task tracker with completion status
-│   ├── 📄 WHAT_I_LEARNED.md            # Skills and concepts gained
-│   ├── 📄 PROJECT_LOGS.md              # High-level project log
-│   └── 📄 SCREENSHOTS_CAPTURE.md      # Screenshot collection checklist
+├── 📂 docs/                            # Project-wide documentation
+│   ├── 📄 PROGRESS.md                  # Chronological build log (May-Jul 2026)
+│   ├── 📄 NEXT_STEPS.md                # Task tracker with completion status
+│   ├── 📄 WHAT_I_LEARNED.md            # Skills and concepts gained
+│   ├── 📄 PROJECT_LOGS.md              # High-level project log
+│   └── 📄 SCREENSHOTS_CAPTURE.md      # Screenshot collection checklist
 │
-├── 📂 project-upgrades/                # Planned enhancements & future modules
-│   ├── 📄 Attack_Simulations.md        # 12 planned high-impact SIEM additions
-│   ├── 📄 Next Steps.md                # Upgrade roadmap
-│   ├── 📄 Progress.md                  # Upgrade tracking log
-│   ├── 📄 SCREENSHOTS_CAPTURE_UPGRADE.md  # Upgrade screenshot checklist
-│   └── 📂 Upgrade Screenshots/         # Screenshots from upgrades
+├── 📂 project-upgrades/                # Planned enhancements & future modules
+│   ├── 📄 Attack_Simulations.md        # 12 planned high-impact SIEM additions
+│   ├── 📄 Next Steps.md                # Upgrade roadmap
+│   ├── 📄 Progress.md                  # Upgrade tracking log
+│   ├── 📄 SCREENSHOTS_CAPTURE_UPGRADE.md  # Upgrade screenshot checklist
+│   └── 📂 Upgrade Screenshots/         # Screenshots from upgrades
 │
-├── 📂 screenshots/                     # Infrastructure & setup screenshots
-│   ├── 🖼️  Wazuh Dashboard.png
-│   ├── 🖼️  Wazuh Dashboard Active.jpg
-│   ├── 🖼️  Wazuh Login Page.png
-│   ├── 🖼️  Wazuh Manager Active.png
-│   ├── 🖼️  Wazuh Indexer Active.jpg
-│   ├── 🖼️  Wazuh Agents Section.png
-│   ├── 🖼️  Ubuntu Agent Logs.png
-│   ├── 🖼️  Sysmon Running on endpoint.png
-│   ├── 🖼️  auditd active on endpoint.png
-│   ├── 🖼️  Server Host Information.png
-│   ├── 🖼️  IP of Wazuh Server.png
-│   ├── 🖼️  Endpoint Information.png
-│   ├── 🖼️  Ubuntu_Laptop_Overview.png
-│   ├── 🖼️  Available Storage on Server.jpg
-│   ├── 🖼️  Ram on Server.jpg
-│   └── 📄 README.md                    # Screenshot index & descriptions
+├── 📂 screenshots/                     # Infrastructure & setup screenshots
+│   ├── 🖼️  Wazuh Dashboard.png
+│   ├── 🖼️  Wazuh Dashboard Active.jpg
+│   ├── 🖼️  Wazuh Login Page.png
+│   ├── 🖼️  Wazuh Manager Active.png
+│   ├── 🖼️  Wazuh Indexer Active.jpg
+│   ├── 🖼️  Wazuh Agents Section.png
+│   ├── 🖼️  Ubuntu Agent Logs.png
+│   ├── 🖼️  Sysmon Running on endpoint.png
+│   ├── 🖼️  auditd active on endpoint.png
+│   ├── 🖼️  Server Host Information.png
+│   ├── 🖼️  IP of Wazuh Server.png
+│   ├── 🖼️  Endpoint Information.png
+│   ├── 🖼️  Ubuntu_Laptop_Overview.png
+│   ├── 🖼️  Available Storage on Server.jpg
+│   ├── 🖼️  Ram on Server.jpg
+│   └── 📄 README.md                    # Screenshot index & descriptions
 │
-└── 📂 videos/                          # Full project demo recordings
-└── 🎬 DEMO.mp4                     # Main SIEM lab demo video
-
+└── 📂 videos/                          # Full project demo recordings
+    └── 🎬 DEMO.mp4                     # Main SIEM lab demo video
+```
 
 ---
 
@@ -179,14 +177,6 @@ This project builds a small, realistic **security monitoring lab** designed to s
 ---
 
 ## ⚔️ Attack Simulations
-
-I simulated and documented the following security event scenarios and detection pipelines:
-
-- 🔐 **[SSH Brute-Force Detection & Automated Response](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack)**
-- 🔑 **[Linux Privilege Escalation Detection](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Linux%20Privilege%20Escalation%20Detection)**
-- 💉 **[SQL Injection Detection (PoC)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Web%20Server%20Attack)**
-
----
 
 ### 🔐 Simulation 1 - SSH Brute-Force Attack Pipeline
 
@@ -236,7 +226,7 @@ I simulated and documented the following security event scenarios and detection 
 
 ## 🤖 SOAR - Automated Incident Response
 
-This is my **first SOAR response implementation**, built for the [SSH brute-force attack simulation](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack). It automates containment the moment Wazuh confirms a full attack chain — no manual intervention required between detection and response.
+This is my **first SOAR response implementation**, built for the [SSH brute-force attack simulation](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations). It automates containment the moment Wazuh confirms a full attack chain — no manual intervention required between detection and response.
 
 When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, the automated response executes the following containment actions:
 
@@ -250,7 +240,6 @@ When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, the automate
 **Implementation:** The response is a **Python script** (wrapped in a Bash active response handler) deployed at `/var/ossec/active-response/bin/soar-remediate-100012.py`, invoked by Wazuh's active response framework when the rule fires.
 
 > 📄 Full breakdown and walkthrough: [SSH Attack Simulation](https://zayanparpia.github.io/Portfolio/ssh-attack-simulation.html)
-
 ---
 
 ## 📏 Custom Detection Rules
@@ -292,12 +281,10 @@ Attack simulation detection screenshots are located within each simulation's `Sc
 - **SOAR Scripting** - Writing Python active response scripts integrated with Wazuh's active response framework
 - **Networking (nmcli)** - Managing interfaces via CLI, debugging NAT vs Bridge mode in VM environments
 - **SSH Key Authentication** - Generating keys with `ssh-keygen`, using `ssh-copy-id`, understanding `authorized_keys`
-- **Web Application Monitoring** - Ingesting HTTP server logs to detect SQL Injection (SQLi) patterns and web attack payloads
 
 ### 🔐 Security Concepts
 - SIEM log pipeline: `Endpoint → Agent → Manager → Indexer → Dashboard`
 - Correlation rules - chaining multiple events with `frequency`, `timeframe`, and `if_matched_sid`
-- Web Application Attacks - identifying SQL injection attempts and malicious query parameters within web access logs
 - MITRE ATT&CK framework mapping for detection engineering
 - False positive management and rule tuning in real environments
 - PII awareness and handling sensitive data in logs
@@ -307,7 +294,6 @@ Attack simulation detection screenshots are located within each simulation's `Sc
 - GitHub project organization for security engineering portfolios
 - Patience and systematic troubleshooting in complex multi-service environments
 
----
 
 ## 📊 Project Timeline
 
@@ -335,9 +321,10 @@ This project is licensed under the terms found in the [`License`](./License) fil
 ---
 
 <p align="center">
-  <em>Built as a hands-on cybersecurity portfolio project. Documenting the real process - including the failures, the troubleshooting, and the wins.</em>
+  <em>Built as a hands-on cybersecurity portfolio project. Documenting the real process - including the failures, the troubleshooting, and the wins.</em>
 </p>
 
 <p align="center">
-  <strong>📫 Documentation maintained by Zayan Parpia</strong>
+  <strong>📫 Documentation maintained by Zayan Parpia</strong>
 </p>
+
