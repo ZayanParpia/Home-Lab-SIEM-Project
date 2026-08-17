@@ -86,9 +86,21 @@ August 17, 2026
 
 
 
+its getting to complex, call it off
+
+
+
 Watch
 
 https://www.youtube.com/watch?v=CTaQq02uAww
+
+
+
+Create Diagram for it
+
+
+
+Move on to next attack detection
 
 
 
@@ -123,7 +135,7 @@ Make Things to learn after simulation doc
 * Decoders
 * Man
 * User Permissions
-* Learn Theroy
+* Learn Theory
 
 Explain what is tech stack for
 

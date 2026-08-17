@@ -103,16 +103,25 @@ This project builds a small, realistic **security monitoring lab** designed to s
 │   │   ├── 📂 Video Demo/              # Attack simulation video recordings
 │   │   └── 📂 DEMO edit/               # Edited demo footage
 │   │
-│   └── 📂 Linux Privilege Escalation Detection/  # Privilege escalation module
-│       ├── 📄 README.md                # Module overview and achievements
-│       ├── 📄 Outline.md               # Detection strategy and phase plan
-│       ├── 📄 Next Steps.md            # Upcoming phases (SUID, chmod abuse)
-│       ├── 📄 What I learned.md        # Technical takeaways
-│       ├── 📄 Problems Encountered.md  # Issues encountered and resolved
-│       ├── 📄 Prompt.txt               # AI prompts used for this module
-│       ├── 🖼️  Attack Simulation 1.png # Simulation diagram
-│       ├── 📂 Screenshots/             # Detection evidence (Wazuh alerts)
-│       └── 📂 Video Demo/              # Module video demonstrations
+│   ├── 📂 Linux Privilege Escalation Detection/  # Privilege escalation module
+│   │   ├── 📄 README.md                # Module overview and achievements
+│   │   ├── 📄 Outline.md               # Detection strategy and phase plan
+│   │   ├── 📄 Next Steps.md            # Upcoming phases (SUID, chmod abuse)
+│   │   ├── 📄 What I learned.md        # Technical takeaways
+│   │   ├── 📄 Problems Encountered.md  # Issues encountered and resolved
+│   │   ├── 📄 Prompt.txt               # AI prompts used for this module
+│   │   ├── 🖼️  Attack Simulation 1.png # Simulation diagram
+│   │   ├── 📂 Screenshots/             # Detection evidence (Wazuh alerts)
+│   │   └── 📂 Video Demo/              # Module video demonstrations
+│   │
+│   └── 📂 Web Server Attack/           # Web server attack & SQL detection POC
+│       ├── 📄 Outline.md               # Simulation design & attack matrix
+│       ├── 📄 Techstack.md             # Web attack tech stack details
+│       ├── 📄 Next Steps & What I did.md # Execution journal & step log
+│       ├── 📄 What I learned.md        # Key insights from SQL injection detection
+│       ├── 📂 config/                  # Apache log & decoder configurations
+│       ├── 📂 rules/                   # Custom Wazuh detection rules (local_rules.xml)
+│       └── 📂 Screenshots/             # SQL detection alert screenshots
 │
 ├── 📂 docs/                            # Project-wide documentation
 │   ├── 📄 PROGRESS.md                  # Chronological build log (May-Jul 2026)
@@ -178,6 +187,14 @@ This project builds a small, realistic **security monitoring lab** designed to s
 
 ## ⚔️ Attack Simulations
 
+In this project, I simulated and detected the following attack scenarios to validate security monitoring, rule triggering, and incident response capabilities:
+
+- **[I simulated SSH brute force detection](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack)**
+- **[Linux privilege escalation](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Linux%20Privilege%20Escalation%20Detection)**
+- **[SQL DETECTION (POC)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Web%20Server%20Attack)**
+
+---
+
 ### 🔐 Simulation 1 - SSH Brute-Force Attack Pipeline
 
 **Status:** ✅ Fully Simulated & Documented
@@ -224,6 +241,21 @@ This project builds a small, realistic **security monitoring lab** designed to s
 
 ---
 
+### 🌐 Simulation 3 - Web Server SQL Detection (POC)
+
+**Status:** ✅ POC Complete | 🔄 Advanced Correlation In Progress
+
+**Objective:** Validate SIEM/Wazuh capability to detect SQL injection attempts targeting a vulnerable web application (OWASP Juice Shop / Apache).
+
+| Phase | Technique | Detection |
+|-------|-----------|-----------|
+| **Phase 1: SQL Injection Attempt** | Input validation bypass via query parameters | Custom Rule 100200 (Level 7) - detected via web-accesslog decoder |
+
+**MITRE ATT&CK Mapping:**
+- `T1190` - Exploit Public-Facing Application
+
+---
+
 ## 🤖 SOAR - Automated Incident Response
 
 This is my **first SOAR response implementation**, built for the [SSH brute-force attack simulation](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations). It automates containment the moment Wazuh confirms a full attack chain — no manual intervention required between detection and response.
@@ -248,6 +280,7 @@ When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, the automate
 |---------|------|---------|----------|
 | `100002` | Sudo Password Guessing | 3× failed sudo in 120 seconds | `10` (Critical) |
 | `100012` | Full SSH Attack Chain | Brute-force + successful login + key injection | High |
+| `100200` | SQL Injection Detected | Match `union select` or `OR 1=1` in web logs | `7` (Medium) |
 | Custom Suricata | Nmap SSH Port Scan | SYN packet to port 22 from non-admin IP | Alert |
 
 ---
