@@ -21,7 +21,7 @@
 - [Tech Stack](#-tech-stack)
 - [Repository Structure](#-repository-structure)
 - [What Was Built](#-what-was-built)
-- [Attack Simulations](#-attack-simulations)
+- [Attack Simulations](#attack-simulations)
 - [SOAR - Automated Response](#-soar---automated-incident-response)
 - [Custom Detection Rules](#-custom-detection-rules)
 - [Screenshots](#-screenshots)
@@ -212,10 +212,11 @@ This project builds a small, realistic **security monitoring lab** designed to s
 
 ### Phase 3 - Attack Simulations & Detection ✅
 
-> See [Attack Simulations](#-attack-simulations) section below.
+> See [Attack Simulations](#attack-simulations) section below.
 
 ---
 
+<a id="attack-simulations"></a>
 ## ⚔️ Attack Simulations
 
 In this project, I simulated and detected the following attack scenarios to validate security monitoring, rule triggering, and incident response capabilities:
