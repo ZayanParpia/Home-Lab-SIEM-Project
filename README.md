@@ -26,6 +26,7 @@
 - [Custom Detection Rules](#-custom-detection-rules)
 - [Screenshots](#-screenshots)
 - [What I Learned](#-what-i-learned)
+- [Project Timeline](#-project-timeline)
 - [License](#-license)
 
 ---
@@ -69,7 +70,6 @@ This project builds a small, realistic **security monitoring lab** designed to s
 
 ## 📁 Repository Structure
 
-```
 📦 Home SIEM Lab
 │
 ├── 📄 README.md                        # This file - project overview
@@ -103,16 +103,18 @@ This project builds a small, realistic **security monitoring lab** designed to s
 │   │   ├── 📂 Video Demo/              # Attack simulation video recordings
 │   │   └── 📂 DEMO edit/               # Edited demo footage
 │   │
-│   └── 📂 Linux Privilege Escalation Detection/  # Privilege escalation module
-│       ├── 📄 README.md                # Module overview and achievements
-│       ├── 📄 Outline.md               # Detection strategy and phase plan
-│       ├── 📄 Next Steps.md            # Upcoming phases (SUID, chmod abuse)
-│       ├── 📄 What I learned.md        # Technical takeaways
-│       ├── 📄 Problems Encountered.md  # Issues encountered and resolved
-│       ├── 📄 Prompt.txt               # AI prompts used for this module
-│       ├── 🖼️  Attack Simulation 1.png # Simulation diagram
-│       ├── 📂 Screenshots/             # Detection evidence (Wazuh alerts)
-│       └── 📂 Video Demo/              # Module video demonstrations
+│   ├── 📂 Linux Privilege Escalation Detection/  # Privilege escalation module
+│   │   ├── 📄 README.md                # Module overview and achievements
+│   │   ├── 📄 Outline.md               # Detection strategy and phase plan
+│   │   ├── 📄 Next Steps.md            # Upcoming phases (SUID, chmod abuse)
+│   │   ├── 📄 What I learned.md        # Technical takeaways
+│   │   ├── 📄 Problems Encountered.md  # Issues encountered and resolved
+│   │   ├── 📄 Prompt.txt               # AI prompts used for this module
+│   │   ├── 🖼️  Attack Simulation 1.png # Simulation diagram
+│   │   ├── 📂 Screenshots/             # Detection evidence (Wazuh alerts)
+│   │   └── 📂 Video Demo/              # Module video demonstrations
+│   │
+│   └── 📂 Web Server Attack/           # Web server attack simulation module
 │
 ├── 📂 docs/                            # Project-wide documentation
 │   ├── 📄 PROGRESS.md                  # Chronological build log (May-Jul 2026)
@@ -147,8 +149,8 @@ This project builds a small, realistic **security monitoring lab** designed to s
 │   └── 📄 README.md                    # Screenshot index & descriptions
 │
 └── 📂 videos/                          # Full project demo recordings
-    └── 🎬 DEMO.mp4                     # Main SIEM lab demo video
-```
+└── 🎬 DEMO.mp4                     # Main SIEM lab demo video
+
 
 ---
 
@@ -177,6 +179,14 @@ This project builds a small, realistic **security monitoring lab** designed to s
 ---
 
 ## ⚔️ Attack Simulations
+
+I simulated and documented the following security event scenarios and detection pipelines:
+
+- 🔐 **[SSH Brute-Force Detection & Automated Response](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack)**
+- 🔑 **[Linux Privilege Escalation Detection](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Linux%20Privilege%20Escalation%20Detection)**
+- 💉 **[SQL Injection Detection (PoC)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Web%20Server%20Attack)**
+
+---
 
 ### 🔐 Simulation 1 - SSH Brute-Force Attack Pipeline
 
@@ -226,7 +236,7 @@ This project builds a small, realistic **security monitoring lab** designed to s
 
 ## 🤖 SOAR - Automated Incident Response
 
-This is my **first SOAR response implementation**, built for the [SSH brute-force attack simulation](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations). It automates containment the moment Wazuh confirms a full attack chain — no manual intervention required between detection and response.
+This is my **first SOAR response implementation**, built for the [SSH brute-force attack simulation](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack). It automates containment the moment Wazuh confirms a full attack chain — no manual intervention required between detection and response.
 
 When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, the automated response executes the following containment actions:
 
@@ -240,6 +250,7 @@ When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, the automate
 **Implementation:** The response is a **Python script** (wrapped in a Bash active response handler) deployed at `/var/ossec/active-response/bin/soar-remediate-100012.py`, invoked by Wazuh's active response framework when the rule fires.
 
 > 📄 Full breakdown and walkthrough: [SSH Attack Simulation](https://zayanparpia.github.io/Portfolio/ssh-attack-simulation.html)
+
 ---
 
 ## 📏 Custom Detection Rules
@@ -281,10 +292,12 @@ Attack simulation detection screenshots are located within each simulation's `Sc
 - **SOAR Scripting** - Writing Python active response scripts integrated with Wazuh's active response framework
 - **Networking (nmcli)** - Managing interfaces via CLI, debugging NAT vs Bridge mode in VM environments
 - **SSH Key Authentication** - Generating keys with `ssh-keygen`, using `ssh-copy-id`, understanding `authorized_keys`
+- **Web Application Monitoring** - Ingesting HTTP server logs to detect SQL Injection (SQLi) patterns and web attack payloads
 
 ### 🔐 Security Concepts
 - SIEM log pipeline: `Endpoint → Agent → Manager → Indexer → Dashboard`
 - Correlation rules - chaining multiple events with `frequency`, `timeframe`, and `if_matched_sid`
+- Web Application Attacks - identifying SQL injection attempts and malicious query parameters within web access logs
 - MITRE ATT&CK framework mapping for detection engineering
 - False positive management and rule tuning in real environments
 - PII awareness and handling sensitive data in logs
@@ -294,6 +307,7 @@ Attack simulation detection screenshots are located within each simulation's `Sc
 - GitHub project organization for security engineering portfolios
 - Patience and systematic troubleshooting in complex multi-service environments
 
+---
 
 ## 📊 Project Timeline
 
