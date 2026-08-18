@@ -86,7 +86,7 @@ August 17, 2026
 
 
 
-its getting to complex, call it off
+I realized that there's already premade rules for wazuh for sql injections and will be moving on to another simulation
 
 
 
