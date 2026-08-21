@@ -116,7 +116,7 @@ August 19, 2026
 
 
 
-Move on to next vector plan
+Move on to next vector plan 
 
 
 
@@ -128,7 +128,7 @@ Upload Portfolio and linkedin
 
 
 
-Learn thing 
+Learn thing
 
 # **Things to keep in mind**
 
