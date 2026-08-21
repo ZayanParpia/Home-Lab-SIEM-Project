@@ -96,29 +96,27 @@ https://www.youtube.com/watch?v=CTaQq02uAww
 
 
 
-Create Diagram for it
+Create Diagram for it ✅
 
 
 
-Move on to next attack detection
+Move on to next attack detection ✅
 
 
 
-and use it as a reverse proxy
+Clean up Outline ✅
 
 
 
-Clean up Outline
+Create outline for how I should approach project purposes and what I learned, what I found etc ✅
 
-Format Github
 
-Get rid of NGINX Mentions
 
-Use atomic red team to
+August 19, 2026
 
-Make different DIRS for each attack simulation here aswell
 
-Create outline for how I should approach project purposes and what I learned, what I found etc
+
+Move on to next vector plan
 
 
 
@@ -126,28 +124,11 @@ README for conf and rules
 
 
 
-Make Things to learn after simulation doc
-
-* Cat
-* How to write the test line rules
-* Mire mapping
-* SQL map
-* Decoders
-* Man
-* User Permissions
-* Learn Theory
-
-Explain what is tech stack for
-
-Also learn to use man command and find docs
-
-Learn curl
-
-Create Report
-
-One more attack vector main
+Upload Portfolio and linkedin
 
 
+
+Learn thing 
 
 # **Things to keep in mind**
 
