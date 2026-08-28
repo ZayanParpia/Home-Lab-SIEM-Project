@@ -14,5 +14,9 @@ find trigger for it on SIEM
 
 
 
+August 26-28, 2026
 
+I was learning how to make the python script to encrypt files in directories.
+
+I learned about the cryptography library and the rsa library. 
 
