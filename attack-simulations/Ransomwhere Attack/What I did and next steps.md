@@ -18,5 +18,25 @@ August 26-28, 2026
 
 I was learning how to make the python script to encrypt files in directories.
 
-I learned about the cryptography library and the rsa library. 
+I learned about the cryptography library and the rsa library.
+
+
+
+September 1, 2026
+
+After a few days of learning how to make the script, I made the script using AESGCM for bulk encryption, I put the script in /scripts.
+
+
+
+PUT SCRIPT HERE
+
+
+
+I also made mock data for the /documents folder for realism 
+
+AT THE END PUT README.md
+
+
+
+Create Diagram
 
