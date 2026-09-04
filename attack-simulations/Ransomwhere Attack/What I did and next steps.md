@@ -30,7 +30,13 @@ After a few days of learning how to make the script, I made the script using AES
 
 PUT SCRIPT HERE
 
+look at
 
+https://documentation.wazuh.com/current/user-manual/capabilities/file-integrity/advanced-settings.html#who-data-monitoring
+
+
+
+Figure out how to use whodata
 
 I also made mock data for the /documents folder for realism 
 
