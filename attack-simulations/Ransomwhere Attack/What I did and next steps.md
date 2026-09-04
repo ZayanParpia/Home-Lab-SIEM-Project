@@ -28,6 +28,34 @@ After a few days of learning how to make the script, I made the script using AES
 
 
 
+September 4, 2026
+
+
+
+After a few hours of getting the errors 
+
+
+
+Sep 04 15:14:15 endpoint4 audisp-af\_unix\[35406]: Using default queue depth
+
+Sep 04 15:14:15 endpoint4 audisp-af\_unix\[35406]: Couldn't bind af\_unix socket (Address already in use)
+
+Sep 04 15:14:15 endpoint4 audisp-af\_unix\[35406]: audisp-af\_unix plugin exiting due to errors setting up socket
+
+Sep 04 15:14:15 endpoint4 auditd\[35205]: plugin /sbin/audisp-af\_unix terminated unexpectedly
+
+Sep 04 15:14:15 endpoint4 auditd\[35205]: plugin /sbin/audisp-af\_unix was restarted (10x)
+
+Sep 04 15:14:15 endpoint4 audisp-af\_unix\[35413]: Using default queue depth
+
+Sep 04 15:14:15 endpoint4 audisp-af\_unix\[35413]: Couldn't bind af\_unix socket (Address already in use)
+
+Sep 04 15:14:15 endpoint4 audisp-af\_unix\[35413]: audisp-af\_unix plugin exiting due to errors setting up socket
+
+Sep 04 15:14:16 endpoint4 auditd\[35205]: plugin /sbin/audisp-af\_unix terminated unexpectedly
+
+Sep 04 15:14:16 endpoint4 auditd\[35205]: plugin /sbin/audisp-af\_unix has exceeded max\_restarts
+
 PUT SCRIPT HERE
 
 look at
@@ -38,7 +66,11 @@ https://documentation.wazuh.com/current/user-manual/capabilities/file-integrity/
 
 Figure out how to use whodata
 
-I also made mock data for the /documents folder for realism 
+Put Script inside this folder
+
+Next session troubleshoot whodata
+
+I also made mock data for the /documents folder for realism
 
 AT THE END PUT README.md
 
