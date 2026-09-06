@@ -32,7 +32,7 @@ September 4, 2026
 
 
 
-After a few hours of getting the errors 
+After a few hours of getting the errors
 
 
 
@@ -61,6 +61,26 @@ PUT SCRIPT HERE
 look at
 
 https://documentation.wazuh.com/current/user-manual/capabilities/file-integrity/advanced-settings.html#who-data-monitoring
+
+
+
+September 5, 2026
+
+
+
+Today I found out that the whodata fires properly when using the /etc folder, going to dive into why now
+
+
+
+September 6, 2026
+
+
+
+I finally figured it out as to why whodata is only working inside the /etc folder, I found out that when I make new things inside the /root directory, whether it be a new file or directory, and make it track inside the ossec.conf file, then when I make changes to a file, it works completely fine. I realized that it wasn't working for user documents and user directories because when I tried making a new directory inside my user account and tried tracking it by adding a new monitoring line inside the ossec.conf file for that file using whodata, it worked perfectly. 
+
+
+
+I believe that this worked now because I needed to make a new file or directory that wasn't already there. The folders and files I was trying to track existed before I started configuring Whodata which likely caused an error because it didn't register it and it only registers new files/folders that I make after configuring the ossec.conf.
 
 
 
