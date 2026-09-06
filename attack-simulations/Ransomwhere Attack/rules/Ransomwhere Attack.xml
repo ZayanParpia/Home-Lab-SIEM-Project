@@ -1,0 +1,19 @@
+<group name="Ransomwhere Attack">
+
+ <rule id="100234" level="15" frequency="10" timeframe="8">
+    <if_sid>550</if_sid>
+    <same_field>syscheck.audit.process.ppid</same_field>
+    <description>Possible Mass Encryption Detected</description>
+  </rule>
+
+ <rule id="100235" level="16" timeframe="15" frequency="1">
+    <if_sid>554</if_sid>
+    <if_matched_sid>100234</if_matched_sid>
+    <field name="file" type="pcre2">(?i)\.(md|txt|html|htm|png|jpg)$</field>
+    <same_field>syscheck.audit.process.ppid</same_field>
+    <description>Ransomwhere Detected. Initiating Snapshot Reverse...</description>
+    <mitre>
+      <id>T1486</id>
+    </mitre>
+  </rule>
+</group>
