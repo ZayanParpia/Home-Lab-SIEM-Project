@@ -84,6 +84,16 @@ I believe that this worked now because I needed to make a new file or directory 
 
 
 
+Next steps for September 7, 2026
+
+Try to get the rule to fire 
+
+SO far i tested it and it dosent seem to be working for some reason. Fix it
+
+Possibly because mock did something 
+
+
+
 Figure out how to use whodata
 
 Put Script inside this folder
