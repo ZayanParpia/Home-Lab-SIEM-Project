@@ -76,7 +76,7 @@ September 6, 2026
 
 
 
-I finally figured it out as to why whodata is only working inside the /etc folder, I found out that when I make new things inside the /root directory, whether it be a new file or directory, and make it track inside the ossec.conf file, then when I make changes to a file, it works completely fine. I realized that it wasn't working for user documents and user directories because when I tried making a new directory inside my user account and tried tracking it by adding a new monitoring line inside the ossec.conf file for that file using whodata, it worked perfectly. 
+I finally figured it out as to why whodata is only working inside the /etc folder, I found out that when I make new things inside the /root directory, whether it be a new file or directory, and make it track inside the ossec.conf file, then when I make changes to a file, it works completely fine. I realized that it wasn't working for user documents and user directories because when I tried making a new directory inside my user account and tried tracking it by adding a new monitoring line inside the ossec.conf file for that file using whodata, it worked perfectly.
 
 
 
@@ -86,11 +86,19 @@ I believe that this worked now because I needed to make a new file or directory 
 
 Next steps for September 7, 2026
 
-Try to get the rule to fire 
+Try to get the rule to fire
 
 SO far i tested it and it dosent seem to be working for some reason. Fix it
 
-Possibly because mock did something 
+Possibly because mock did something
+
+SYNTAX ERROR IN CUSTOM RULES
+
+
+
+September 7, 2026
+
+I kinda got my custom rule to fire, I found out that syscheck.audit.process.ppid is blocking my rule from firing by removing that line and testing, so Im going to try and figure out why that is.
 
 
 
