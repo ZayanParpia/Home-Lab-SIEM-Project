@@ -102,6 +102,18 @@ I kinda got my custom rule to fire, I found out that syscheck.audit.process.ppid
 
 
 
+Steps for Sep 8
+
+Figure out why rule isn't firing with same syscheck.audit.process.id
+
+
+
+I found out that I needed to put just ppid ( I read the docs properly this time) for the rule to fire. 
+
+I got it to fire and will work on SOAR response next session
+
+
+
 Figure out how to use whodata
 
 Put Script inside this folder
