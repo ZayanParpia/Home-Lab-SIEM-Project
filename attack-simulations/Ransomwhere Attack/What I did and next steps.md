@@ -108,21 +108,49 @@ Figure out why rule isn't firing with same syscheck.audit.process.id
 
 
 
-I found out that I needed to put just ppid ( I read the docs properly this time) for the rule to fire. 
+I found out that I needed to put just ppid ( I read the docs properly this time) for the rule to fire.
 
 I got it to fire and will work on SOAR response next session
 
 
 
+Sep 9, 2026
+
+
+
+Create script for snapshot reverse
+
+
+
+Today I looked at the script pipeline i wanted to create and It will go as follows
+
+
+
+Ransomware is detected - Ransomware file is deleted - Script fires that goes to cloud and restores set files with same names and locations based on a json file that shows what files are where in the vm.
+
+
+
+
+
 Figure out how to use whodata
 
-Put Script inside this folder
+Put Script(s) inside this folder
 
 Next session troubleshoot whodata
 
 I also made mock data for the /documents folder for realism
 
+Format this folder
+
 AT THE END PUT README.md
+
+Portfolio Revamp and update with other attack
+
+Post on GitHub
+
+
+
+Post on linkedin 
 
 
 

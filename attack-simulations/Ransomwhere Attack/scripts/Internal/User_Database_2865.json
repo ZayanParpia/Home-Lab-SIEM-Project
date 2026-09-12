@@ -1,0 +1,10 @@
+{
+    "system_id": 21112,
+    "environment": "production",
+    "enabled": true,
+    "settings": {
+        "logging": true,
+        "authentication": true,
+        "max_connections": 343
+    }
+}

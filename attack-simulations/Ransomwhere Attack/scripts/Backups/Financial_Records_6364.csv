@@ -1,0 +1,15 @@
+ID,Name,Department,Status
+1,User_8355,IT,Pending
+2,User_1336,Finance,Active
+3,User_6209,Finance,Active
+4,User_3143,Finance,Pending
+5,User_9505,Finance,Active
+6,User_4924,HR,Active
+7,User_5352,Security,Inactive
+8,User_7925,Security,Active
+9,User_1360,HR,Pending
+10,User_3051,Security,Inactive
+11,User_6025,Finance,Pending
+12,User_9809,HR,Inactive
+13,User_5243,HR,Active
+14,User_1769,Finance,Inactive

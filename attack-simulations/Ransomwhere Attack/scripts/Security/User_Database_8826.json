@@ -1,0 +1,10 @@
+{
+    "system_id": 55691,
+    "environment": "testing",
+    "enabled": false,
+    "settings": {
+        "logging": true,
+        "authentication": true,
+        "max_connections": 20
+    }
+}

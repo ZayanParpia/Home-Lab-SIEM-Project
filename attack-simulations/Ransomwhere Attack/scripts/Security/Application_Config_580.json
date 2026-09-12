@@ -1,0 +1,10 @@
+{
+    "system_id": 42201,
+    "environment": "development",
+    "enabled": true,
+    "settings": {
+        "logging": true,
+        "authentication": true,
+        "max_connections": 111
+    }
+}
