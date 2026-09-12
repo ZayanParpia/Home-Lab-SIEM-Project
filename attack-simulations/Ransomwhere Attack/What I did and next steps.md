@@ -130,7 +130,21 @@ Ransomware is detected - Ransomware file is deleted - Script fires that goes to 
 
 
 
+Sep 12, 2026
 
+
+
+Today I created the script for the backup
+
+I am now going to test it on the active response on wazuh
+
+
+
+
+
+Disable API key 
+
+Scrub out things on script to be safe to post on github
 
 Figure out how to use whodata
 
@@ -150,7 +164,7 @@ Post on GitHub
 
 
 
-Post on linkedin 
+Post on linkedin
 
 
 
