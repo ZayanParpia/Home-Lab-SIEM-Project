@@ -140,9 +140,13 @@ I am now going to test it on the active response on wazuh
 
 
 
+Sep 14, 2026
+
+Right now Im deciding to add a HITL for the SOAR response when I restore the files
 
 
-Disable API key 
+
+Disable API key
 
 Scrub out things on script to be safe to post on github
 
