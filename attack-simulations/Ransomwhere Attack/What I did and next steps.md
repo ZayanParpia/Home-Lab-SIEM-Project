@@ -130,6 +130,7 @@ Ransomware is detected - Ransomware file is deleted - Script fires that goes to 
 
 
 
+<<<<<<< HEAD
 Sep 12, 2026
 
 
@@ -150,6 +151,10 @@ Disable API key
 
 Scrub out things on script to be safe to post on github
 
+=======
+
+
+>>>>>>> bf2ef8665fa386a8c6b9e8e1994a2a31b812cfaa
 Figure out how to use whodata
 
 Put Script(s) inside this folder
@@ -168,7 +173,11 @@ Post on GitHub
 
 
 
+<<<<<<< HEAD
 Post on linkedin
+=======
+Post on linkedin 
+>>>>>>> bf2ef8665fa386a8c6b9e8e1994a2a31b812cfaa
 
 
 
