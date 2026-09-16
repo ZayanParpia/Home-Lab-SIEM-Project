@@ -146,22 +146,38 @@ Sep 14, 2026
 Right now Im deciding to add a HITL for the SOAR response when I restore the files
 
 
+next steps for Sep 15, 2026
+
+Remake script for no decrypt asking ✅
+
+Create video demo ✅
+
+
+next steps for Sep 16, 2026
+
+Collect Screenshots 
 
 Disable API key
 
-Scrub out things on script to be safe to post on github
 
-=======
+Sanitize Scripts 
+
+Create what I could do better doc 
+
+Create Pipeline doc 
+
+Edit Video
+
+After Project
+
 
 
 >>>>>>> bf2ef8665fa386a8c6b9e8e1994a2a31b812cfaa
-Figure out how to use whodata
 
-Put Script(s) inside this folder
-
-Next session troubleshoot whodata
 
 I also made mock data for the /documents folder for realism
+
+Add Rules to this folder
 
 Format this folder
 
@@ -171,6 +187,9 @@ Portfolio Revamp and update with other attack
 
 Post on GitHub
 
+Format GitHub repo and portfolio website 
+
+Create Diagram
 
 
 <<<<<<< HEAD
@@ -181,5 +200,5 @@ Post on linkedin
 
 
 
-Create Diagram
+
 

