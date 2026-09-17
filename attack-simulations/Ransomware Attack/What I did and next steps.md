@@ -153,12 +153,17 @@ Remake script for no decrypt asking ✅
 Create video demo ✅
 
 
-next steps for Sep 16, 2026
+next steps for Sep 17, 2026
+
+Edit Video ✅
+
+next steps for Sep 17, 2026
 
 Collect Screenshots 
 
 Disable API key
 
+Create README.md for what this attack vector did, false positives and any other information. 
 
 Sanitize Scripts 
 
