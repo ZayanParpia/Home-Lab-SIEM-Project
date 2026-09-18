@@ -159,34 +159,32 @@ Edit Video ✅
 
 next steps for Sep 17, 2026
 
-Collect Screenshots 
+Collect Screenshots ✅
 
-Disable API key
+Disable API key ✅
 
-Create README.md for what this attack vector did, false positives and any other information. 
+Create README.md for what this attack vector did, false positives and any other information. ✅
 
-Sanitize Scripts 
+Sanitize Scripts ✅
 
-Create what I could do better doc 
+Create what I could do better doc  ✅
 
-Create Pipeline doc 
+Create Pipeline doc  ✅
 
-Edit Video
+Edit Video ✅
 
-After Project
 
 
 
 >>>>>>> bf2ef8665fa386a8c6b9e8e1994a2a31b812cfaa
 
+Collect Screenshots for pipeline idea 
 
 I also made mock data for the /documents folder for realism
 
 Add Rules to this folder
 
 Format this folder
-
-AT THE END PUT README.md
 
 Portfolio Revamp and update with other attack
 
