@@ -178,19 +178,10 @@ Edit Video ✅
 
 >>>>>>> bf2ef8665fa386a8c6b9e8e1994a2a31b812cfaa
 
-Collect Screenshots for pipeline idea 
+Collect Screenshots for pipeline idea ✅
 
-I also made mock data for the /documents folder for realism
 
-Add Rules to this folder
-
-Format this folder
-
-Portfolio Revamp and update with other attack
-
-Post on GitHub
-
-Format GitHub repo and portfolio website 
+Format GitHub repo and portfolio website ✅
 
 Create Diagram
 
@@ -198,7 +189,7 @@ Create Diagram
 <<<<<<< HEAD
 Post on linkedin
 =======
-Post on linkedin 
+Post on github
 >>>>>>> bf2ef8665fa386a8c6b9e8e1994a2a31b812cfaa
 
 
