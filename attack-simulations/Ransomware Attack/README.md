@@ -517,19 +517,8 @@ Ransomware/
 
 The following screenshots document the simulation from **pre-attack preparation → encryption → detection → recovery**.
 
----
 
-## 1. 💾 Backup Script Running
-
-**`Backup Script Running.png`**
-
-Shows the backup script actively running before the ransomware simulation. The script creates backups of the files that will later be affected by the simulated attack.
-
-![Backup Script Running](<screenshots/Backup Script Running.png>)
-
----
-
-## 2. 📁 Files Before the Attack
+## 1. 📁 Files Before the Attack
 
 **`Files of DIR before.png`**
 
@@ -539,7 +528,7 @@ Shows the contents of the target directory **before** the ransomware simulation 
 
 ---
 
-## 3. 📄 Plaintext Files Before Ransomware
+## 2. 📄 Plaintext Files Before Ransomware
 
 **`Files in DIR in plaintext before Ransomware Script.png`**
 
@@ -549,7 +538,7 @@ Provides a closer view of the target files while they are still stored as normal
 
 ---
 
-## 4. 🐍 Ransomware Simulation Running
+## 3. 🐍 Ransomware Simulation Running
 
 **`Running Ransomware Script.png`**
 
@@ -561,7 +550,7 @@ This represents the **attack simulation phase** of the project.
 
 ---
 
-## 5. 🔐 Files Being Encrypted
+## 4. 🔐 Files Being Encrypted
 
 **`Ransomware Script Encrypted Contents.png`**
 
@@ -573,7 +562,7 @@ This demonstrates the simulated impact of the attack on the test data.
 
 ---
 
-## 6. 🔒 Directory After Encryption
+## 5. 🔒 Directory After Encryption
 
 **`Files in DIR now Encrypted.png`**
 
@@ -585,7 +574,7 @@ The previously readable files are now represented in their encrypted state.
 
 ---
 
-## 7. 📝 Ransomware Note Created
+## 6. 📝 Ransomware Note Created
 
 **`Ransomware Note Made.png`**
 
@@ -597,7 +586,7 @@ This represents the notification behavior commonly associated with ransomware an
 
 ---
 
-## 8. 🛡️ Wazuh Detection Pipeline
+## 7. 🛡️ Wazuh Detection Pipeline
 
 **`Pipeline for Rules Working .png`**
 
@@ -609,7 +598,7 @@ This demonstrates the custom security rules being triggered and the detection pi
 
 ---
 
-## 9. 🚨 Bulk File Changes Detected by SIEM
+## 8. 🚨 Bulk File Changes Detected by SIEM
 
 **`Bulk File Changes Detected by SIEM.png`**
 
@@ -620,6 +609,17 @@ The rapid modification activity serves as an indicator of potentially malicious 
 ![Bulk File Changes Detected](<screenshots/Bulk File Changes Detected by SIEM.png>)
 
 ---
+
+## 9. 💾 Backup Script Running
+
+**`Backup Script Running.png`**
+
+Shows the backup script actively running after the ransomware simulation.
+
+![Backup Script Running](<screenshots/Backup Script Running.png>)
+
+---
+
 
 ## 10. ♻️ Files Restored
 
