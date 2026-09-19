@@ -1,5 +1,11 @@
 # 🦠 Ransomware Attack Simulation
 
+<p align="center">
+  <img src="Diagram.png" alt="Ransomware Detection and Recovery Pipeline" width="900">
+</p>
+
+
+
 > **A defensive ransomware simulation and detection-engineering project using Wazuh SIEM**
 
 ![Platform](https://img.shields.io/badge/Platform-Wazuh%20SIEM-4C9AFF)
