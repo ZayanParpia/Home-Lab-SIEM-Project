@@ -183,7 +183,7 @@ Collect Screenshots for pipeline idea ✅
 
 Format GitHub repo and portfolio website ✅
 
-Create Diagram
+Create Diagram ✅
 
 
 <<<<<<< HEAD

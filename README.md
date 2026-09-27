@@ -1,15 +1,15 @@
 <h1 align="center">🛡️ Home SIEM Lab - Wazuh Detection & Response Project</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/SIEM-Wazuh%20v4.14-blue?style=for-the-badge&logo=linux" alt="Wazuh"/>
-  <img src="https://img.shields.io/badge/OS-Ubuntu%20Server-orange?style=for-the-badge&logo=ubuntu" alt="Ubuntu"/>
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status"/>
-  <img src="https://img.shields.io/badge/Type-Portfolio%20Project-purple?style=for-the-badge" alt="Type"/>
-  <img src="https://img.shields.io/badge/MITRE-ATT%26CK%20Mapped-red?style=for-the-badge" alt="MITRE"/>
+  <img src="https://img.shields.io/badge/SIEM-Wazuh%20v4.14-blue?style=for-the-badge&logo=linux" alt="Wazuh"/>
+  <img src="https://img.shields.io/badge/OS-Ubuntu%20Server-orange?style=for-the-badge&logo=ubuntu" alt="Ubuntu"/>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status"/>
+  <img src="https://img.shields.io/badge/Type-Portfolio%20Project-purple?style=for-the-badge" alt="Type"/>
+  <img src="https://img.shields.io/badge/MITRE-ATT%26CK%20Mapped-red?style=for-the-badge" alt="MITRE"/>
 </p>
 
 <p align="center">
-  A hands-on, home-built Security Information and Event Management (SIEM) lab demonstrating real-world SOC workflows - from infrastructure deployment to live attack simulation and automated incident response.
+  A hands-on, home-built Security Information and Event Management (SIEM) lab demonstrating real-world SOC workflows - from infrastructure deployment to live attack simulation and automated incident response.
 </p>
 
 ---
@@ -63,7 +63,8 @@ This project builds a small, realistic **security monitoring lab** designed to s
 | 📋 **Auditd** | Linux kernel-level syscall audit logging |
 | 🌐 **Suricata** | Network IDS/IPS - detects Nmap scans and network threats |
 | 🐉 **Kali Linux** | Attack simulation node (Hydra, Nmap) |
-| 🐍 **Python** | SOAR automated response scripting |
+| 🐍 **Python** | SOAR automated response scripting & ransomware/backup simulation |
+| 🔐 **AES-GCM** | Symmetric encryption used in the ransomware simulation |
 
 ---
 
@@ -72,20 +73,19 @@ This project builds a small, realistic **security monitoring lab** designed to s
 ```
 📦 Home SIEM Lab
 │
-├── 📄 README.md                        # This file - project overview
-├── 📄 AI-PROMPTS.md                    # AI prompts used during the project
-├── 📄 License                          # Project license
-├── 📄 .gitignore                       # Git ignore rules
+├── 📄 README.md                        # This file - project overview
+├── 📄 AI-PROMPTS.md                    # AI prompts used during the project
+├── 📄 License                          # Project license
+├── 📄 .gitignore                       # Git ignore rules
 │
-├── 📂 Infrastructure/                  # Core SIEM setup & architecture
-│   ├── 📄 PROJECT_OUTLINE.md           # Full project outline and build plan
-│   ├── 📂 Diagrams/                    # Network and lab architecture diagrams
-│   │   ├── 🖼️  DIAGRAM v1.png          # Initial architecture diagram
-│   │   ├── 🖼️  DIAGRAM v2.png          # Updated architecture diagram
-│   │   └── 🖼️  Attack Simulation 1.png # Attack simulation diagram
-│   └── 📂 config/                      # Configuration files (reserved)
+├── 📂 Infrastructure/                  # Core SIEM setup & architecture
+│   ├── 📄 PROJECT_OUTLINE.md           # Full project outline and build plan
+│   ├── 📂 Diagrams/                    # Network and lab architecture diagrams
+│   │   ├── 🖼️  DIAGRAM v1.png          # Initial architecture diagram
+│   │   ├── 🖼️  DIAGRAM v2.png          # Updated architecture diagram
+│   │   └── 🖼️  Attack Simulation 1.png # Attack simulation diagram
+│   └── 📂 config/                      # Configuration files (reserved)
 │
-<<<<<<< HEAD
 ├── 📂 attack-simulations/              # All attack scenarios & detection work
 │   ├── 📄 Rules.md                     # Custom Wazuh detection rule documentation
 │   │
@@ -98,6 +98,7 @@ This project builds a small, realistic **security monitoring lab** designed to s
 │   │   ├── 📄 Rule Outline.md          # Detection rule design notes
 │   │   ├── 📄 Prompt.txt               # AI prompts used for this module
 │   │   ├── 📄 ruletest.txt             # Rule testing notes
+│   │   ├── 🖼️  SOAR RESPONSE DIAGRAM.png # SOAR automated response flow diagram
 │   │   ├── 📂 Scripts/                 # SOAR response scripts
 │   │   │   └── 📄 SSH SOAR response script.md  # Python/Bash remediation script doc
 │   │   ├── 📂 Screenshots/             # Evidence of attack detection
@@ -115,79 +116,58 @@ This project builds a small, realistic **security monitoring lab** designed to s
 │   │   ├── 📂 Screenshots/             # Detection evidence (Wazuh alerts)
 │   │   └── 📂 Video Demo/              # Module video demonstrations
 │   │
-│   └── 📂 Web Server Attack/           # Web server attack & SQL detection POC
-│       ├── 📄 Outline.md               # Simulation design & attack matrix
-│       ├── 📄 Techstack.md             # Web attack tech stack details
-│       ├── 📄 Next Steps & What I did.md # Execution journal & step log
-│       ├── 📄 What I learned.md        # Key insights from SQL injection detection
-│       ├── 📂 config/                  # Apache log & decoder configurations
-│       ├── 📂 rules/                   # Custom Wazuh detection rules (local_rules.xml)
-│       └── 📂 Screenshots/             # SQL detection alert screenshots
-=======
-├── 📂 attack-simulations/              # All attack scenarios & detection work
-│   ├── 📄 Rules.md                     # Custom Wazuh detection rule documentation
-│   │
-│   ├── 📂 SSH Attack/                  # Full SSH brute-force attack pipeline
-│   │   ├── 📄 Outline.md               # Attack simulation plan & phase breakdown
-│   │   ├── 📄 Full Attack Simulation Steps.md  # Step-by-step execution log
-│   │   ├── 📄 What I did.md            # Detailed session journal (Jul 5-23, 2026)
-│   │   ├── 📄 What I learned.md        # Key takeaways from this simulation
-│   │   ├── 📄 SOAR Response Plan.md    # Automated response plan for Rule 100012
-│   │   ├── 📄 Rule Outline.md          # Detection rule design notes
-│   │   ├── 📄 Prompt.txt               # AI prompts used for this module
-│   │   ├── 📄 ruletest.txt             # Rule testing notes
-│   │   ├── 📂 Scripts/                 # SOAR response scripts
-│   │   │   └── 📄 SSH SOAR response script.md  # Python/Bash remediation script doc
-│   │   ├── 📂 Screenshots/             # Evidence of attack detection
-│   │   ├── 📂 Video Demo/              # Attack simulation video recordings
-│   │   └── 📂 DEMO edit/               # Edited demo footage
-│   │
-│   └── 📂 Linux Privilege Escalation Detection/  # Privilege escalation module
-│       ├── 📄 README.md                # Module overview and achievements
-│       ├── 📄 Outline.md               # Detection strategy and phase plan
-│       ├── 📄 Next Steps.md            # Upcoming phases (SUID, chmod abuse)
-│       ├── 📄 What I learned.md        # Technical takeaways
-│       ├── 📄 Problems Encountered.md  # Issues encountered and resolved
-│       ├── 📄 Prompt.txt               # AI prompts used for this module
-│       ├── 🖼️  Attack Simulation 1.png # Simulation diagram
-│       ├── 📂 Screenshots/             # Detection evidence (Wazuh alerts)
-│       └── 📂 Video Demo/              # Module video demonstrations
->>>>>>> 923b67b870059f5f3e20bd949d2eeb5a58f8d47e
+│   ├── 📂 SQL Attack/                  # Web server attack & SQL injection detection POC
+│   │   ├── 📄 Outline.md               # Simulation design & attack matrix
+│   │   ├── 📄 Techstack.md             # Web attack tech stack details
+│   │   ├── 📄 Next Steps & What I did.md # Execution journal & step log
+│   │   ├── 📄 What I learned.md        # Key insights from SQL injection detection
+│   │   ├── 🖼️  Diagram.png             # SQL injection detection flow diagram
+│   │   ├── 📂 config/                  # Apache log & decoder configurations
+│   │   ├── 📂 rules/                   # Custom Wazuh detection rules (local_rules.xml)
+│   │   └── 📂 Screenshots/             # SQL detection alert screenshots
+│   │
+│   └── 📂 Ransomware Attack/           # Ransomware detection, response & recovery module
+│       ├── 📄 README.md                # Module overview, detection logic & conclusions
+│       ├── 🖼️  Ransomware Diagram.png  # Detection and recovery pipeline diagram
+│       ├── 📂 screenshots/             # Pre-attack, encryption, detection & recovery evidence
+│       ├── 📂 Scripts/                 # Mock_data.py, Ransomware Script.py, RestoreBackup.py
+│       ├── 📂 Rules/                   # Ransomwhere Attack.xml (Rules 550, 100234, 100235)
+│       └── 📂 Video/                   # Demo.mp4 - full attack & recovery pipeline
 │
-├── 📂 docs/                            # Project-wide documentation
-│   ├── 📄 PROGRESS.md                  # Chronological build log (May-Jul 2026)
-│   ├── 📄 NEXT_STEPS.md                # Task tracker with completion status
-│   ├── 📄 WHAT_I_LEARNED.md            # Skills and concepts gained
-│   ├── 📄 PROJECT_LOGS.md              # High-level project log
-│   └── 📄 SCREENSHOTS_CAPTURE.md      # Screenshot collection checklist
+├── 📂 docs/                            # Project-wide documentation
+│   ├── 📄 PROGRESS.md                  # Chronological build log (May-Jul 2026)
+│   ├── 📄 NEXT_STEPS.md                # Task tracker with completion status
+│   ├── 📄 WHAT_I_LEARNED.md            # Skills and concepts gained
+│   ├── 📄 PROJECT_LOGS.md              # High-level project log
+│   └── 📄 SCREENSHOTS_CAPTURE.md      # Screenshot collection checklist
 │
-├── 📂 project-upgrades/                # Planned enhancements & future modules
-│   ├── 📄 Attack_Simulations.md        # 12 planned high-impact SIEM additions
-│   ├── 📄 Next Steps.md                # Upgrade roadmap
-│   ├── 📄 Progress.md                  # Upgrade tracking log
-│   ├── 📄 SCREENSHOTS_CAPTURE_UPGRADE.md  # Upgrade screenshot checklist
-│   └── 📂 Upgrade Screenshots/         # Screenshots from upgrades
+├── 📂 project-upgrades/                # Planned enhancements & future modules
+│   ├── 📄 Attack_Simulations.md        # 12 planned high-impact SIEM additions
+│   ├── 📄 Next Steps.md                # Upgrade roadmap
+│   ├── 📄 Progress.md                  # Upgrade tracking log
+│   ├── 📄 SCREENSHOTS_CAPTURE_UPGRADE.md  # Upgrade screenshot checklist
+│   └── 📂 Upgrade Screenshots/         # Screenshots from upgrades
 │
-├── 📂 screenshots/                     # Infrastructure & setup screenshots
-│   ├── 🖼️  Wazuh Dashboard.png
-│   ├── 🖼️  Wazuh Dashboard Active.jpg
-│   ├── 🖼️  Wazuh Login Page.png
-│   ├── 🖼️  Wazuh Manager Active.png
-│   ├── 🖼️  Wazuh Indexer Active.jpg
-│   ├── 🖼️  Wazuh Agents Section.png
-│   ├── 🖼️  Ubuntu Agent Logs.png
-│   ├── 🖼️  Sysmon Running on endpoint.png
-│   ├── 🖼️  auditd active on endpoint.png
-│   ├── 🖼️  Server Host Information.png
-│   ├── 🖼️  IP of Wazuh Server.png
-│   ├── 🖼️  Endpoint Information.png
-│   ├── 🖼️  Ubuntu_Laptop_Overview.png
-│   ├── 🖼️  Available Storage on Server.jpg
-│   ├── 🖼️  Ram on Server.jpg
-│   └── 📄 README.md                    # Screenshot index & descriptions
+├── 📂 screenshots/                     # Infrastructure & setup screenshots
+│   ├── 🖼️  Wazuh Dashboard.png
+│   ├── 🖼️  Wazuh Dashboard Active.jpg
+│   ├── 🖼️  Wazuh Login Page.png
+│   ├── 🖼️  Wazuh Manager Active.png
+│   ├── 🖼️  Wazuh Indexer Active.jpg
+│   ├── 🖼️  Wazuh Agents Section.png
+│   ├── 🖼️  Ubuntu Agent Logs.png
+│   ├── 🖼️  Sysmon Running on endpoint.png
+│   ├── 🖼️  auditd active on endpoint.png
+│   ├── 🖼️  Server Host Information.png
+│   ├── 🖼️  IP of Wazuh Server.png
+│   ├── 🖼️  Endpoint Information.png
+│   ├── 🖼️  Ubuntu_Laptop_Overview.png
+│   ├── 🖼️  Available Storage on Server.jpg
+│   ├── 🖼️  Ram on Server.jpg
+│   └── 📄 README.md                    # Screenshot index & descriptions
 │
-└── 📂 videos/                          # Full project demo recordings
-    └── 🎬 DEMO.mp4                     # Main SIEM lab demo video
+└── 📂 videos/                          # Full project demo recordings
+    └── 🎬 DEMO.mp4                     # Main SIEM lab demo video
 ```
 
 ---
@@ -222,8 +202,9 @@ This project builds a small, realistic **security monitoring lab** designed to s
 In this project, I simulated and detected the following attack scenarios to validate security monitoring, rule triggering, and incident response capabilities:
 
 - **[Linux privilege escalation (Completed)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Linux%20Privilege%20Escalation%20Detection)**
-- **[I simulated SSH brute force detection (Completed)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack)**
-- **[SQL DETECTION (POC)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Web%20Server%20Attack)**
+- **[SSH brute-force detection (Completed)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack)**
+- **[SQL injection detection (POC)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SQL%20Attack)**
+- **[Ransomware detection & recovery (Completed)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Ransomware%20Attack)**
 
 ---
 
@@ -235,6 +216,8 @@ In this project, I simulated and detected the following attack scenarios to vali
 
 [![View Documentation](https://img.shields.io/badge/View_Documentation-2ea44f?style=for-the-badge&logo=github)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Linux%20Privilege%20Escalation%20Detection)
 
+![Linux Privilege Escalation Attack Simulation Diagram](<attack-simulations/Linux Privilege Escalation Detection/Attack Simulation 1.png>)
+
 | Phase | Technique | Detection |
 |-------|-----------|-----------|
 | **Phase 1: Failed Sudo** | Password guessing against sudo | Custom Rule 100002 - 3 failures in 120 seconds |
@@ -244,11 +227,15 @@ In this project, I simulated and detected the following attack scenarios to vali
 | **Phase 5: SUID Binaries** | SUID binary creation | Wazuh Rule 510 + Auditd syscall monitoring (Complete) |
 | **Phase 6: Defense Evasion** | Suspicious `chmod`/`chown` abuse | Command auditing via Auditd (Complete) |
 
-**MITRE ATT&CK Mapping:**
-- `T1110` - Brute Force
-- `T1548.003` - Abuse Elevation Control Mechanism: Sudo and Sudo Caching
-- `T1078` - Valid Accounts
-- `T1098` - Account Manipulation
+**What I Did:**
+- Simulated an attacker escalating privileges on the monitored Ubuntu endpoint - starting from failed sudo password guesses, through a successful sudo session, unauthorized edits to `/etc/sudoers`, adding a rogue account to the `sudo` group, planting SUID binaries, and abusing `chmod`/`chown` for defense evasion
+- Wrote a custom Wazuh rule (`100002`) to flag repeated failed sudo attempts within a short time window
+- Configured Wazuh File Integrity Monitoring (FIM) on `/etc/sudoers` and paired it with Auditd syscall monitoring to catch unauthorized privilege changes at the file and kernel level
+
+**What I Learned:**
+- How Linux privilege escalation techniques (`T1110`, `T1548.003`, `T1078`) manifest as observable log and file-system events
+- How to combine FIM with Auditd for defense-in-depth detection of the same underlying activity
+- How to tune detection thresholds (failure counts, time windows) to catch brute-force sudo attempts without excessive noise
 
 ---
 
@@ -260,6 +247,8 @@ In this project, I simulated and detected the following attack scenarios to vali
 
 [![View Documentation](https://img.shields.io/badge/View_Documentation-2ea44f?style=for-the-badge&logo=github)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack)
 
+![SOAR Automated Response Diagram](<attack-simulations/SSH Attack/SOAR RESPONSE DIAGRAM.png>)
+
 | Phase | Description | Detection |
 |-------|-------------|-----------|
 | **Phase 1: Reconnaissance** | Nmap scan targeting port 22 from Kali Linux VM | Suricata rule triggers on SYN packets to port 22 |
@@ -268,22 +257,30 @@ In this project, I simulated and detected the following attack scenarios to vali
 | **Phase 4: Persistence** | Attacker injects SSH key into `~/.ssh/authorized_keys` | Wazuh FIM + Auditd detect unauthorized file modification |
 | **Phase 5: Lock Triggered** | Custom Rule 100012 fires on full attack chain | SOAR automated response executed |
 
-**Key Technical Highlights:**
-- Developed **Suricata custom rule** to detect Nmap scans, with false-positive suppression for the admin IP
-- Identified and resolved Kali Linux **NAT vs Bridge mode** issue affecting rule triggering
-- Configured Kali Linux VM in **Bridge mode** so it uses a unique IP on the network (critical for accurate detection)
-- Built a **composite Wazuh detection rule** chaining brute-force + persistence detection into a single high-severity alert
-- Implemented and debugged **SOAR automated response** - a Python script triggered by Wazuh active response
+**What I Did:**
+- Built a full attack chain from a Kali Linux VM - Nmap reconnaissance, Hydra brute-force, a successful login with compromised credentials, and persistence via an injected SSH key
+- Developed a **Suricata custom rule** to detect Nmap scans, with false-positive suppression for the admin IP
+- Identified and resolved a Kali Linux **NAT vs Bridge mode** issue that was preventing accurate rule triggering, then configured the VM in Bridge mode so it presented a unique IP on the network
+- Built a **composite Wazuh detection rule** (`100012`) chaining brute-force + persistence detection into a single high-severity alert
+- Implemented and debugged a **SOAR automated response** - a Python script triggered by Wazuh's active response framework the moment the full attack chain fires
+
+**What I Learned:**
+- How to design correlation rules that chain multiple discrete events (`frequency`, `timeframe`, `if_matched_sid`) into one high-confidence alert
+- How VM networking mode (NAT vs Bridge) affects whether traffic is visible to the monitoring stack, and how to debug that with `nmcli`
+- How to move from detection into **automated containment** by wiring a Python active-response script into Wazuh
+- SSH key-based authentication mechanics (`ssh-keygen`, `ssh-copy-id`, `authorized_keys`) well enough to both simulate and detect their abuse
 
 ---
 
-### 🌐 Simulation 3 - Web Server SQL Detection (POC)
+### 🌐 Simulation 3 - SQL Injection Detection (POC)
 
 **Status:** ✅ POC Complete | 🔄 Advanced Correlation In Progress
 
 **Objective:** Validate SIEM/Wazuh capability to detect SQL injection attempts targeting a vulnerable web application (OWASP Juice Shop / Apache).
 
-[![View Documentation](https://img.shields.io/badge/View_Documentation-2ea44f?style=for-the-badge&logo=github)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Web%20Server%20Attack)
+[![View Documentation](https://img.shields.io/badge/View_Documentation-2ea44f?style=for-the-badge&logo=github)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SQL%20Attack)
+
+![SQL Attack Detection Diagram](<attack-simulations/SQL Attack/Diagram.png>)
 
 | Phase | Technique | Detection |
 |-------|-----------|-----------|
@@ -292,11 +289,58 @@ In this project, I simulated and detected the following attack scenarios to vali
 **MITRE ATT&CK Mapping:**
 - `T1190` - Exploit Public-Facing Application
 
+**What I Did:**
+- Stood up a vulnerable web application (OWASP Juice Shop) behind Apache and generated SQL injection traffic (e.g. `union select` / `OR 1=1` style payloads) against it
+- Wrote a custom Apache access-log decoder and a matching custom Wazuh rule (`100200`) to flag SQL injection patterns in web request logs
+- Verified the full pipeline end-to-end: malicious request → Apache log → Wazuh decoder → rule match → dashboard alert
+
+**What I Learned:**
+- How to write custom Wazuh **decoders** to parse application-specific log formats (web access logs) before rules can act on them
+- How `T1190` (Exploit Public-Facing Application) style attacks appear at the log level, and how to pattern-match common SQL injection strings without excessive false positives
+- The groundwork needed to extend this POC into broader correlation (e.g. chaining injection attempts with subsequent anomalous database or file activity)
+
+---
+
+### 🦠 Simulation 4 - Ransomware Attack Simulation
+
+**Status:** ✅ Fully Simulated & Documented
+
+**Objective:** Demonstrate that a SIEM can detect ransomware based on **behavioral indicators** - rapid, correlated file activity - rather than relying on a known malware signature, and connect that detection to a working recovery workflow.
+
+[![View Documentation](https://img.shields.io/badge/View_Documentation-2ea44f?style=for-the-badge&logo=github)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Ransomware%20Attack)
+
+![Ransomware Detection and Recovery Pipeline Diagram](<attack-simulations/Ransomware Attack/Ransomware Diagram.png>)
+
+| Phase | Technique | Detection |
+|-------|-----------|-----------|
+| **Phase 1: Mass File Encryption** | Python script bulk-encrypts files in a monitored directory using AES-GCM | Wazuh Rule `550` (file-change event) + custom Rule `100234` - 10+ changes from the same PPID within 2 seconds |
+| **Phase 2: Ransom Note Creation** | Ransomware-style notification file dropped after encryption | Custom Rule `100235` - correlates a matching file extension within 5 seconds of Rule `100234` |
+| **Phase 3: Recovery** | Backup restoration triggered after detection | `RestoreBackup.py` restores affected files from a Google Drive backup source |
+
+**MITRE ATT&CK Mapping:**
+- `T1486` - Data Encrypted for Impact
+
+**What I Did:**
+- Wrote a Python script (`Ransomware Script.py`) that performs bulk **AES-GCM** encryption against a monitored directory to reproduce the observable behavior of real ransomware, followed by dropping a ransom-note-style file
+- Designed a two-stage Wazuh correlation: Rule `100234` flags **10+ file-change events from the same PPID within 2 seconds** (possible mass encryption), then Rule `100235` confirms **ransomware detected** if a matching notification file (`.md`, `.txt`, `.html`, `.htm`, `.png`, `.jpg`) appears within 5 seconds of that alert
+- Used `Mock_data.py` to generate synthetic file-change events to test and tune the correlation rules before running the live simulation
+- Built a recovery workflow (`RestoreBackup.py`) that restores the affected files from a **Google Drive** backup source once the ransomware alert fires
+- Documented the full lifecycle with screenshots from pre-attack, through encryption, ransom-note creation, SIEM detection, and file restoration
+
+**What I Learned:**
+- How to design **behavioral** detections that rely on correlating multiple weak signals (mass file changes + same PPID + ransom-note file) into one high-confidence alert, rather than a single signature
+- How to use process metadata (**PPID**) as a correlation field to tie a burst of file events back to a single responsible process
+- Practical **AES-GCM** and symmetric encryption concepts, and how to implement bulk file encryption safely in an isolated lab
+- How to connect a detection pipeline to an actual **recovery workflow** (detection → response → backup restoration), not just alerting
+- Where the natural next steps are for maturing this module: integrating a SOAR platform for automated endpoint isolation and process termination, adding snapshot-based recovery, and investigating persistence removal
+
 ---
 
 ## 🤖 SOAR - Automated Incident Response
 
-This is my **first SOAR response implementation**, built for the [SSH brute-force attack simulation](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations). It automates containment the moment Wazuh confirms a full attack chain — no manual intervention required between detection and response.
+This is my **first SOAR response implementation**, built for the [SSH brute-force attack simulation](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack). It automates containment the moment Wazuh confirms a full attack chain — no manual intervention required between detection and response.
+
+![SOAR Automated Response Diagram](<attack-simulations/SSH Attack/SOAR RESPONSE DIAGRAM.png>)
 
 When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, the automated response executes the following containment actions:
 
@@ -309,6 +353,8 @@ When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, the automate
 
 **Implementation:** The response is a **Python script** (wrapped in a Bash active response handler) deployed at `/var/ossec/active-response/bin/soar-remediate-100012.py`, invoked by Wazuh's active response framework when the rule fires.
 
+> The Ransomware Attack Simulation (above) currently uses a manual/scripted backup-restore recovery rather than a live SOAR trigger - integrating it into this same active-response framework is the next planned step for that module.
+
 > 📄 Full breakdown and walkthrough: [SSH Attack Simulation](https://zayanparpia.github.io/Portfolio/ssh-attack-simulation.html)
 ---
 
@@ -319,6 +365,9 @@ When **Rule 100012** (Full SSH Attack Chain Detected) is triggered, the automate
 | `100002` | Sudo Password Guessing | 3× failed sudo in 120 seconds | `10` (Critical) |
 | `100012` | Full SSH Attack Chain | Brute-force + successful login + key injection | High |
 | `100200` | SQL Injection Detected | Match `union select` or `OR 1=1` in web logs | `7` (Medium) |
+| `550` | File Change Event | Base FIM/file-modification event | — |
+| `100234` | Possible Mass Encryption | 10+ file-change events, same PPID, within 2 seconds | `15` (High) |
+| `100235` | Ransomware Detected | Matching ransom-note file created within 5 sec of Rule `100234` | `16` (Critical) |
 | Custom Suricata | Nmap SSH Port Scan | SYN packet to port 22 from non-admin IP | Alert |
 
 ---
@@ -352,12 +401,16 @@ Attack simulation detection screenshots are located within each simulation's `Sc
 - **SOAR Scripting** - Writing Python active response scripts integrated with Wazuh's active response framework
 - **Networking (nmcli)** - Managing interfaces via CLI, debugging NAT vs Bridge mode in VM environments
 - **SSH Key Authentication** - Generating keys with `ssh-keygen`, using `ssh-copy-id`, understanding `authorized_keys`
+- **Python Security Automation** - Writing scripts for simulated attacks (ransomware), mock data generation, and backup/recovery
+- **AES-GCM & Symmetric Encryption** - Implementing and reasoning about encryption used in the ransomware simulation
 
 ### 🔐 Security Concepts
 - SIEM log pipeline: `Endpoint → Agent → Manager → Indexer → Dashboard`
 - Correlation rules - chaining multiple events with `frequency`, `timeframe`, and `if_matched_sid`
+- Behavioral detection - identifying ransomware-style activity from process (PPID) and file-extension correlation rather than a static signature
 - MITRE ATT&CK framework mapping for detection engineering
 - False positive management and rule tuning in real environments
+- Detection → Response → Recovery workflows, including backup-based restoration
 - PII awareness and handling sensitive data in logs
 
 ### 💼 Professional Development
@@ -382,6 +435,7 @@ Attack simulation detection screenshots are located within each simulation's `Sc
 | July 2-23, 2026 | SSH brute-force attack simulation built, tuned, and fully executed |
 | July 2026 | Linux Privilege Escalation module - Phases 1-4 completed |
 | July 22-23, 2026 | SOAR automated response built, debugged, and verified working |
+| September 18, 2026 | Ransomware attack simulation built, detected, and recovered end-to-end |
 
 ---
 
@@ -392,10 +446,9 @@ This project is licensed under the terms found in the [`License`](./License) fil
 ---
 
 <p align="center">
-  <em>Built as a hands-on cybersecurity portfolio project. Documenting the real process - including the failures, the troubleshooting, and the wins.</em>
+  <em>Built as a hands-on cybersecurity portfolio project. Documenting the real process - including the failures, the troubleshooting, and the wins.</em>
 </p>
 
 <p align="center">
-  <strong>📫 Documentation maintained by Zayan Parpia</strong>
+  <strong>📫 Documentation maintained by Zayan Parpia</strong>
 </p>
-
