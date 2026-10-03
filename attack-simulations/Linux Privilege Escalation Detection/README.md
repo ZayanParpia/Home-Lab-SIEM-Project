@@ -1,156 +1,54 @@
+# Linux Privilege Escalation Detection
 
+This project documents a controlled security simulation used to evaluate how Wazuh detects privilege escalation and persistence activity on a Linux endpoint. The work combines endpoint telemetry, Wazuh alerting, Auditd, and file integrity monitoring (FIM).
 
-\# 🛡️ Linux Privilege Escalation Detection Project
+---
 
+## Project Overview
 
+The simulation is organized into phases that exercise different sudo and privilege-related behaviors:
 
-Welcome to the \*\*Linux Privilege Escalation Detection\*\* project. This repository documents a systematic security simulation aimed at validating the detection capabilities of the \*\*Wazuh SIEM\*\* against common Linux exploitation techniques.
+| Phase | Activity | Status | Detection approach |
+| --- | --- | --- | --- |
+| 1 | Failed sudo attempts | Verified | Custom Wazuh rule `100002` correlates three failed attempts within 300 seconds. |
+| 2 | Successful sudo usage | Verified | Standard Wazuh alerts record successful sudo activity. |
+| 3 | Sudoers file modification | Verified | Wazuh FIM reports changes to `/etc/sudoers`. |
+| 4 | Sudo group persistence | Verified | Auditd records the group membership change. |
+| 5-6 | SUID and permission-change testing | Planned | Additional attack vectors are documented for future testing. |
 
+The project is a defensive validation exercise. Testing is performed against the lab's Ubuntu CLI endpoint, identified as Endpoint II.
 
+---
 
-\---
+## Detection Notes
 
+- **Failed sudo attempts:** Rule `100002` uses the failed sudo event `5557` as its match condition, with a frequency of three events in a 300-second window.
+- **Configuration integrity:** FIM provides visibility into changes to the sudoers configuration.
+- **Persistence monitoring:** Auditd provides evidence of changes to sudo group membership.
+- **Account behavior:** Adding an account to the `sudo` group can grant elevated access and may change which failed-sudo detections apply to that account.
+- **ATT&CK context:** The simulation is organized around privilege escalation and persistence behaviors; consult the project outline for the documented scope and results.
 
+---
 
-\## 📋 Project Summary
+## Lab Environment
 
+- **SIEM:** Wazuh Manager and Dashboard
+- **Endpoint monitoring:** Wazuh agent, Sysmon for Linux, and Auditd
+- **Target:** Ubuntu CLI Endpoint II
 
+---
 
-This project follows a structured approach to security validation:
+## Project Files
 
+- [Outline and simulation results](Outline.md)
+- [Next steps](Next%20Steps.md)
+- [Problems encountered](Problems%20Encountered.md)
+- [What I learned](What%20I%20learned.md)
+- [Screenshots](Screenshots/)
+- [Video demo](Video%20Demo/)
 
+---
 
-\* \*\*Phase 1: Failed Sudo Attempts\*\* – Detection of brute-force password guessing.
+## Status
 
-
-
-
-
-\* \*\*Phase 2: Successful Sudo Usage\*\* – Monitoring legitimate and escalated administrative activity.
-
-
-
-
-
-\* \*\*Phase 3: Sudoers File Modification\*\* – Tracking unauthorized configuration changes via File Integrity Monitoring (FIM).
-
-
-
-
-
-\* \*\*Phase 4: Persistence\*\* – Detecting when an account is added to the `sudo` group.
-
-
-
-
-
-\* \*\*Phases 5-6 (Upcoming):\*\* Testing SUID binary creation and unauthorized `chmod`/`chown` abuse.
-
-
-
-
-
-
-
-\---
-
-
-
-\## 📂 Repository Structure
-
-
-
-\* `Attack Simulation 1.png`: Lab architecture and simulation diagram.
-
-\* `Outline.md`: The detailed strategic plan for the simulation.
-
-\* `Next steps.md`: Roadmap for upcoming detection modules.
-
-\* `What I learned.md`: Key takeaways and insights from this engineering exercise.
-
-\* `Prompt.txt`: The original technical prompts used to structure this project.
-
-\* `screenshots/`: Visual evidence of detection and Wazuh rule triggers.
-
-\* `Endpoint II active.png`: Lab verification showing active host and failed sudo attempts.
-
-\* `Rule 5557.png`: Detailed log of the failed password attempt detection.
-
-\* `Rule 5403.png`: Alert verification for the first successful sudo session.
-
-\* `Wazuh 510 Triggered.png`: Confirmation of system-level alerts.
-
-\* `sudoers file edit.png`: Evidence of FIM alerts triggered by file modification.
-
-\* `User Group MOD.png`: Documentation of user group escalation detection.
-
-
-
-
-
-
-
-\---
-
-
-
-\## 🚀 Key Technical Achievements
-
-
-
-\* \*\*Custom Correlation Rules:\*\* Developed a specific rule (ID: 100002) to detect password guessing by correlating 3 failed attempts within a 5-minute window.
-
-
-
-
-
-\* \*\*Layered Visibility:\*\* Combined \*\*Auditd\*\* for syscall monitoring and \*\*Wazuh FIM\*\* for critical file integrity, ensuring no configuration changes go unnoticed.
-
-
-
-
-
-\* \*\*MITRE ATT\&CK Mapping:\*\* All activities have been mapped to MITRE tactics, providing a defensible framework for security posture evaluation.
-
-
-
-
-
-
-
-\---
-
-
-
-\## 🛠️ Infrastructure
-
-
-
-\* \*\*SIEM:\*\* Wazuh (Manager \& Dashboard)
-
-\* \*\*Monitoring Agents:\*\* Sysmon for Linux, Auditd
-
-\* \*\*Target:\*\* Ubuntu CLI Endpoint (Endpoint II)
-
-
-
-\---
-
-
-
-\## 🚧 Status
-
-
-
-> \[!NOTE]
-
-> This project is currently \*\*Active\*\*. We have successfully verified Phases 1 through 4. SUID and Defense Evasion testing (Phases 5 \& 6) are currently in progress.
-
-
-
-\---
-
-
-
-\*Documentation maintained by Zayan Parpia\* 🚀
-
+Phases 1-4 are verified. SUID binary and permission-change testing remain planned follow-up work; the project notes track the remaining documentation and simulation tasks.
