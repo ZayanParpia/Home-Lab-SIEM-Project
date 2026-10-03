@@ -201,12 +201,14 @@ This project builds a small, realistic **security monitoring lab** designed to s
 
 In this project, I simulated and detected the following attack scenarios to validate security monitoring, rule triggering, and incident response capabilities:
 
-- **[Linux privilege escalation (Completed)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Linux%20Privilege%20Escalation%20Detection)**
-- **[SSH brute-force detection (Completed)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SSH%20Attack)**
-- **[SQL injection detection (POC)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/SQL%20Attack)**
-- **[Ransomware detection & recovery (Completed)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Ransomware%20Attack)**
+- **[Linux privilege escalation (Completed)](#linux-privilege-escalation-detection)**
+- **[SSH brute-force detection (Completed)](#ssh-brute-force-attack-pipeline)**
+- **[SQL injection detection (POC)](#sql-injection-detection-poc)**
+- **[Ransomware detection & recovery (Completed)](#ransomware-detection-recovery)**
 
 ---
+
+<a id="linux-privilege-escalation-detection"></a>
 
 ### 🔑 Simulation 1 - Linux Privilege Escalation Detection
 
@@ -238,6 +240,8 @@ In this project, I simulated and detected the following attack scenarios to vali
 - How to tune detection thresholds (failure counts, time windows) to catch brute-force sudo attempts without excessive noise
 
 ---
+
+<a id="ssh-brute-force-attack-pipeline"></a>
 
 ### 🔐 Simulation 2 - SSH Brute-Force Attack Pipeline
 
@@ -272,6 +276,8 @@ In this project, I simulated and detected the following attack scenarios to vali
 
 ---
 
+<a id="sql-injection-detection-poc"></a>
+
 ### 🌐 Simulation 3 - SQL Injection Detection (POC)
 
 **Status:** ✅ POC Complete | 🔄 Advanced Correlation In Progress
@@ -300,6 +306,8 @@ In this project, I simulated and detected the following attack scenarios to vali
 - The groundwork needed to extend this POC into broader correlation (e.g. chaining injection attempts with subsequent anomalous database or file activity)
 
 ---
+
+<a id="ransomware-detection-recovery"></a>
 
 ### 🦠 Simulation 4 - Ransomware Detection & Recovery
 
