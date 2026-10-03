@@ -301,38 +301,45 @@ In this project, I simulated and detected the following attack scenarios to vali
 
 ---
 
-### 🦠 Simulation 4 - Ransomware Attack Simulation
+### 🦠 Simulation 4 - Ransomware Detection & Recovery
 
 **Status:** ✅ Fully Simulated & Documented
 
-**Objective:** Demonstrate that a SIEM can detect ransomware based on **behavioral indicators** - rapid, correlated file activity - rather than relying on a known malware signature, and connect that detection to a working recovery workflow.
+**Objective:** Demonstrate how a SIEM can detect ransomware using **behavioral indicators**—rapid, correlated file activity and ransom-note creation—then connect that detection to an operational recovery workflow.
 
 [![View Documentation](https://img.shields.io/badge/View_Documentation-2ea44f?style=for-the-badge&logo=github)](https://github.com/ZayanParpia/Home-Lab-SIEM-Project/tree/main/attack-simulations/Ransomware%20Attack)
 
 ![Ransomware Detection and Recovery Pipeline Diagram](<attack-simulations/Ransomware Attack/Ransomware Diagram.png>)
 
-| Phase | Technique | Detection |
-|-------|-----------|-----------|
-| **Phase 1: Mass File Encryption** | Python script bulk-encrypts files in a monitored directory using AES-GCM | Wazuh Rule `550` (file-change event) + custom Rule `100234` - 10+ changes from the same PPID within 2 seconds |
-| **Phase 2: Ransom Note Creation** | Ransomware-style notification file dropped after encryption | Custom Rule `100235` - correlates a matching file extension within 5 seconds of Rule `100234` |
-| **Phase 3: Recovery** | Backup restoration triggered after detection | `RestoreBackup.py` restores affected files from a Google Drive backup source |
+| Phase | Technique | Detection / Outcome |
+|-------|-----------|-------------------|
+| **Phase 1: Mass File Encryption** | Python script bulk-encrypts files in a monitored directory using AES-GCM | Wazuh Rule `550` + Rule `100234` detect 10+ file changes from the same PPID within 2 seconds |
+| **Phase 2: Ransom Note Creation** | Ransomware-style notification file dropped after encryption | Rule `100235` correlates the match with suspicious file creation and raises the ransomware alert |
+| **Phase 3: Detection & Correlation** | Mass file changes + same-process behavior + matching extension | Custom local Wazuh rule chain produces a high-confidence ransomware alert |
+| **Phase 4: Recovery** | Backup restoration triggered after alert | `RestoreBackup.py` restores affected files from the backup source |
 
 **MITRE ATT&CK Mapping:**
 - `T1486` - Data Encrypted for Impact
 
 **What I Did:**
-- Wrote a Python script (`Ransomware Script.py`) that performs bulk **AES-GCM** encryption against a monitored directory to reproduce the observable behavior of real ransomware, followed by dropping a ransom-note-style file
-- Designed a two-stage Wazuh correlation: Rule `100234` flags **10+ file-change events from the same PPID within 2 seconds** (possible mass encryption), then Rule `100235` confirms **ransomware detected** if a matching notification file (`.md`, `.txt`, `.html`, `.htm`, `.png`, `.jpg`) appears within 5 seconds of that alert
-- Used `Mock_data.py` to generate synthetic file-change events to test and tune the correlation rules before running the live simulation
-- Built a recovery workflow (`RestoreBackup.py`) that restores the affected files from a **Google Drive** backup source once the ransomware alert fires
-- Documented the full lifecycle with screenshots from pre-attack, through encryption, ransom-note creation, SIEM detection, and file restoration
+- Wrote a Python script (`Ransomware Script.py`) that recursively encrypts files in a monitored directory to reproduce the observable behavior of ransomware, then drops a ransom-note-style file
+- Built a two-stage Wazuh correlation model: Rule `100234` flags a burst of file modifications from the same PPID within a short time window, and Rule `100235` confirms a ransomware event when a matching file type appears shortly after the mass-change alert
+- Used `Mock_data.py` to generate synthetic file-change data and tune the detection logic before running the live simulation
+- Designed a recovery workflow (`RestoreBackup.py`) that restores the affected files from a Google Drive backup source once the alert is triggered
+- Captured full lifecycle screenshots showing the pre-attack state, file encryption, ransom-note creation, Wazuh detection, and final restoration
+- Kept the simulation in an isolated home-lab environment so it could be used as a safe, defensive detection and response project
+
+**Why This Matters:**
+- This project demonstrates that ransomware detection can be based on **behavioral indicators** rather than a single known signature
+- The key idea is not “one file was changed,” but rather “a single process generated a burst of file changes, and then a ransom note appeared in the same path”
+- That correlation is far more reliable than relying on a single file change event or a single suspicious filename
 
 **What I Learned:**
-- How to design **behavioral** detections that rely on correlating multiple weak signals (mass file changes + same PPID + ransom-note file) into one high-confidence alert, rather than a single signature
-- How to use process metadata (**PPID**) as a correlation field to tie a burst of file events back to a single responsible process
-- Practical **AES-GCM** and symmetric encryption concepts, and how to implement bulk file encryption safely in an isolated lab
-- How to connect a detection pipeline to an actual **recovery workflow** (detection → response → backup restoration), not just alerting
-- Where the natural next steps are for maturing this module: integrating a SOAR platform for automated endpoint isolation and process termination, adding snapshot-based recovery, and investigating persistence removal
+- How to build **behavioral detections** by correlating multiple weak signals into a stronger, higher-confidence alert
+- How to use process metadata like **PPID** to tie a burst of file changes back to one responsible process
+- How to reason about **AES-GCM** and symmetric encryption in a real detection lab without using harmful malware tooling
+- How to connect **detection to recovery** so the workflow does not stop at a dashboard alert
+- The next maturity steps for the module: adding SOAR-driven endpoint isolation, snapshot-based restoration, and better persistence-removal workflows
 
 ---
 
